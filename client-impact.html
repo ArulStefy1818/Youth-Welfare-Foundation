@@ -1,0 +1,1202 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#126b45">
+    <title>Stackly Youth | Client Dashboard</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="client.css">
+
+</head>
+
+<body>
+
+    <!-- ==============================
+         SIDEBAR
+    ============================== -->
+
+    <aside class="stackly-youth-client-sidebar" id="stacklyYouthClientSidebar">
+
+        <div class="stackly-youth-client-brand">
+            <a href="client.html" aria-label="Stackly Youth Foundation Home">
+                <img src="Stackly-logo-Blue.webp"
+                     alt="Stackly Youth Foundation Logo">
+                 
+            </a>
+
+            <button class="stackly-youth-client-menu-close"
+                    id="stacklyYouthClientMenuClose"
+                    aria-label="Close navigation menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <p class="stackly-youth-client-sidebar-label">Main Menu</p>
+
+        <nav class="stackly-youth-client-nav"
+             aria-label="Client dashboard navigation">
+
+            <a href="client.html"  aria-current="page">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="client-programs.html">
+                <i class="fa-solid fa-hands-holding-child"></i>
+                <span>Our Programs</span>
+            </a>
+
+            <a href="client-donations.html">
+                <i class="fa-solid fa-heart"></i>
+                <span>My Donations</span>
+            </a>
+
+            <a href="client-impact.html" class="active">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Impact Reports</span>
+            </a>
+
+            <a href="client-events.html">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>Events</span>
+            </a>
+
+            <a href="client-messages.html">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Messages</span>
+            </a>
+
+        </nav>
+
+        <p class="stackly-youth-client-sidebar-label">Account</p>
+
+        <nav class="stackly-youth-client-nav"
+             aria-label="Account navigation">
+
+            <a href="client-profile.html">
+                <i class="fa-solid fa-user"></i>
+                <span>My Profile</span>
+            </a>
+
+            
+
+        </nav>
+
+        <div class="stackly-youth-client-sidebar-bottom">
+            <a href="index.html" id="stacklyYouthClientLogout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Logout</span>
+            </a>
+        </div>
+
+    </aside>
+
+    <!-- Mobile overlay -->
+    <div class="stackly-youth-client-overlay"
+         id="stacklyYouthClientOverlay"></div>
+
+
+    <!-- ==============================
+         MAIN
+    ============================== -->
+
+    <main class="stackly-youth-client-main">
+
+        <!-- Topbar -->
+        <header class="stackly-youth-client-topbar">
+
+            <div class="stackly-youth-client-topbar-left">
+
+                <button class="stackly-youth-client-menu-toggle"
+                        id="stacklyYouthClientMenuToggle"
+                        aria-label="Open navigation menu"
+                        aria-controls="stacklyYouthClientSidebar"
+                        aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <h2 class="stackly-youth-client-page-title">
+                    Client Dashboard
+                </h2>
+
+            </div>
+
+            <div class="stackly-youth-client-topbar-right">
+
+                <a href="404-client.html">
+                    <button class="stackly-youth-client-notification"
+                            type="button"
+                            aria-label="Notifications">
+                        <i class="fa-regular fa-bell"></i>
+                    </button>
+                </a>
+
+                <div class="stackly-youth-client-user">
+
+                    <div class="stackly-youth-client-avatar"
+                         id="stacklyYouthClientAvatar">
+                        U
+                    </div>
+
+                    <div class="stackly-youth-client-user-info">
+                        <strong id="stacklyYouthClientUserName">
+                            User
+                        </strong>
+
+                        <span id="stacklyYouthClientUserEmail">
+                            client@stacklyyouth.org
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- =========================================================
+     STACKLY YOUTH WELFARE FOUNDATION
+     CLIENT DASHBOARD — IMPACT REPORTS PAGE
+========================================================= -->
+
+<div class="stackly-youth-client-impact-page">
+
+
+    <!-- =====================================================
+         DECORATIVE BACKGROUND
+    ====================================================== -->
+
+    <div class="stackly-youth-client-impact-glow
+                stackly-youth-client-impact-glow-one"></div>
+
+    <div class="stackly-youth-client-impact-glow
+                stackly-youth-client-impact-glow-two"></div>
+
+
+    <!-- =====================================================
+         IMPACT HERO
+    ====================================================== -->
+
+    <section class="stackly-youth-client-impact-hero">
+
+        <div class="stackly-youth-client-impact-hero-content"
+             data-aos="fade-right">
+
+            <span class="stackly-youth-client-impact-eyebrow">
+                <i class="fa-solid fa-chart-line"></i>
+                Measuring Meaningful Change
+            </span>
+
+            <h1>
+                See How Your
+                <span>Support Creates Impact.</span>
+            </h1>
+
+            <p>
+                Explore the progress, outcomes, and stories made possible
+                through youth-focused programs, community initiatives,
+                and continued support.
+            </p>
+
+            <div class="stackly-youth-client-impact-hero-actions">
+
+                <a href="404-client.html"
+                   class="stackly-youth-client-impact-primary-btn">
+
+                    <i class="fa-solid fa-file-arrow-down"></i>
+                    View Latest Report
+
+                </a>
+
+                <a href="404-client.html"
+                   class="stackly-youth-client-impact-secondary-btn">
+
+                    Explore My Support
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Hero visual -->
+
+        <div class="stackly-youth-client-impact-hero-visual"
+             data-aos="fade-left">
+
+            <div class="stackly-youth-client-impact-hero-image-wrap">
+
+                <img src="impact-client.webp"
+                     alt="Youth participating in community programs"
+                     class="stackly-youth-client-impact-hero-image">
+
+                <div class="stackly-youth-client-impact-floating-card">
+
+                    <div class="stackly-youth-client-impact-floating-icon">
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                    </div>
+
+                    <div>
+                        <strong>+28%</strong>
+                        <span>Program Reach</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         IMPACT OVERVIEW
+    ====================================================== -->
+
+    <section class="stackly-youth-client-impact-overview">
+
+        <div class="stackly-youth-client-impact-heading"
+             data-aos="fade-up">
+
+            <span>IMPACT OVERVIEW</span>
+
+            <h2>
+                Progress You Can See.
+            </h2>
+
+            <p>
+                A snapshot of the people, programs, and communities
+                reached through our initiatives.
+            </p>
+
+        </div>
+
+
+        <div class="stackly-youth-client-impact-metrics">
+
+            <!-- Metric 1 -->
+
+            <article class="stackly-youth-client-impact-metric"
+                     data-aos="fade-up"
+                     data-aos-delay="100">
+
+                <div class="stackly-youth-client-impact-metric-icon">
+
+                    <i class="fa-solid fa-children"></i>
+
+                </div>
+
+                <strong>
+                    8,420
+                </strong>
+
+                <span>
+                    Young People Reached
+                </span>
+
+                <small>
+                    Across active programs
+                </small>
+
+            </article>
+
+
+            <!-- Metric 2 -->
+
+            <article class="stackly-youth-client-impact-metric"
+                     data-aos="fade-up"
+                     data-aos-delay="180">
+
+                <div class="stackly-youth-client-impact-metric-icon orange">
+
+                    <i class="fa-solid fa-book-open-reader"></i>
+
+                </div>
+
+                <strong>
+                    42
+                </strong>
+
+                <span>
+                    Learning Initiatives
+                </span>
+
+                <small>
+                    Education and mentorship
+                </small>
+
+            </article>
+
+
+            <!-- Metric 3 -->
+
+            <article class="stackly-youth-client-impact-metric"
+                     data-aos="fade-up"
+                     data-aos-delay="260">
+
+                <div class="stackly-youth-client-impact-metric-icon">
+
+                    <i class="fa-solid fa-heart-pulse"></i>
+
+                </div>
+
+                <strong>
+                    3,780
+                </strong>
+
+                <span>
+                    Wellness Participants
+                </span>
+
+                <small>
+                    Health and wellbeing programs
+                </small>
+
+            </article>
+
+
+            <!-- Metric 4 -->
+
+            <article class="stackly-youth-client-impact-metric"
+                     data-aos="fade-up"
+                     data-aos-delay="340">
+
+                <div class="stackly-youth-client-impact-metric-icon orange">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                </div>
+
+                <strong>
+                    24
+                </strong>
+
+                <span>
+                    Communities Served
+                </span>
+
+                <small>
+                    Local youth initiatives
+                </small>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PROGRAM IMPACT
+    ====================================================== -->
+
+    <section class="stackly-youth-client-impact-programs">
+
+        <div class="stackly-youth-client-impact-section-head"
+             data-aos="fade-up">
+
+            <div>
+
+                <span>
+                    PROGRAM PERFORMANCE
+                </span>
+
+                <h2>
+                    Impact Across Key Programs
+                </h2>
+
+            </div>
+
+            <a href="404-client.html"
+               class="stackly-youth-client-impact-text-link">
+
+                Explore Programs
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+        <div class="stackly-youth-client-impact-program-grid">
+
+
+            <!-- Program 1 -->
+
+            <article class="stackly-youth-client-impact-program-card"
+                     data-aos="fade-up">
+
+                <div class="stackly-youth-client-impact-program-top">
+
+                    <div class="stackly-youth-client-impact-program-icon">
+
+                        <i class="fa-solid fa-graduation-cap"></i>
+
+                    </div>
+
+                    <span class="stackly-youth-client-impact-program-tag">
+                        Education
+                    </span>
+
+                </div>
+
+                <h3>
+                    Youth Education Support
+                </h3>
+
+                <p>
+                    Improving access to learning resources, mentorship,
+                    educational guidance, and study opportunities.
+                </p>
+
+                <div class="stackly-youth-client-impact-program-stat">
+
+                    <div>
+
+                        <strong>
+                            92%
+                        </strong>
+
+                        <span>
+                            Progress
+                        </span>
+
+                    </div>
+
+                    <div>
+                        <strong>
+                            2,450
+                        </strong>
+
+                        <span>
+                            Participants
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="stackly-youth-client-impact-progress">
+
+                    <span style="width:92%;"></span>
+
+                </div>
+
+            </article>
+
+
+            <!-- Program 2 -->
+
+            <article class="stackly-youth-client-impact-program-card"
+                     data-aos="fade-up"
+                     data-aos-delay="120">
+
+                <div class="stackly-youth-client-impact-program-top">
+
+                    <div class="stackly-youth-client-impact-program-icon orange">
+
+                        <i class="fa-solid fa-heart-pulse"></i>
+
+                    </div>
+
+                    <span class="stackly-youth-client-impact-program-tag orange">
+                        Wellness
+                    </span>
+
+                </div>
+
+                <h3>
+                    Health & Youth Wellness
+                </h3>
+
+                <p>
+                    Promoting health awareness, nutrition education, 
+                    essential care, and positive physical and emotional wellbeing.
+                </p>
+
+                <div class="stackly-youth-client-impact-program-stat">
+
+                    <div>
+
+                        <strong>
+                            84%
+                        </strong>
+
+                        <span>
+                            Progress
+                        </span>
+
+                    </div>
+
+                    <div>
+                        <strong>
+                            3,780
+                        </strong>
+
+                        <span>
+                            Participants
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="stackly-youth-client-impact-progress orange">
+
+                    <span style="width:84%;"></span>
+
+                </div>
+
+            </article>
+
+
+            <!-- Program 3 -->
+
+            <article class="stackly-youth-client-impact-program-card"
+                     data-aos="fade-up"
+                     data-aos-delay="240">
+
+                <div class="stackly-youth-client-impact-program-top">
+
+                    <div class="stackly-youth-client-impact-program-icon">
+
+                        <i class="fa-solid fa-lightbulb"></i>
+
+                    </div>
+
+                    <span class="stackly-youth-client-impact-program-tag">
+                        Skills
+                    </span>
+
+                </div>
+
+                <h3>
+                    Skills & Career Growth
+                </h3>
+
+                <p>
+                    Building practical skills, confidence, career awareness,
+                    and pathways toward future opportunities.
+                </p>
+
+                <div class="stackly-youth-client-impact-program-stat">
+
+                    <div>
+
+                        <strong>
+                            76%
+                        </strong>
+
+                        <span>
+                            Progress
+                        </span>
+
+                    </div>
+
+                    <div>
+                        <strong>
+                            1,940
+                        </strong>
+
+                        <span>
+                            Participants
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="stackly-youth-client-impact-progress">
+
+                    <span style="width:76%;"></span>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         IMPACT JOURNEY
+    ====================================================== -->
+
+    <section class="stackly-youth-client-impact-journey">
+
+        <div class="stackly-youth-client-impact-journey-intro"
+             data-aos="fade-right">
+
+            <span>
+                OUR PROGRESS
+            </span>
+
+            <h2>
+                From Support
+                <span>To Lasting Change.</span>
+            </h2>
+
+            <p>
+                Each program follows a clear journey designed to move from
+                identifying needs to creating measurable and sustainable
+                opportunities for young people.
+            </p>
+
+        </div>
+
+
+        <div class="stackly-youth-client-impact-timeline"
+             data-aos="fade-left">
+
+            <div class="stackly-youth-client-impact-timeline-line"></div>
+
+
+            <!-- Step 1 -->
+
+            <div class="stackly-youth-client-impact-timeline-item">
+
+                <div class="stackly-youth-client-impact-timeline-number">
+                    01
+                </div>
+
+                <div class="stackly-youth-client-impact-timeline-content">
+
+                    <span>
+                        STEP ONE
+                    </span>
+
+                    <h3>
+                        Identify Needs
+                    </h3>
+
+                    <p>
+                        Understanding local challenges and identifying
+                        areas where youth need meaningful support.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Step 2 -->
+
+            <div class="stackly-youth-client-impact-timeline-item">
+
+                <div class="stackly-youth-client-impact-timeline-number orange">
+                    02
+                </div>
+
+                <div class="stackly-youth-client-impact-timeline-content">
+
+                    <span>
+                        STEP TWO
+                    </span>
+
+                    <h3>
+                        Deliver Support
+                    </h3>
+
+                    <p>
+                        Connecting participants with programs, resources,
+                        mentorship, and essential services.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Step 3 -->
+
+            <div class="stackly-youth-client-impact-timeline-item">
+
+                <div class="stackly-youth-client-impact-timeline-number">
+                    03
+                </div>
+
+                <div class="stackly-youth-client-impact-timeline-content">
+
+                    <span>
+                        STEP THREE
+                    </span>
+
+                    <h3>
+                        Measure Progress
+                    </h3>
+
+                    <p>
+                        Tracking participation, outcomes, milestones,
+                        and program development.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Step 4 -->
+
+            <div class="stackly-youth-client-impact-timeline-item">
+
+                <div class="stackly-youth-client-impact-timeline-number orange">
+                    04
+                </div>
+
+                <div class="stackly-youth-client-impact-timeline-content">
+
+                    <span>
+                        STEP FOUR
+                    </span>
+
+                    <h3>
+                        Grow Impact
+                    </h3>
+
+                    <p>
+                        Using insights and community feedback to strengthen
+                        programs and reach more young people.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SUCCESS STORY
+    ====================================================== -->
+
+    <section class="stackly-youth-client-impact-story">
+
+        <div class="stackly-youth-client-impact-story-image"
+             data-aos="fade-right">
+
+            <img src="impact-story.webp"
+                 alt="Young person participating in a youth development program">
+
+            <div class="stackly-youth-client-impact-story-badge">
+
+                <i class="fa-solid fa-quote-left"></i>
+
+                <span>
+                    Real Stories.<br>
+                    Real Progress.
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="stackly-youth-client-impact-story-content"
+             data-aos="fade-left">
+
+            <span class="stackly-youth-client-impact-story-label">
+                FEATURED IMPACT STORY
+            </span>
+
+            <h2>
+                A Small Opportunity
+                <span>Can Open New Doors.</span>
+            </h2>
+
+            <p>
+                Through access to learning support and mentorship, young
+                participants can develop new confidence, strengthen skills,
+                and discover pathways toward their goals.
+            </p>
+
+            <blockquote>
+                “The support gave me the confidence to continue learning
+                and believe that I could build something better for myself.”
+            </blockquote>
+
+            <div class="stackly-youth-client-impact-story-person">
+
+                <div class="stackly-youth-client-impact-story-avatar">
+                    A
+                </div>
+
+                <div>
+                    <strong>
+                        Program Participant
+                    </strong>
+
+                    <span>
+                        Youth Development Initiative
+                    </span>
+                </div>
+
+            </div>
+
+            <a href="404-client.html"
+               class="stackly-youth-client-impact-story-btn">
+
+                Read Full Story
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         REPORT CENTER
+    ====================================================== -->
+
+    <section class="stackly-youth-client-impact-reports">
+
+        <div class="stackly-youth-client-impact-reports-head"
+             data-aos="fade-up">
+
+            <span>
+                REPORT CENTER
+            </span>
+
+            <h2>
+                Explore Impact Reports
+            </h2>
+
+            <p>
+                Review program updates, annual progress, and impact-focused
+                reports from the foundation.
+            </p>
+
+        </div>
+
+
+        <div class="stackly-youth-client-impact-report-grid">
+
+
+            <!-- Report 1 -->
+
+            <article class="stackly-youth-client-impact-report-card"
+                     data-aos="fade-up">
+
+                <div class="stackly-youth-client-impact-report-icon">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                </div>
+
+                <div class="stackly-youth-client-impact-report-info">
+
+                    <span>
+                        2026
+                    </span>
+
+                    <h3>
+                        Youth Impact Report
+                    </h3>
+
+                    <p>
+                        Programs, participation, outcomes, and community
+                        progress overview.
+                    </p>
+
+                </div>
+
+                <a href="404-client.html"
+                   class="stackly-youth-client-impact-report-btn">
+
+                    <i class="fa-solid fa-arrow-down"></i>
+
+                    View Report
+
+                </a>
+
+            </article>
+
+
+            <!-- Report 2 -->
+
+            <article class="stackly-youth-client-impact-report-card"
+                     data-aos="fade-up"
+                     data-aos-delay="120">
+
+                <div class="stackly-youth-client-impact-report-icon orange">
+
+                    <i class="fa-solid fa-chart-pie"></i>
+
+                </div>
+
+                <div class="stackly-youth-client-impact-report-info">
+
+                    <span>
+                        2026
+                    </span>
+
+                    <h3>
+                        Program Outcomes Report
+                    </h3>
+
+                    <p>
+                        A focused overview of results across education,
+                        health, and skills initiatives.
+                    </p>
+
+                </div>
+
+                <a href="404-client.html"
+                   class="stackly-youth-client-impact-report-btn">
+
+                    <i class="fa-solid fa-arrow-down"></i>
+
+                    View Report
+
+                </a>
+
+            </article>
+
+
+            <!-- Report 3 -->
+
+            <article class="stackly-youth-client-impact-report-card"
+                     data-aos="fade-up"
+                     data-aos-delay="240">
+
+                <div class="stackly-youth-client-impact-report-icon">
+
+                    <i class="fa-solid fa-users-viewfinder"></i>
+
+                </div>
+
+                <div class="stackly-youth-client-impact-report-info">
+
+                    <span>
+                        2025–26
+                    </span>
+
+                    <h3>
+                        Community Progress
+                    </h3>
+
+                    <p>
+                        Insights into communities reached and initiatives
+                        developed through local partnerships.
+                    </p>
+
+                </div>
+
+                <a href="404-client.html"
+                   class="stackly-youth-client-impact-report-btn">
+
+                    <i class="fa-solid fa-arrow-down"></i>
+
+                    View Report
+
+                </a>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         IMPACT FOCUS
+    ====================================================== -->
+
+    <section class="stackly-youth-client-impact-focus">
+
+        <div class="stackly-youth-client-impact-focus-content"
+             data-aos="fade-right">
+
+            <span>
+                WHAT WE ARE FOCUSING ON
+            </span>
+
+            <h2>
+                Building Progress
+                <span>Where It Matters.</span>
+            </h2>
+
+            <p>
+                Our current focus areas are designed around practical,
+                measurable support that helps young people move toward
+                stronger opportunities and healthier futures.
+            </p>
+
+            <a href="404-client.html"
+               class="stackly-youth-client-impact-focus-btn">
+
+                View Active Programs
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+        <div class="stackly-youth-client-impact-focus-grid"
+             data-aos="fade-left">
+
+            <div class="stackly-youth-client-impact-focus-card">
+
+                <i class="fa-solid fa-graduation-cap"></i>
+
+                <strong>
+                    Education Access
+                </strong>
+
+                <span>
+                    Learning resources and support
+                </span>
+
+            </div>
+
+
+            <div class="stackly-youth-client-impact-focus-card orange">
+
+                <i class="fa-solid fa-heart-pulse"></i>
+
+                <strong>
+                    Youth Wellbeing
+                </strong>
+
+                <span>
+                    Health and wellness awareness
+                </span>
+
+            </div>
+
+
+            <div class="stackly-youth-client-impact-focus-card">
+
+                <i class="fa-solid fa-briefcase"></i>
+
+                <strong>
+                    Career Readiness
+                </strong>
+
+                <span>
+                    Skills and future opportunities
+                </span>
+
+            </div>
+
+
+            <div class="stackly-youth-client-impact-focus-card orange">
+
+                <i class="fa-solid fa-people-group"></i>
+
+                <strong>
+                    Community Growth
+                </strong>
+
+                <span>
+                    Stronger local youth networks
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         IMPACT CTA
+    ====================================================== -->
+
+    <section class="stackly-youth-client-impact-cta"
+             data-aos="zoom-in">
+
+        <div class="stackly-youth-client-impact-cta-circle
+                    stackly-youth-client-impact-cta-circle-one"></div>
+
+        <div class="stackly-youth-client-impact-cta-circle
+                    stackly-youth-client-impact-cta-circle-two"></div>
+
+
+        <div class="stackly-youth-client-impact-cta-content">
+
+            <span>
+                <i class="fa-solid fa-chart-column"></i>
+                CONTINUE FOLLOWING THE JOURNEY
+            </span>
+
+            <h2>
+                Progress Is Built
+                <br>
+                One Opportunity at a Time.
+            </h2>
+
+            <p>
+                Stay connected with program updates, community stories,
+                events, and the latest impact milestones.
+            </p>
+
+            <div class="stackly-youth-client-impact-cta-actions">
+
+                <a href="404-client.html"
+                   class="stackly-youth-client-impact-cta-primary">
+
+                    View Upcoming Events
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+                <a href="404-client.html"
+                   class="stackly-youth-client-impact-cta-secondary">
+
+                    Contact Foundation
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         IMPACT FOOT NOTE
+    ====================================================== -->
+
+    <div class="stackly-youth-client-impact-note"
+         data-aos="fade-up">
+
+        <i class="fa-solid fa-shield-heart"></i>
+
+        <p>
+            Impact figures and program updates are presented to help
+            supporters follow progress and understand the reach of our work.
+        </p>
+
+    </div>
+
+</div>
+
+</main>
+
+
+    <!-- ==============================
+         JAVASCRIPT
+    ============================== -->
+    <script src="client.js"></script>
+</body>
+</html>

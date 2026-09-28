@@ -1,0 +1,1779 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- =========================================================
+         STACKLY YOUTH WELFARE FOUNDATION
+         ADMIN DASHBOARD
+    ========================================================== -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stackly Youth Welfare Foundation | Admin Dashboard</title>
+
+    <!-- =========================================================
+         GOOGLE FONTS
+    ========================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- =========================================================
+         FONT AWESOME
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <!-- =========================================================
+         AOS ANIMATION
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    >
+
+    <!-- =========================================================
+         ADMIN CSS
+    ========================================================== -->
+
+    <link rel="stylesheet" href="admin.css">
+
+</head>
+
+
+<body>
+
+    <!-- =========================================================
+         MOBILE OVERLAY
+    ========================================================== -->
+
+    <div
+        class="stackly-youth-admin-overlay"
+        id="stacklyYouthAdminOverlay"
+    ></div>
+
+
+    <!-- =========================================================
+         ADMIN SIDEBAR
+    ========================================================== -->
+
+    <aside
+        class="stackly-youth-admin-sidebar"
+        id="stacklyYouthAdminSidebar"
+    >
+
+        <!-- =====================================================
+             SIDEBAR HEADER
+        ====================================================== -->
+
+        <div class="stackly-youth-admin-sidebar-header">
+
+            <!-- Logo -->
+            <a
+                href="admin.html"
+                class="stackly-youth-admin-brand"
+            >
+
+                <img
+                    src="Stackly-logo-Blue.webp"
+                    alt="Stackly Youth Welfare Foundation Logo"
+                >
+
+
+            </a>
+
+
+            <!-- Mobile Close -->
+            <button
+                type="button"
+                class="stackly-youth-admin-sidebar-close"
+                id="stacklyYouthAdminSidebarClose"
+                aria-label="Close navigation"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- =====================================================
+             SIDEBAR NAVIGATION
+        ====================================================== -->
+
+        <nav class="stackly-youth-admin-navigation">
+
+            <span class="stackly-youth-admin-nav-label">
+                MAIN MENU
+            </span>
+
+
+            <!-- Dashboard -->
+            <a
+                href="admin.html"
+                class="stackly-youth-admin-nav-link"
+            >
+
+                <span class="stackly-youth-admin-nav-icon">
+                    <i class="fa-solid fa-chart-pie"></i>
+                </span>
+
+                <span class="stackly-youth-admin-nav-text">
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <!-- Volunteers -->
+            <a
+                href="admin-volunteers.html"
+                class="stackly-youth-admin-nav-link"
+            >
+
+                <span class="stackly-youth-admin-nav-icon">
+                    <i class="fa-solid fa-users"></i>
+                </span>
+
+                <span class="stackly-youth-admin-nav-text">
+                    Volunteers
+                </span>
+
+            </a>
+
+
+            <!-- Donations -->
+            <a
+                href="admin-donations.html"
+                class="stackly-youth-admin-nav-link"
+            >
+
+                <span class="stackly-youth-admin-nav-icon">
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                </span>
+
+                <span class="stackly-youth-admin-nav-text">
+                    Donations
+                </span>
+
+            </a>
+
+
+            <!-- =================================================
+                 MANAGEMENT
+            ================================================== -->
+
+            <span class="stackly-youth-admin-nav-label">
+                MANAGEMENT
+            </span>
+
+            <!-- Events -->
+            <a
+                href="admin-events.html"
+                class="stackly-youth-admin-nav-link"
+            >
+
+                <span class="stackly-youth-admin-nav-icon">
+                    <i class="fa-solid fa-calendar-days"></i>
+                </span>
+
+                <span class="stackly-youth-admin-nav-text">
+                    Events
+                </span>
+
+            </a>
+
+
+            <!-- Reports -->
+            <a
+                href="admin-reports.html"
+                class="stackly-youth-admin-nav-link"
+            >
+
+                <span class="stackly-youth-admin-nav-icon">
+                    <i class="fa-solid fa-chart-column"></i>
+                </span>
+
+                <span class="stackly-youth-admin-nav-text">
+                    Reports
+                </span>
+
+            </a>
+
+
+            <!-- =================================================
+                 SYSTEM
+            ================================================== -->
+
+            <span class="stackly-youth-admin-nav-label">
+                SYSTEM
+            </span>
+
+
+            <!-- Messages -->
+            <a
+                href="admin-messages.html"
+                class="stackly-youth-admin-nav-link"
+            >
+
+                <span class="stackly-youth-admin-nav-icon">
+                    <i class="fa-regular fa-envelope"></i>
+                </span>
+
+                <span class="stackly-youth-admin-nav-text">
+                    Messages
+                </span>
+
+                <span class="stackly-youth-admin-nav-badge">
+                    8
+                </span>
+
+            </a>
+
+
+            <!-- Settings -->
+            <a
+                href="admin-settings.html"
+                class="stackly-youth-admin-nav-link active"
+            >
+
+                <span class="stackly-youth-admin-nav-icon">
+                    <i class="fa-solid fa-gear"></i>
+                </span>
+
+                <span class="stackly-youth-admin-nav-text">
+                    Settings
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- =====================================================
+             SIDEBAR FOOTER
+        ====================================================== -->
+
+        <div class="stackly-youth-admin-sidebar-footer">
+
+            <a
+                href="index.html"
+                class="stackly-youth-admin-logout"
+            >
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>
+                    Logout
+                </span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =========================================================
+         MAIN DASHBOARD AREA
+    ========================================================== -->
+
+    <main class="stackly-youth-admin-main">
+
+
+        <!-- =====================================================
+             TOP HEADER
+        ====================================================== -->
+
+        <header class="stackly-youth-admin-topbar">
+
+
+            <!-- Mobile Hamburger -->
+            <button
+                type="button"
+                class="stackly-youth-admin-menu-toggle"
+                id="stacklyYouthAdminMenuToggle"
+                aria-label="Open navigation"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <!-- Page Heading -->
+            <div
+                class="stackly-youth-admin-page-heading"
+                data-aos="fade-down"
+            >
+
+                <span>
+                    ADMINISTRATION
+                </span>
+
+                <h1>
+                    Admin Dashboard
+                </h1>
+
+            </div>
+
+
+            <!-- =================================================
+                 TOP RIGHT
+            ================================================== -->
+
+            <div class="stackly-youth-admin-top-actions">
+
+
+                <!-- Notification -->
+                <a href="404-admin.html"><button
+                    type="button"
+                    class="stackly-youth-admin-notification"
+                    aria-label="Notifications"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span>
+                        3
+                    </span>
+
+                </button></a>
+
+
+                <!-- Admin Email -->
+                <div class="stackly-youth-admin-profile">
+
+                    <div class="stackly-youth-admin-profile-avatar">
+
+                        <i class="fa-solid fa-user-shield"></i>
+
+                    </div>
+
+                    <div class="stackly-youth-admin-profile-info">
+
+                        <strong>
+                            Admin
+                        </strong>
+
+                        <span id="stacklyYouthAdminEmail">
+                            admin@stacklyyouth.org
+                        </span>
+
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down stackly-youth-admin-profile-arrow"></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+<!-- =========================================================
+     STACKLY YOUTH WELFARE FOUNDATION
+     ADMIN SETTINGS PAGE
+     SETTINGS CONTROL CENTER
+========================================================= -->
+
+<section
+    class="stackly-youth-admin-settings-content"
+    id="stacklyYouthAdminSettings"
+>
+
+    <!-- =====================================================
+         SETTINGS HERO
+    ====================================================== -->
+
+    <section
+        class="stackly-youth-admin-settings-hero"
+        data-aos="fade-up"
+    >
+
+        <div class="stackly-youth-admin-settings-hero-pattern"></div>
+
+        <div class="stackly-youth-admin-settings-hero-copy">
+
+            <span class="stackly-youth-admin-settings-eyebrow">
+                <i class="fa-solid fa-sliders"></i>
+                SYSTEM CONTROL CENTER
+            </span>
+
+            <h2>
+                Manage Your
+                <strong>Foundation Workspace.</strong>
+            </h2>
+
+            <p>
+                Configure your administrator profile, communication
+                preferences, security controls, and foundation settings
+                from one central workspace.
+            </p>
+
+        </div>
+
+
+        <div
+            class="stackly-youth-admin-settings-hero-status"
+            data-aos="zoom-in"
+            data-aos-delay="150"
+        >
+
+            <div class="stackly-youth-admin-settings-status-icon">
+                <i class="fa-solid fa-shield-heart"></i>
+            </div>
+
+            <div>
+                <span>WORKSPACE STATUS</span>
+
+                <strong>
+                    System Operational
+                </strong>
+
+                <small>
+                    Last synchronized 2 minutes ago
+                </small>
+            </div>
+
+            <span class="stackly-youth-admin-settings-online">
+                <i class="fa-solid fa-circle"></i>
+                Online
+            </span>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SETTINGS LAYOUT
+    ====================================================== -->
+
+    <div class="stackly-youth-admin-settings-layout">
+
+
+        <!-- =================================================
+             SETTINGS NAVIGATION
+        ================================================== -->
+
+        <aside
+            class="stackly-youth-admin-settings-navigation"
+            data-aos="fade-right"
+        >
+
+            <div class="stackly-youth-admin-settings-nav-heading">
+
+                <span>
+                    SETTINGS
+                </span>
+
+                <strong>
+                    Workspace Controls
+                </strong>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="stackly-youth-admin-settings-nav-item active"
+                data-settings-tab="profile"
+            >
+
+                <span class="stackly-youth-admin-settings-nav-icon">
+                    <i class="fa-solid fa-user"></i>
+                </span>
+
+                <span>
+                    Administrator
+                    <small>Profile & account</small>
+                </span>
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="stackly-youth-admin-settings-nav-item"
+                data-settings-tab="foundation"
+            >
+
+                <span class="stackly-youth-admin-settings-nav-icon green">
+                    <i class="fa-solid fa-building-columns"></i>
+                </span>
+
+                <span>
+                    Foundation
+                    <small>Organization details</small>
+                </span>
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="stackly-youth-admin-settings-nav-item"
+                data-settings-tab="notifications"
+            >
+
+                <span class="stackly-youth-admin-settings-nav-icon orange">
+                    <i class="fa-regular fa-bell"></i>
+                </span>
+
+                <span>
+                    Notifications
+                    <small>Alerts & updates</small>
+                </span>
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="stackly-youth-admin-settings-nav-item"
+                data-settings-tab="security"
+            >
+
+                <span class="stackly-youth-admin-settings-nav-icon blue">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </span>
+
+                <span>
+                    Security
+                    <small>Password & access</small>
+                </span>
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="stackly-youth-admin-settings-nav-item"
+                data-settings-tab="appearance"
+            >
+
+                <span class="stackly-youth-admin-settings-nav-icon purple">
+                    <i class="fa-solid fa-palette"></i>
+                </span>
+
+                <span>
+                    Appearance
+                    <small>Workspace display</small>
+                </span>
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </button>
+
+
+            <div class="stackly-youth-admin-settings-nav-footer">
+
+                <i class="fa-solid fa-circle-info"></i>
+
+                <div>
+                    <strong>Need assistance?</strong>
+                    <span>Contact the foundation support team.</span>
+                </div>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- =================================================
+             SETTINGS PANELS
+        ================================================== -->
+
+        <div class="stackly-youth-admin-settings-panels">
+
+
+
+            <!-- =================================================
+                 PROFILE SETTINGS
+            ================================================== -->
+
+            <section
+                class="stackly-youth-admin-settings-panel active"
+                data-settings-panel="profile"
+                data-aos="fade-up"
+            >
+
+                <div class="stackly-youth-admin-settings-panel-header">
+
+                    <div>
+
+                        <span>
+                            ACCOUNT SETTINGS
+                        </span>
+
+                        <h3>
+                            Administrator Profile
+                        </h3>
+
+                        <p>
+                            Manage your administrator information and
+                            account preferences.
+                        </p>
+
+                    </div>
+
+                    <div class="stackly-youth-admin-settings-panel-icon">
+                        <i class="fa-solid fa-user-shield"></i>
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-youth-admin-settings-profile-card">
+
+                    <div class="stackly-youth-admin-settings-large-avatar">
+                        <i class="fa-solid fa-user-shield"></i>
+                    </div>
+
+                    <div class="stackly-youth-admin-settings-profile-info">
+
+                        <span>
+                            ADMINISTRATOR
+                        </span>
+
+                        <h4 id="stacklyYouthAdminUserName">
+                            Foundation Admin
+                        </h4>
+
+                        <p id="stacklyYouthAdminUserEmail">
+                            admin@stacklyyouth.org
+                        </p>
+
+                        <small>
+                            Super Administrator
+                        </small>
+
+                    </div>
+
+                    <a href="404.html"><button
+                        type="button"
+                        class="stackly-youth-admin-settings-outline-btn"
+                    >
+                        <i class="fa-solid fa-camera"></i>
+                        Change Photo
+                    </button></a>
+
+                </div>
+
+
+                <div class="stackly-youth-admin-settings-form-grid">
+
+<div class="stackly-youth-admin-settings-field">
+
+    <label for="stacklyYouthAdminFullName">
+        Full Name
+    </label>
+
+    <div class="stackly-youth-admin-settings-input">
+        <i class="fa-regular fa-user"></i>
+
+        <input
+            type="text"
+            id="stacklyYouthAdminFullName"
+            value=""
+            placeholder="Enter your full name"
+        >
+    </div>
+
+</div>
+
+<div class="stackly-youth-admin-settings-field">
+
+    <label for="stacklyYouthAdminEmailSetting">
+        Email Address
+    </label>
+
+    <div class="stackly-youth-admin-settings-input">
+        <i class="fa-regular fa-envelope"></i>
+
+        <input
+            type="email"
+            id="stacklyYouthAdminEmailSetting"
+            value=""
+            placeholder="Enter your email address"
+        >
+    </div>
+
+</div>
+
+
+
+                    <div class="stackly-youth-admin-settings-field">
+
+                        <label for="stacklyYouthAdminPhone">
+                            Phone Number
+                        </label>
+
+                        <div class="stackly-youth-admin-settings-input">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                            <input
+                                type="tel"
+                                id="stacklyYouthAdminPhone"
+                                value="+1 (514) 312-5678"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stackly-youth-admin-settings-field">
+
+                        <label for="stacklyYouthAdminRole">
+                            Account Role
+                        </label>
+
+                        <div class="stackly-youth-admin-settings-input">
+
+                            <i class="fa-solid fa-user-tag"></i>
+
+                            <input
+                                type="text"
+                                id="stacklyYouthAdminRole"
+                                value="Super Administrator"
+                                readonly
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-youth-admin-settings-panel-footer">
+
+                    <span>
+                        <i class="fa-solid fa-circle-check"></i>
+                        Your profile is up to date
+                    </span>
+
+                    
+<button
+    type="button"
+    class="stackly-youth-admin-settings-save-btn"
+    id="stacklyYouthAdminProfileSave"
+>
+    <i class="fa-regular fa-floppy-disk"></i>
+    Save Changes
+</button>
+
+<p
+    id="stacklyYouthAdminProfileMessage"
+    aria-live="polite"
+></p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 FOUNDATION SETTINGS
+            ================================================== -->
+
+            <section
+                class="stackly-youth-admin-settings-panel"
+                data-settings-panel="foundation"
+            >
+
+                <div class="stackly-youth-admin-settings-panel-header">
+
+                    <div>
+
+                        <span>
+                            ORGANIZATION SETTINGS
+                        </span>
+
+                        <h3>
+                            Foundation Information
+                        </h3>
+
+                        <p>
+                            Keep your foundation's public organization
+                            information accurate and consistent.
+                        </p>
+
+                    </div>
+
+                    <div class="stackly-youth-admin-settings-panel-icon green">
+                        <i class="fa-solid fa-building-columns"></i>
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-youth-admin-settings-form-grid">
+
+                    <div class="stackly-youth-admin-settings-field full">
+
+                        <label for="stacklyYouthFoundationName">
+                            Foundation Name
+                        </label>
+
+                        <div class="stackly-youth-admin-settings-input">
+
+                            <i class="fa-solid fa-building"></i>
+
+                            <input
+                                type="text"
+                                id="stacklyYouthFoundationName"
+                                value="Stackly Youth Welfare Foundation"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stackly-youth-admin-settings-field">
+
+                        <label for="stacklyYouthFoundationEmail">
+                            Official Email
+                        </label>
+
+                        <div class="stackly-youth-admin-settings-input">
+
+                            <i class="fa-regular fa-envelope"></i>
+
+                            <input
+                                type="email"
+                                id="stacklyYouthFoundationEmail"
+                                value="hello@stacklyyouth.org"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stackly-youth-admin-settings-field">
+
+                        <label for="stacklyYouthFoundationPhone">
+                            Contact Number
+                        </label>
+
+                        <div class="stackly-youth-admin-settings-input">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                            <input
+                                type="tel"
+                                id="stacklyYouthFoundationPhone"
+                                value="+1 (514) 312-5678"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stackly-youth-admin-settings-field full">
+
+                        <label for="stacklyYouthFoundationAddress">
+                            Foundation Address
+                        </label>
+
+                        <div class="stackly-youth-admin-settings-input textarea">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            <textarea id="stacklyYouthFoundationAddress">24 Community Avenue, Chennai, Tamil Nadu, India</textarea>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-youth-admin-settings-toggle-list">
+
+                    <div class="stackly-youth-admin-settings-toggle-item">
+
+                        <div>
+
+                            <strong>
+                                Public Foundation Profile
+                            </strong>
+
+                            <span>
+                                Display foundation information across
+                                public-facing pages.
+                            </span>
+
+                        </div>
+
+                        <label class="stackly-youth-admin-switch">
+
+                            <input type="checkbox" checked>
+
+                            <span></span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="stackly-youth-admin-settings-toggle-item">
+
+                        <div>
+
+                            <strong>
+                                Impact Statistics
+                            </strong>
+
+                            <span>
+                                Show current impact metrics on the
+                                foundation dashboard.
+                            </span>
+
+                        </div>
+
+                        <label class="stackly-youth-admin-switch">
+
+                            <input type="checkbox" checked>
+
+                            <span></span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-youth-admin-settings-panel-footer">
+
+                    <span>
+                        <i class="fa-solid fa-circle-check"></i>
+                        Organization settings ready
+                    </span>
+
+                    <button
+                        type="button"
+                        class="stackly-youth-admin-settings-save-btn"
+                    >
+                        Save Changes
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 NOTIFICATION SETTINGS
+            ================================================== -->
+
+            <section
+                class="stackly-youth-admin-settings-panel"
+                data-settings-panel="notifications"
+            >
+
+                <div class="stackly-youth-admin-settings-panel-header">
+
+                    <div>
+
+                        <span>
+                            COMMUNICATION PREFERENCES
+                        </span>
+
+                        <h3>
+                            Notification Center
+                        </h3>
+
+                        <p>
+                            Decide which administrative alerts and
+                            communication updates you receive.
+                        </p>
+
+                    </div>
+
+                    <div class="stackly-youth-admin-settings-panel-icon orange">
+                        <i class="fa-regular fa-bell"></i>
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-youth-admin-settings-notification-list">
+
+                    <div class="stackly-youth-admin-settings-notification-item">
+
+                        <div class="stackly-youth-admin-settings-notification-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                New Messages
+                            </strong>
+
+                            <span>
+                                Receive an alert when a new community
+                                message arrives.
+                            </span>
+
+                        </div>
+
+                        <label class="stackly-youth-admin-switch">
+
+                            <input type="checkbox" checked>
+
+                            <span></span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="stackly-youth-admin-settings-notification-item">
+
+                        <div class="stackly-youth-admin-settings-notification-icon orange">
+                            <i class="fa-solid fa-hand-holding-dollar"></i>
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Donation Updates
+                            </strong>
+
+                            <span>
+                                Get notified about new donations and
+                                contribution activity.
+                            </span>
+
+                        </div>
+
+                        <label class="stackly-youth-admin-switch">
+
+                            <input type="checkbox" checked>
+
+                            <span></span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="stackly-youth-admin-settings-notification-item">
+
+                        <div class="stackly-youth-admin-settings-notification-icon green">
+                            <i class="fa-solid fa-user-plus"></i>
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Volunteer Registrations
+                            </strong>
+
+                            <span>
+                                Receive alerts for new volunteer
+                                applications.
+                            </span>
+
+                        </div>
+
+                        <label class="stackly-youth-admin-switch">
+
+                            <input type="checkbox" checked>
+
+                            <span></span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="stackly-youth-admin-settings-notification-item">
+
+                        <div class="stackly-youth-admin-settings-notification-icon blue">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Event Reminders
+                            </strong>
+
+                            <span>
+                                Get reminders about upcoming foundation
+                                events.
+                            </span>
+
+                        </div>
+
+                        <label class="stackly-youth-admin-switch">
+
+                            <input type="checkbox">
+
+                            <span></span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-youth-admin-settings-panel-footer">
+
+                    <span>
+                        <i class="fa-solid fa-bell"></i>
+                        Notification preferences saved automatically
+                    </span>
+
+                    <button
+                        type="button"
+                        class="stackly-youth-admin-settings-save-btn"
+                    >
+                        Save Preferences
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 SECURITY SETTINGS
+            ================================================== -->
+
+            <section
+                class="stackly-youth-admin-settings-panel"
+                data-settings-panel="security"
+            >
+
+                <div class="stackly-youth-admin-settings-panel-header">
+
+                    <div>
+
+                        <span>
+                            ACCOUNT PROTECTION
+                        </span>
+
+                        <h3>
+                            Security & Access
+                        </h3>
+
+                        <p>
+                            Review account protection settings and
+                            administrator access controls.
+                        </p>
+
+                    </div>
+
+                    <div class="stackly-youth-admin-settings-panel-icon blue">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-youth-admin-settings-security-banner">
+
+                    <div class="stackly-youth-admin-settings-security-icon">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Your account is protected
+                        </strong>
+
+                        <span>
+                            Security monitoring is active for this
+                            administrator workspace.
+                        </span>
+
+                    </div>
+
+                    <span class="stackly-youth-admin-security-badge">
+                        Protected
+                    </span>
+
+                </div>
+
+
+                <div class="stackly-youth-admin-settings-security-grid">
+
+                    <div class="stackly-youth-admin-settings-security-card">
+
+                        <div class="security-card-icon green">
+                            <i class="fa-solid fa-key"></i>
+                        </div>
+
+                        <div>
+                            <strong>Password</strong>
+                            <span>Last updated 18 days ago</span>
+                        </div>
+
+                        <button type="button">
+                            Update
+                        </button>
+
+                    </div>
+
+
+                    <div class="stackly-youth-admin-settings-security-card">
+
+                        <div class="security-card-icon blue">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                        </div>
+
+                        <div>
+                            <strong>Two-Step Verification</strong>
+                            <span>Additional login protection</span>
+                        </div>
+
+                        <label class="stackly-youth-admin-switch">
+
+                            <input type="checkbox" checked>
+
+                            <span></span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="stackly-youth-admin-settings-security-card">
+
+                        <div class="security-card-icon orange">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                        </div>
+
+                        <div>
+                            <strong>Login Activity</strong>
+                            <span>4 active sessions</span>
+                        </div>
+
+                        <button type="button">
+                            Review
+                        </button>
+
+                    </div>
+
+
+                    <div class="stackly-youth-admin-settings-security-card">
+
+                        <div class="security-card-icon purple">
+                            <i class="fa-solid fa-user-lock"></i>
+                        </div>
+
+                        <div>
+                            <strong>Admin Access</strong>
+                            <span>Full workspace permissions</span>
+                        </div>
+
+                        <span class="stackly-youth-admin-access-status">
+                            Active
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 APPEARANCE SETTINGS
+            ================================================== -->
+
+            <section
+                class="stackly-youth-admin-settings-panel"
+                data-settings-panel="appearance"
+            >
+
+                <div class="stackly-youth-admin-settings-panel-header">
+
+                    <div>
+
+                        <span>
+                            WORKSPACE EXPERIENCE
+                        </span>
+
+                        <h3>
+                            Appearance & Display
+                        </h3>
+
+                        <p>
+                            Customize the way your administration
+                            workspace is displayed.
+                        </p>
+
+                    </div>
+
+                    <div class="stackly-youth-admin-settings-panel-icon purple">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-youth-admin-settings-theme-heading">
+
+                    <strong>
+                        Workspace Theme
+                    </strong>
+
+                    <span>
+                        Choose your preferred administration interface.
+                    </span>
+
+                </div>
+
+
+                <div class="stackly-youth-admin-settings-theme-grid">
+
+                    <button
+                        type="button"
+                        class="stackly-youth-admin-settings-theme-card active"
+                    >
+
+                        <div class="theme-preview light">
+
+                            <div></div>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+                        <strong>
+                            Light
+                        </strong>
+
+                        <small>
+                            Clean & bright
+                        </small>
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="stackly-youth-admin-settings-theme-card"
+                    >
+
+                        <div class="theme-preview soft">
+
+                            <div></div>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+                        <strong>
+                            Soft Green
+                        </strong>
+
+                        <small>
+                            Foundation inspired
+                        </small>
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="stackly-youth-admin-settings-theme-card"
+                    >
+
+                        <div class="theme-preview contrast">
+
+                            <div></div>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+                        <strong>
+                            High Contrast
+                        </strong>
+
+                        <small>
+                            Enhanced visibility
+                        </small>
+
+                    </button>
+
+                </div>
+
+
+                <div class="stackly-youth-admin-settings-display-list">
+
+                    <div>
+
+                        <div>
+                            <strong>Compact Sidebar</strong>
+                            <span>Use a smaller navigation sidebar.</span>
+                        </div>
+
+                        <label class="stackly-youth-admin-switch">
+
+                            <input type="checkbox">
+
+                            <span></span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div>
+
+                        <div>
+                            <strong>Motion Effects</strong>
+                            <span>Enable workspace transition animations.</span>
+                        </div>
+
+                        <label class="stackly-youth-admin-switch">
+
+                            <input type="checkbox" checked>
+
+                            <span></span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         SYSTEM HEALTH
+    ====================================================== -->
+
+    <section
+        class="stackly-youth-admin-settings-system"
+        data-aos="fade-up"
+    >
+
+        <div class="stackly-youth-admin-settings-system-header">
+
+            <div>
+
+                <span>
+                    SYSTEM MONITOR
+                </span>
+
+                <h3>
+                    Workspace Health
+                </h3>
+
+            </div>
+
+            <span class="stackly-youth-admin-settings-system-live">
+                <i class="fa-solid fa-circle"></i>
+                All Systems Operational
+            </span>
+
+        </div>
+
+
+        <div class="stackly-youth-admin-settings-health-grid">
+
+            <div class="stackly-youth-admin-settings-health-card">
+
+                <div class="health-card-top">
+                    <span>SERVER STATUS</span>
+
+                    <i class="fa-solid fa-server"></i>
+                </div>
+
+                <strong>
+                    99.98%
+                </strong>
+
+                <div class="health-progress">
+                    <span style="width:99.98%;"></span>
+                </div>
+
+                <small>
+                    Excellent uptime
+                </small>
+
+            </div>
+
+
+            <div class="stackly-youth-admin-settings-health-card">
+
+                <div class="health-card-top">
+                    <span>DATABASE</span>
+
+                    <i class="fa-solid fa-database"></i>
+                </div>
+
+                <strong>
+                    Healthy
+                </strong>
+
+                <div class="health-progress">
+                    <span style="width:96%;"></span>
+                </div>
+
+                <small>
+                    Data synchronization active
+                </small>
+
+            </div>
+
+
+            <div class="stackly-youth-admin-settings-health-card">
+
+                <div class="health-card-top">
+                    <span>SECURITY</span>
+
+                    <i class="fa-solid fa-shield"></i>
+                </div>
+
+                <strong>
+                    Protected
+                </strong>
+
+                <div class="health-progress">
+                    <span style="width:94%;"></span>
+                </div>
+
+                <small>
+                    Security monitoring enabled
+                </small>
+
+            </div>
+
+
+            <div class="stackly-youth-admin-settings-health-card">
+
+                <div class="health-card-top">
+                    <span>BACKUPS</span>
+
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                </div>
+
+                <strong>
+                    Up to Date
+                </strong>
+
+                <div class="health-progress">
+                    <span style="width:100%;"></span>
+                </div>
+
+                <small>
+                    Last backup completed today
+                </small>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         QUICK SETTINGS
+    ====================================================== -->
+
+    <section
+        class="stackly-youth-admin-settings-quick"
+        data-aos="fade-up"
+    >
+
+        <div class="stackly-youth-admin-settings-quick-copy">
+
+            <span>
+                QUICK CONTROLS
+            </span>
+
+            <h3>
+                Frequently Used Settings
+            </h3>
+
+            <p>
+                Access commonly used administration controls without
+                navigating through multiple sections.
+            </p>
+
+        </div>
+
+
+        <div class="stackly-youth-admin-settings-quick-grid">
+
+            <a
+                href="404-admin.html"
+                class="stackly-youth-admin-settings-quick-card"
+            >
+
+                <span class="quick-icon green">
+                    <i class="fa-solid fa-users-gear"></i>
+                </span>
+
+                <div>
+                    <strong>
+                        User Permissions
+                    </strong>
+
+                    <small>
+                        Manage administrator access
+                    </small>
+                </div>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <a
+                href="404-admin.html"
+                class="stackly-youth-admin-settings-quick-card"
+            >
+
+                <span class="quick-icon orange">
+                    <i class="fa-solid fa-file-shield"></i>
+                </span>
+
+                <div>
+                    <strong>
+                        Audit Logs
+                    </strong>
+
+                    <small>
+                        Review system activity
+                    </small>
+                </div>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <a
+                href="404-admin.html"
+                class="stackly-youth-admin-settings-quick-card"
+            >
+
+                <span class="quick-icon blue">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                </span>
+
+                <div>
+                    <strong>
+                        Backup Center
+                    </strong>
+
+                    <small>
+                        Manage workspace backups
+                    </small>
+                </div>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <a
+                href="404-admin.html"
+                class="stackly-youth-admin-settings-quick-card"
+            >
+
+                <span class="quick-icon purple">
+                    <i class="fa-solid fa-circle-question"></i>
+                </span>
+
+                <div>
+                    <strong>
+                        Help Center
+                    </strong>
+
+                    <small>
+                        Get administration support
+                    </small>
+                </div>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </section>
+
+</section>
+
+
+    </main>
+
+
+    <!-- =========================================================
+         AOS JS
+    ========================================================== -->
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js">
+    </script>
+
+
+    <!-- =========================================================
+         ADMIN JS
+    ========================================================== -->
+
+    <script src="admin.js"></script>
+
+</body>
+
+</html>

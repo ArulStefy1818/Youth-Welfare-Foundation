@@ -1,0 +1,798 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#126b45">
+    <title>Stackly Youth | Client Dashboard</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="client.css">
+
+</head>
+
+<body>
+
+    <!-- ==============================
+         SIDEBAR
+    ============================== -->
+
+    <aside class="stackly-youth-client-sidebar" id="stacklyYouthClientSidebar">
+
+        <div class="stackly-youth-client-brand">
+            <a href="client.html" aria-label="Stackly Youth Foundation Home">
+                <img src="Stackly-logo-Blue.webp"
+                     alt="Stackly Youth Foundation Logo">
+                 
+            </a>
+
+            <button class="stackly-youth-client-menu-close"
+                    id="stacklyYouthClientMenuClose"
+                    aria-label="Close navigation menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <p class="stackly-youth-client-sidebar-label">Main Menu</p>
+
+        <nav class="stackly-youth-client-nav"
+             aria-label="Client dashboard navigation">
+
+            <a href="client.html"  aria-current="page">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="client-programs.html">
+                <i class="fa-solid fa-hands-holding-child"></i>
+                <span>Our Programs</span>
+            </a>
+
+            <a href="client-donations.html">
+                <i class="fa-solid fa-heart"></i>
+                <span>My Donations</span>
+            </a>
+
+            <a href="client-impact.html">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Impact Reports</span>
+            </a>
+
+            <a href="client-events.html">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>Events</span>
+            </a>
+
+            <a href="client-messages.html">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Messages</span>
+            </a>
+
+        </nav>
+
+        <p class="stackly-youth-client-sidebar-label">Account</p>
+
+        <nav class="stackly-youth-client-nav"
+             aria-label="Account navigation">
+
+            <a href="client-profile.html" class="active">
+                <i class="fa-solid fa-user"></i>
+                <span>My Profile</span>
+            </a>
+
+            
+
+        </nav>
+
+        <div class="stackly-youth-client-sidebar-bottom">
+            <a href="index.html" id="stacklyYouthClientLogout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Logout</span>
+            </a>
+        </div>
+
+    </aside>
+
+    <!-- Mobile overlay -->
+    <div class="stackly-youth-client-overlay"
+         id="stacklyYouthClientOverlay"></div>
+
+
+    <!-- ==============================
+         MAIN
+    ============================== -->
+
+    <main class="stackly-youth-client-main">
+
+        <!-- Topbar -->
+        <header class="stackly-youth-client-topbar">
+
+            <div class="stackly-youth-client-topbar-left">
+
+                <button class="stackly-youth-client-menu-toggle"
+                        id="stacklyYouthClientMenuToggle"
+                        aria-label="Open navigation menu"
+                        aria-controls="stacklyYouthClientSidebar"
+                        aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <h2 class="stackly-youth-client-page-title">
+                    Client Dashboard
+                </h2>
+
+            </div>
+
+            <div class="stackly-youth-client-topbar-right">
+
+                <a href="404-client.html">
+                    <button class="stackly-youth-client-notification"
+                            type="button"
+                            aria-label="Notifications">
+                        <i class="fa-regular fa-bell"></i>
+                    </button>
+                </a>
+
+                <div class="stackly-youth-client-user">
+
+                    <div class="stackly-youth-client-avatar"
+                         id="stacklyYouthClientAvatar">
+                        U
+                    </div>
+
+                    <div class="stackly-youth-client-user-info">
+                        <strong id="stacklyYouthClientUserName">
+                            User
+                        </strong>
+
+                        <span id="stacklyYouthClientUserEmail">
+                            client@stacklyyouth.org
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- =========================================================
+     STACKLY YOUTH WELFARE FOUNDATION
+     CLIENT DASHBOARD — MY PROFILE PAGE
+========================================================= -->
+
+<div class="stackly-youth-client-profile-page">
+
+
+    <!-- =====================================================
+         PROFILE HERO
+    ====================================================== -->
+
+    <section class="stackly-youth-client-profile-hero" 
+         data-aos="fade-up"> 
+
+    <div class="stackly-youth-client-profile-cover"></div> 
+
+    <div class="stackly-youth-client-profile-hero-content"> 
+
+        <div class="stackly-youth-client-profile-avatar-large" 
+             id="stacklyYouthProfileAvatar">
+            U
+        </div> 
+
+        <div class="stackly-youth-client-profile-hero-info"> 
+
+            <span class="stackly-youth-client-profile-status"> 
+                <i class="fa-solid fa-circle"></i> 
+                Active Member 
+            </span> 
+
+            <h1 id="stacklyYouthProfileName">
+                User
+            </h1> 
+
+            <p id="stacklyYouthProfileEmail">
+                client@stacklyyouth.org
+            </p> 
+
+            <small> 
+                <i class="fa-solid fa-calendar-check"></i> 
+                Member since 2026 
+            </small> 
+
+        </div> 
+
+        <a href="404-client.html" 
+           class="stackly-youth-client-profile-edit-btn"> 
+
+            <i class="fa-solid fa-pen"></i> 
+            Edit Profile 
+
+        </a> 
+
+    </div> 
+
+</section>
+
+
+    <!-- =====================================================
+         PROFILE CONTENT
+    ====================================================== -->
+
+    <section class="stackly-youth-client-profile-content">
+
+
+        <!-- =================================================
+             PERSONAL INFORMATION
+        ================================================== -->
+
+        <div class="stackly-youth-client-profile-main-card"
+             data-aos="fade-right">
+
+            <div class="stackly-youth-client-profile-card-heading">
+
+                <div>
+
+                    <span>
+                        PERSONAL DETAILS
+                    </span>
+
+                    <h2>
+                        About You
+                    </h2>
+
+                </div>
+
+                <div class="stackly-youth-client-profile-heading-icon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+            </div>
+
+
+            <div class="stackly-youth-client-profile-details">
+
+                <div class="stackly-youth-client-profile-detail">
+
+                    <div class="stackly-youth-client-profile-detail-icon">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <div>
+                        <span>Full Name</span>
+                        <strong id="stacklyYouthProfileDetailName">
+                            User
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-youth-client-profile-detail">
+
+                    <div class="stackly-youth-client-profile-detail-icon orange">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+
+                    <div>
+                        <span>Email Address</span>
+                        <strong id="stacklyYouthProfileDetailEmail">
+                            client@stacklyyouth.org
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-youth-client-profile-detail">
+
+                    <div class="stackly-youth-client-profile-detail-icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+
+                    <div>
+                        <span>Phone Number</span>
+                        <strong>
+                            +91 98765 43210
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-youth-client-profile-detail">
+
+                    <div class="stackly-youth-client-profile-detail-icon orange">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+
+                    <div>
+                        <span>Location</span>
+                        <strong>
+                            Chennai, India
+                        </strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             ACCOUNT SUMMARY
+        ================================================== -->
+
+        <aside class="stackly-youth-client-profile-side"
+               data-aos="fade-left">
+
+
+            <!-- Account Status -->
+
+            <div class="stackly-youth-client-profile-status-card">
+
+                <div class="stackly-youth-client-profile-status-top">
+
+                    <span>
+                        ACCOUNT STATUS
+                    </span>
+
+                    <i class="fa-solid fa-shield-heart"></i>
+
+                </div>
+
+                <div class="stackly-youth-client-profile-status-main">
+
+                    <div class="stackly-youth-client-profile-status-check">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Account Verified
+                        </strong>
+
+                        <small>
+                            Your account is active and secure.
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Membership -->
+
+            <div class="stackly-youth-client-profile-membership-card">
+
+                <div class="stackly-youth-client-profile-membership-icon">
+                    <i class="fa-solid fa-hands-holding-circle"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        MEMBERSHIP
+                    </span>
+
+                    <strong>
+                        Foundation Member
+                    </strong>
+
+                    <small>
+                        Active supporter account
+                    </small>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+    </section>
+
+
+    <!-- =====================================================
+         PARTICIPATION SNAPSHOT
+    ====================================================== -->
+
+    <section class="stackly-youth-client-profile-snapshot">
+
+        <div class="stackly-youth-client-profile-section-heading"
+             data-aos="fade-up">
+
+            <span>
+                YOUR ACTIVITY
+            </span>
+
+            <h2>
+                Participation Snapshot
+            </h2>
+
+        </div>
+
+
+        <div class="stackly-youth-client-profile-snapshot-grid">
+
+            <!-- Programs -->
+
+            <div class="stackly-youth-client-profile-snapshot-card"
+                 data-aos="fade-up">
+
+                <div class="stackly-youth-client-profile-snapshot-icon">
+                    <i class="fa-solid fa-hands-holding-child"></i>
+                </div>
+
+                <strong>
+                    05
+                </strong>
+
+                <span>
+                    Programs Joined
+                </span>
+
+            </div>
+
+
+            <!-- Donations -->
+
+            <div class="stackly-youth-client-profile-snapshot-card orange"
+                 data-aos="fade-up"
+                 data-aos-delay="100">
+
+                <div class="stackly-youth-client-profile-snapshot-icon">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <strong>
+                    ₹24,500
+                </strong>
+
+                <span>
+                    Total Contributions
+                </span>
+
+            </div>
+
+
+            <!-- Events -->
+
+            <div class="stackly-youth-client-profile-snapshot-card"
+                 data-aos="fade-up"
+                 data-aos-delay="180">
+
+                <div class="stackly-youth-client-profile-snapshot-icon">
+                    <i class="fa-solid fa-calendar-check"></i>
+                </div>
+
+                <strong>
+                    08
+                </strong>
+
+                <span>
+                    Events Attended
+                </span>
+
+            </div>
+
+
+            <!-- Messages -->
+
+            <div class="stackly-youth-client-profile-snapshot-card orange"
+                 data-aos="fade-up"
+                 data-aos-delay="260">
+
+                <div class="stackly-youth-client-profile-snapshot-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+
+                <strong>
+                    24
+                </strong>
+
+                <span>
+                    Messages
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ACCOUNT PREFERENCES
+    ====================================================== -->
+
+    <section class="stackly-youth-client-profile-preferences">
+
+        <div class="stackly-youth-client-profile-preferences-content"
+             data-aos="fade-right">
+
+            <span>
+                ACCOUNT PREFERENCES
+            </span>
+
+            <h2>
+                Manage Your
+                <span>Preferences.</span>
+            </h2>
+
+            <p>
+                Keep your account information and communication preferences
+                up to date so you can stay connected with the foundation.
+            </p>
+
+        </div>
+
+
+        <div class="stackly-youth-client-profile-preferences-list"
+             data-aos="fade-left">
+
+
+            <div class="stackly-youth-client-profile-preference-item">
+
+                <div class="stackly-youth-client-profile-preference-icon">
+                    <i class="fa-solid fa-bell"></i>
+                </div>
+
+                <div class="stackly-youth-client-profile-preference-text">
+
+                    <strong>
+                        Notifications
+                    </strong>
+
+                    <span>
+                        Receive important updates and reminders
+                    </span>
+
+                </div>
+
+                <span class="stackly-youth-client-profile-toggle active">
+                    <span></span>
+                </span>
+
+            </div>
+
+
+            <div class="stackly-youth-client-profile-preference-item">
+
+                <div class="stackly-youth-client-profile-preference-icon orange">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+
+                <div class="stackly-youth-client-profile-preference-text">
+
+                    <strong>
+                        Email Updates
+                    </strong>
+
+                    <span>
+                        Receive program and event information
+                    </span>
+
+                </div>
+
+                <span class="stackly-youth-client-profile-toggle active">
+                    <span></span>
+                </span>
+
+            </div>
+
+
+            <div class="stackly-youth-client-profile-preference-item">
+
+                <div class="stackly-youth-client-profile-preference-icon">
+                    <i class="fa-solid fa-calendar"></i>
+                </div>
+
+                <div class="stackly-youth-client-profile-preference-text">
+
+                    <strong>
+                        Event Reminders
+                    </strong>
+
+                    <span>
+                        Get reminders before registered events
+                    </span>
+
+                </div>
+
+                <span class="stackly-youth-client-profile-toggle active">
+                    <span></span>
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         QUICK ACTIONS
+    ====================================================== -->
+
+    <section class="stackly-youth-client-profile-actions">
+
+        <div class="stackly-youth-client-profile-section-heading"
+             data-aos="fade-up">
+
+            <span>
+                QUICK ACTIONS
+            </span>
+
+            <h2>
+                Manage Your Account
+            </h2>
+
+        </div>
+
+
+        <div class="stackly-youth-client-profile-action-grid">
+
+
+            <a href="404-client.html"
+               class="stackly-youth-client-profile-action-card"
+               data-aos="fade-up">
+
+                <div class="stackly-youth-client-profile-action-icon">
+                    <i class="fa-solid fa-key"></i>
+                </div>
+
+                <div>
+                    <strong>
+                        Change Password
+                    </strong>
+
+                    <span>
+                        Update your account password
+                    </span>
+                </div>
+
+                <i class="fa-solid fa-arrow-right action-arrow"></i>
+
+            </a>
+
+
+            <a href="404-client.html"
+               class="stackly-youth-client-profile-action-card orange"
+               data-aos="fade-up"
+               data-aos-delay="100">
+
+                <div class="stackly-youth-client-profile-action-icon">
+                    <i class="fa-solid fa-user-pen"></i>
+                </div>
+
+                <div>
+                    <strong>
+                        Edit Information
+                    </strong>
+
+                    <span>
+                        Update your personal details
+                    </span>
+                </div>
+
+                <i class="fa-solid fa-arrow-right action-arrow"></i>
+
+            </a>
+
+
+            <a href="404-client.html"
+               class="stackly-youth-client-profile-action-card"
+               data-aos="fade-up"
+               data-aos-delay="180">
+
+                <div class="stackly-youth-client-profile-action-icon">
+                    <i class="fa-solid fa-headset"></i>
+                </div>
+
+                <div>
+                    <strong>
+                        Contact Support
+                    </strong>
+
+                    <span>
+                        Get help from the foundation team
+                    </span>
+                </div>
+
+                <i class="fa-solid fa-arrow-right action-arrow"></i>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PROFILE CTA
+    ====================================================== -->
+
+    <section class="stackly-youth-client-profile-cta"
+             data-aos="zoom-in">
+
+        <div class="stackly-youth-client-profile-cta-content">
+
+            <span>
+                <i class="fa-solid fa-user-check"></i>
+                YOUR ACCOUNT
+            </span>
+
+            <h2>
+                Keep Your Profile
+                <span>Up to Date.</span>
+            </h2>
+
+            <p>
+                Accurate account information helps us keep you informed
+                about programs, events, opportunities, and important updates.
+            </p>
+
+            <div class="stackly-youth-client-profile-cta-actions">
+
+                <a href="404-client.html"
+                   class="stackly-youth-client-profile-cta-primary">
+
+                    Edit Profile
+                    <i class="fa-solid fa-pen"></i>
+
+                </a>
+
+                <a href="404-client.html"
+                   class="stackly-youth-client-profile-cta-secondary">
+
+                    Contact Support
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PROFILE NOTE
+    ====================================================== -->
+
+    <div class="stackly-youth-client-profile-note"
+         data-aos="fade-up">
+
+        <i class="fa-solid fa-shield-heart"></i>
+
+        <p>
+            Your profile information is used to keep your client dashboard
+            and foundation communications up to date.
+        </p>
+
+    </div>
+
+</div>
+
+</main>
+
+
+    <!-- ==============================
+         JAVASCRIPT
+    ============================== -->
+    <script src="client.js"></script>
+</body>
+</html>

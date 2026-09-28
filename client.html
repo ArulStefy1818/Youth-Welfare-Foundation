@@ -1,0 +1,453 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#126b45">
+    <title>Stackly Youth | Client Dashboard</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="client.css">
+
+</head>
+
+<body>
+
+    <!-- ==============================
+         SIDEBAR
+    ============================== -->
+
+    <aside class="stackly-youth-client-sidebar" id="stacklyYouthClientSidebar">
+
+        <div class="stackly-youth-client-brand">
+            <a href="client.html" aria-label="Stackly Youth Foundation Home">
+                <img src="Stackly-logo-Blue.webp"
+                     alt="Stackly Youth Foundation Logo">
+                 
+            </a>
+
+            <button class="stackly-youth-client-menu-close"
+                    id="stacklyYouthClientMenuClose"
+                    aria-label="Close navigation menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <p class="stackly-youth-client-sidebar-label">Main Menu</p>
+
+        <nav class="stackly-youth-client-nav"
+             aria-label="Client dashboard navigation">
+
+            <a href="client.html" class="active" aria-current="page">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="client-programs.html">
+                <i class="fa-solid fa-hands-holding-child"></i>
+                <span>Our Programs</span>
+            </a>
+
+            <a href="client-donations.html">
+                <i class="fa-solid fa-heart"></i>
+                <span>My Donations</span>
+            </a>
+
+            <a href="client-impact.html">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Impact Reports</span>
+            </a>
+
+            <a href="client-events.html">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>Events</span>
+            </a>
+
+            <a href="client-messages.html">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Messages</span>
+            </a>
+
+        </nav>
+
+        <p class="stackly-youth-client-sidebar-label">Account</p>
+
+        <nav class="stackly-youth-client-nav"
+             aria-label="Account navigation">
+
+            <a href="client-profile.html">
+                <i class="fa-solid fa-user"></i>
+                <span>My Profile</span>
+            </a>
+
+            
+
+        </nav>
+
+        <div class="stackly-youth-client-sidebar-bottom">
+            <a href="index.html" id="stacklyYouthClientLogout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Logout</span>
+            </a>
+        </div>
+
+    </aside>
+
+    <!-- Mobile overlay -->
+    <div class="stackly-youth-client-overlay"
+         id="stacklyYouthClientOverlay"></div>
+
+
+    <!-- ==============================
+         MAIN
+    ============================== -->
+
+    <main class="stackly-youth-client-main">
+
+        <!-- Topbar -->
+        <header class="stackly-youth-client-topbar">
+
+            <div class="stackly-youth-client-topbar-left">
+
+                <button class="stackly-youth-client-menu-toggle"
+                        id="stacklyYouthClientMenuToggle"
+                        aria-label="Open navigation menu"
+                        aria-controls="stacklyYouthClientSidebar"
+                        aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <h2 class="stackly-youth-client-page-title">
+                    Client Dashboard
+                </h2>
+
+            </div>
+
+            <div class="stackly-youth-client-topbar-right">
+
+                <a href="404-client.html">
+                    <button class="stackly-youth-client-notification"
+                            type="button"
+                            aria-label="Notifications">
+                        <i class="fa-regular fa-bell"></i>
+                    </button>
+                </a>
+
+                <div class="stackly-youth-client-user">
+
+                    <div class="stackly-youth-client-avatar"
+                         id="stacklyYouthClientAvatar">
+                        U
+                    </div>
+
+                    <div class="stackly-youth-client-user-info">
+                        <strong id="stacklyYouthClientUserName">
+                            User
+                        </strong>
+
+                        <span id="stacklyYouthClientUserEmail">
+                            client@stacklyyouth.org
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- Dashboard Content -->
+        <div class="stackly-youth-client-content">
+
+            <!-- Welcome -->
+            <section class="stackly-youth-client-welcome">
+
+                <div>
+                    <h1>
+                        Welcome back,
+                        <span id="stacklyYouthClientWelcomeName">User</span>!
+                    </h1>
+
+                    <p>
+                        Stay connected with your contributions and
+                        explore the positive impact of our community.
+                    </p>
+                </div>
+
+                <div class="stackly-youth-client-date">
+                    <i class="fa-regular fa-calendar"></i>
+                    <span id="stacklyYouthClientCurrentDate">
+                        Today
+                    </span>
+                </div>
+
+            </section>
+
+
+            <!-- Summary Cards -->
+            <section class="stackly-youth-client-stats">
+
+                <article class="stackly-youth-client-stat-card">
+                    <div class="stackly-youth-client-stat-top">
+                        <div class="stackly-youth-client-stat-icon">
+                            <i class="fa-solid fa-hand-holding-heart"></i>
+                        </div>
+                        <span class="stackly-youth-client-stat-trend">
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                            Active
+                        </span>
+                    </div>
+
+                    <h2>₹25,000</h2>
+                    <p>Total Contributions</p>
+                </article>
+
+                <article class="stackly-youth-client-stat-card">
+                    <div class="stackly-youth-client-stat-top">
+                        <div class="stackly-youth-client-stat-icon">
+                            <i class="fa-solid fa-children"></i>
+                        </div>
+                        <span class="stackly-youth-client-stat-trend">
+                            Ongoing
+                        </span>
+                    </div>
+
+                    <h2>04</h2>
+                    <p>Supported Programs</p>
+                </article>
+
+                <article class="stackly-youth-client-stat-card">
+                    <div class="stackly-youth-client-stat-top">
+                        <div class="stackly-youth-client-stat-icon">
+                            <i class="fa-solid fa-seedling"></i>
+                        </div>
+                        <span class="stackly-youth-client-stat-trend">
+                            Community
+                        </span>
+                    </div>
+
+                    <h2>128</h2>
+                    <p>People Reached</p>
+                </article>
+
+                <article class="stackly-youth-client-stat-card">
+                    <div class="stackly-youth-client-stat-top">
+                        <div class="stackly-youth-client-stat-icon">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+                        <span class="stackly-youth-client-stat-trend">
+                            Upcoming
+                        </span>
+                    </div>
+
+                    <h2>03</h2>
+                    <p>Registered Events</p>
+                </article>
+
+            </section>
+
+
+            <!-- Impact and Activity -->
+            <section class="stackly-youth-client-dashboard-grid">
+
+                <!-- Program Impact -->
+                <article class="stackly-youth-client-panel">
+
+                    <div class="stackly-youth-client-panel-header">
+                        <h3>Program Contributions</h3>
+                        <a href="404-client.html"
+                           class="stackly-youth-client-view-all">
+                            View Reports
+                        </a>
+                    </div>
+
+                    <div class="stackly-youth-client-impact">
+
+                        <div class="stackly-youth-client-impact-item">
+                            <div class="stackly-youth-client-impact-info">
+                                <strong>Education for All</strong>
+                                <span>78%</span>
+                            </div>
+                            <div class="stackly-youth-client-progress">
+                                <span style="--progress:78%"></span>
+                            </div>
+                        </div>
+
+                        <div class="stackly-youth-client-impact-item">
+                            <div class="stackly-youth-client-impact-info">
+                                <strong>Health & Nutrition</strong>
+                                <span>62%</span>
+                            </div>
+                            <div class="stackly-youth-client-progress">
+                                <span style="--progress:62%"></span>
+                            </div>
+                        </div>
+
+                        <div class="stackly-youth-client-impact-item">
+                            <div class="stackly-youth-client-impact-info">
+                                <strong>Youth Empowerment</strong>
+                                <span>85%</span>
+                            </div>
+                            <div class="stackly-youth-client-progress">
+                                <span style="--progress:85%"></span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Recent Activity -->
+                <article class="stackly-youth-client-panel">
+
+                    <div class="stackly-youth-client-panel-header">
+                        <h3>Recent Activity</h3>
+                        <a href="404-client.html"
+                           class="stackly-youth-client-view-all">
+                            View All
+                        </a>
+                    </div>
+
+                    <div class="stackly-youth-client-activity-list">
+
+                        <div class="stackly-youth-client-activity">
+                            <div class="stackly-youth-client-activity-icon">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+
+                            <div class="stackly-youth-client-activity-text">
+                                <strong>Contribution Recorded</strong>
+                                <p>Your recent contribution was recorded.</p>
+                            </div>
+
+                            <span class="stackly-youth-client-activity-time">
+                                2d ago
+                            </span>
+                        </div>
+
+                        <div class="stackly-youth-client-activity">
+                            <div class="stackly-youth-client-activity-icon">
+                                <i class="fa-solid fa-calendar-check"></i>
+                            </div>
+
+                            <div class="stackly-youth-client-activity-text">
+                                <strong>Event Registration</strong>
+                                <p>You registered for a community event.</p>
+                            </div>
+
+                            <span class="stackly-youth-client-activity-time">
+                                4d ago
+                            </span>
+                        </div>
+
+                        <div class="stackly-youth-client-activity">
+                            <div class="stackly-youth-client-activity-icon">
+                                <i class="fa-solid fa-file-lines"></i>
+                            </div>
+
+                            <div class="stackly-youth-client-activity-text">
+                                <strong>Impact Report Available</strong>
+                                <p>A new program report is available.</p>
+                            </div>
+
+                            <span class="stackly-youth-client-activity-time">
+                                1w ago
+                            </span>
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- Recent Contributions -->
+            <section class="stackly-youth-client-panel">
+
+                <div class="stackly-youth-client-panel-header">
+                    <h3>Recent Contributions</h3>
+                    <a href="404-client.html"
+                       class="stackly-youth-client-view-all">
+                        View All Contributions
+                    </a>
+                </div>
+
+                <div class="stackly-youth-client-table-wrap">
+
+                    <table class="stackly-youth-client-table">
+                        <thead>
+                            <tr>
+                                <th>Reference ID</th>
+                                <th>Program</th>
+                                <th>Date</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td><strong>#STY-2041</strong></td>
+                                <td>Education for All</td>
+                                <td>18 Sep 2026</td>
+                                <td><strong>₹10,000</strong></td>
+                                <td>
+                                    <span class="stackly-youth-client-status completed">
+                                        Completed
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>#STY-2035</strong></td>
+                                <td>Health & Nutrition</td>
+                                <td>08 Sep 2026</td>
+                                <td><strong>₹5,000</strong></td>
+                                <td>
+                                    <span class="stackly-youth-client-status completed">
+                                        Completed
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>#STY-2028</strong></td>
+                                <td>Youth Empowerment</td>
+                                <td>02 Sep 2026</td>
+                                <td><strong>₹10,000</strong></td>
+                                <td>
+                                    <span class="stackly-youth-client-status pending">
+                                        Processing
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- ==============================
+         JAVASCRIPT
+    ============================== -->
+    <script src="client.js"></script>
+</body>
+</html>

@@ -1,0 +1,1428 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#126b45">
+    <title>Stackly Youth | Client Dashboard</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="client.css">
+
+</head>
+
+<body>
+
+    <!-- ==============================
+         SIDEBAR
+    ============================== -->
+
+    <aside class="stackly-youth-client-sidebar" id="stacklyYouthClientSidebar">
+
+        <div class="stackly-youth-client-brand">
+            <a href="client.html" aria-label="Stackly Youth Foundation Home">
+                <img src="Stackly-logo-Blue.webp"
+                     alt="Stackly Youth Foundation Logo">
+                 
+            </a>
+
+            <button class="stackly-youth-client-menu-close"
+                    id="stacklyYouthClientMenuClose"
+                    aria-label="Close navigation menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <p class="stackly-youth-client-sidebar-label">Main Menu</p>
+
+        <nav class="stackly-youth-client-nav"
+             aria-label="Client dashboard navigation">
+
+            <a href="client.html"  aria-current="page">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="client-programs.html">
+                <i class="fa-solid fa-hands-holding-child"></i>
+                <span>Our Programs</span>
+            </a>
+
+            <a href="client-donations.html">
+                <i class="fa-solid fa-heart"></i>
+                <span>My Donations</span>
+            </a>
+
+            <a href="client-impact.html">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Impact Reports</span>
+            </a>
+
+            <a href="client-events.html" class="active">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>Events</span>
+            </a>
+
+            <a href="client-messages.html">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Messages</span>
+            </a>
+
+        </nav>
+
+        <p class="stackly-youth-client-sidebar-label">Account</p>
+
+        <nav class="stackly-youth-client-nav"
+             aria-label="Account navigation">
+
+            <a href="client-profile.html">
+                <i class="fa-solid fa-user"></i>
+                <span>My Profile</span>
+            </a>
+
+            
+
+        </nav>
+
+        <div class="stackly-youth-client-sidebar-bottom">
+            <a href="index.html" id="stacklyYouthClientLogout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Logout</span>
+            </a>
+        </div>
+
+    </aside>
+
+    <!-- Mobile overlay -->
+    <div class="stackly-youth-client-overlay"
+         id="stacklyYouthClientOverlay"></div>
+
+
+    <!-- ==============================
+         MAIN
+    ============================== -->
+
+    <main class="stackly-youth-client-main">
+
+        <!-- Topbar -->
+        <header class="stackly-youth-client-topbar">
+
+            <div class="stackly-youth-client-topbar-left">
+
+                <button class="stackly-youth-client-menu-toggle"
+                        id="stacklyYouthClientMenuToggle"
+                        aria-label="Open navigation menu"
+                        aria-controls="stacklyYouthClientSidebar"
+                        aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <h2 class="stackly-youth-client-page-title">
+                    Client Dashboard
+                </h2>
+
+            </div>
+
+            <div class="stackly-youth-client-topbar-right">
+
+                <a href="404-client.html">
+                    <button class="stackly-youth-client-notification"
+                            type="button"
+                            aria-label="Notifications">
+                        <i class="fa-regular fa-bell"></i>
+                    </button>
+                </a>
+
+                <div class="stackly-youth-client-user">
+
+                    <div class="stackly-youth-client-avatar"
+                         id="stacklyYouthClientAvatar">
+                        U
+                    </div>
+
+                    <div class="stackly-youth-client-user-info">
+                        <strong id="stacklyYouthClientUserName">
+                            User
+                        </strong>
+
+                        <span id="stacklyYouthClientUserEmail">
+                            client@stacklyyouth.org
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- =========================================================
+     STACKLY YOUTH WELFARE FOUNDATION
+     CLIENT DASHBOARD — EVENTS PAGE
+========================================================= -->
+
+<div class="stackly-youth-client-events-page">
+
+
+    <!-- =====================================================
+         DECORATIVE BACKGROUND
+    ====================================================== -->
+
+    <div class="stackly-youth-client-events-glow
+                stackly-youth-client-events-glow-one"></div>
+
+    <div class="stackly-youth-client-events-glow
+                stackly-youth-client-events-glow-two"></div>
+
+
+    <!-- =====================================================
+         EVENTS HERO
+    ====================================================== -->
+
+    <section class="stackly-youth-client-events-hero">
+
+        <div class="stackly-youth-client-events-hero-content"
+             data-aos="fade-right">
+
+            <span class="stackly-youth-client-events-eyebrow">
+                <i class="fa-solid fa-calendar-heart"></i>
+                Connect • Participate • Grow
+            </span>
+
+            <h1>
+                Be Part of
+                <span>Something Meaningful.</span>
+            </h1>
+
+            <p>
+                Discover upcoming workshops, youth activities, community
+                gatherings, awareness programs, and opportunities to
+                connect with the Stackly Youth Foundation community.
+            </p>
+
+            <div class="stackly-youth-client-events-hero-actions">
+
+                <a href="404-client.html"
+                   class="stackly-youth-client-events-primary-btn">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+                    Explore Events
+
+                </a>
+
+                <a href="404-client.html"
+                   class="stackly-youth-client-events-secondary-btn">
+
+                    My Registrations
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Hero Visual -->
+
+        <div class="stackly-youth-client-events-hero-visual"
+             data-aos="fade-left">
+
+            <div class="stackly-youth-client-events-hero-image-wrap">
+
+                <img src="blog-voice.webp"
+                     alt="Youth community event"
+                     class="stackly-youth-client-events-hero-image">
+
+                <div class="stackly-youth-client-events-date-card">
+
+                    <span>
+                        NEXT EVENT
+                    </span>
+
+                    <strong>
+                        18
+                    </strong>
+
+                    <small>
+                        OCT 2026
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         EVENT QUICK STATS
+    ====================================================== -->
+
+    <section class="stackly-youth-client-events-stats">
+
+        <div class="stackly-youth-client-events-stats-grid">
+
+            <!-- Stat 1 -->
+
+            <article class="stackly-youth-client-event-stat"
+                     data-aos="fade-up">
+
+                <div class="stackly-youth-client-event-stat-icon">
+
+                    <i class="fa-solid fa-calendar-days"></i>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        18
+                    </strong>
+
+                    <span>
+                        Events This Year
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- Stat 2 -->
+
+            <article class="stackly-youth-client-event-stat"
+                     data-aos="fade-up"
+                     data-aos-delay="100">
+
+                <div class="stackly-youth-client-event-stat-icon orange">
+
+                    <i class="fa-solid fa-users"></i>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        620+
+                    </strong>
+
+                    <span>
+                        Participants
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- Stat 3 -->
+
+            <article class="stackly-youth-client-event-stat"
+                     data-aos="fade-up"
+                     data-aos-delay="180">
+
+                <div class="stackly-youth-client-event-stat-icon">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        12
+                    </strong>
+
+                    <span>
+                        Communities Reached
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- Stat 4 -->
+
+            <article class="stackly-youth-client-event-stat"
+                     data-aos="fade-up"
+                     data-aos-delay="260">
+
+                <div class="stackly-youth-client-event-stat-icon orange">
+
+                    <i class="fa-solid fa-certificate"></i>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        08
+                    </strong>
+
+                    <span>
+                        Certificates Issued
+                    </span>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FEATURED EVENT
+    ====================================================== -->
+
+    <section class="stackly-youth-client-events-featured">
+
+        <div class="stackly-youth-client-events-featured-image"
+             data-aos="fade-right">
+
+            <img src="featured-event.webp"
+                 alt="Youth leadership workshop">
+
+            <div class="stackly-youth-client-events-featured-label">
+                <i class="fa-solid fa-star"></i>
+                FEATURED EVENT
+            </div>
+
+        </div>
+
+
+        <div class="stackly-youth-client-events-featured-content"
+             data-aos="fade-left">
+
+            <span class="stackly-youth-client-events-section-label">
+                DON'T MISS THIS
+            </span>
+
+            <h2>
+                Youth Leadership
+                <span>Growth Summit 2026</span>
+            </h2>
+
+            <p>
+                A practical youth-focused gathering featuring leadership
+                sessions, mentoring conversations, interactive activities,
+                and opportunities to connect with other young participants.
+            </p>
+
+
+            <div class="stackly-youth-client-events-featured-details">
+
+                <div>
+
+                    <i class="fa-solid fa-calendar"></i>
+
+                    <span>
+                        <strong>
+                            18 October 2026
+                        </strong>
+                        Sunday
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <i class="fa-solid fa-clock"></i>
+
+                    <span>
+                        <strong>
+                            10:00 AM – 3:00 PM
+                        </strong>
+                        Full Day Program
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <span>
+                        <strong>
+                            Community Hall
+                        </strong>
+                        Main Youth Center
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="stackly-youth-client-events-featured-actions">
+
+                <a href="404-client.html"
+                   class="stackly-youth-client-events-register-btn">
+
+                    Register Now
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+                <a href="404-client.html"
+                   class="stackly-youth-client-events-details-btn">
+
+                    View Details
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         EVENT CATEGORIES
+    ====================================================== -->
+
+    <section class="stackly-youth-client-events-categories">
+
+        <div class="stackly-youth-client-events-section-heading"
+             data-aos="fade-up">
+
+            <span>
+                EXPLORE BY CATEGORY
+            </span>
+
+            <h2>
+                Find Events That Match
+                <span>Your Interests.</span>
+            </h2>
+
+            <p>
+                Choose from learning sessions, wellness activities,
+                youth development programs, and community experiences.
+            </p>
+
+        </div>
+
+
+        <div class="stackly-youth-client-events-category-grid">
+
+
+            <!-- Category 1 -->
+
+            <a href="404-client.html"
+               class="stackly-youth-client-event-category-card"
+               data-aos="fade-up">
+
+                <div class="stackly-youth-client-event-category-icon">
+
+                    <i class="fa-solid fa-graduation-cap"></i>
+
+                </div>
+
+                <h3>
+                    Education
+                </h3>
+
+                <span>
+                    06 Events
+                </span>
+
+                <i class="fa-solid fa-arrow-right category-arrow"></i>
+
+            </a>
+
+
+            <!-- Category 2 -->
+
+            <a href="404-client.html"
+               class="stackly-youth-client-event-category-card orange"
+               data-aos="fade-up"
+               data-aos-delay="100">
+
+                <div class="stackly-youth-client-event-category-icon">
+
+                    <i class="fa-solid fa-heart-pulse"></i>
+
+                </div>
+
+                <h3>
+                    Health & Wellness
+                </h3>
+
+                <span>
+                    04 Events
+                </span>
+
+                <i class="fa-solid fa-arrow-right category-arrow"></i>
+
+            </a>
+
+
+            <!-- Category 3 -->
+
+            <a href="404-client.html"
+               class="stackly-youth-client-event-category-card"
+               data-aos="fade-up"
+               data-aos-delay="180">
+
+                <div class="stackly-youth-client-event-category-icon">
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                </div>
+
+                <h3>
+                    Skills & Careers
+                </h3>
+
+                <span>
+                    05 Events
+                </span>
+
+                <i class="fa-solid fa-arrow-right category-arrow"></i>
+
+            </a>
+
+
+            <!-- Category 4 -->
+
+            <a href="404-client.html"
+               class="stackly-youth-client-event-category-card orange"
+               data-aos="fade-up"
+               data-aos-delay="260">
+
+                <div class="stackly-youth-client-event-category-icon">
+
+                    <i class="fa-solid fa-people-group"></i>
+
+                </div>
+
+                <h3>
+                    Community
+                </h3>
+
+                <span>
+                    03 Events
+                </span>
+
+                <i class="fa-solid fa-arrow-right category-arrow"></i>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         UPCOMING EVENTS
+    ====================================================== -->
+
+    <section class="stackly-youth-client-events-upcoming"
+             id="upcoming-events">
+
+        <div class="stackly-youth-client-events-upcoming-head"
+             data-aos="fade-up">
+
+            <div>
+
+                <span>
+                    MARK YOUR CALENDAR
+                </span>
+
+                <h2>
+                    Upcoming Events
+                </h2>
+
+            </div>
+
+            <a href="404-client.html"
+               class="stackly-youth-client-events-view-all">
+
+                View All Events
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+        <div class="stackly-youth-client-event-list">
+
+
+            <!-- Event 1 -->
+
+            <article class="stackly-youth-client-event-card"
+                     data-aos="fade-up">
+
+                <div class="stackly-youth-client-event-date">
+
+                    <strong>
+                        18
+                    </strong>
+
+                    <span>
+                        OCT
+                    </span>
+
+                    <small>
+                        2026
+                    </small>
+
+                </div>
+
+
+                <div class="stackly-youth-client-event-main">
+
+                    <span class="stackly-youth-client-event-tag">
+                        Leadership
+                    </span>
+
+                    <h3>
+                        Youth Leadership Growth Summit
+                    </h3>
+
+                    <p>
+                        A full-day learning and networking experience
+                        for young people interested in leadership and growth.
+                    </p>
+
+                    <div class="stackly-youth-client-event-meta">
+
+                        <span>
+                            <i class="fa-solid fa-clock"></i>
+                            10:00 AM
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Community Hall
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <a href="404-client.html"
+                   class="stackly-youth-client-event-action">
+
+                    Register
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </article>
+
+
+            <!-- Event 2 -->
+
+            <article class="stackly-youth-client-event-card"
+                     data-aos="fade-up"
+                     data-aos-delay="120">
+
+                <div class="stackly-youth-client-event-date orange">
+
+                    <strong>
+                        26
+                    </strong>
+
+                    <span>
+                        OCT
+                    </span>
+
+                    <small>
+                        2026
+                    </small>
+
+                </div>
+
+
+                <div class="stackly-youth-client-event-main">
+
+                    <span class="stackly-youth-client-event-tag orange">
+                        Wellness
+                    </span>
+
+                    <h3>
+                        Youth Wellness & Nutrition Workshop
+                    </h3>
+
+                    <p>
+                        An awareness session covering nutrition, healthy
+                        habits, wellbeing, and everyday self-care.
+                    </p>
+
+                    <div class="stackly-youth-client-event-meta">
+
+                        <span>
+                            <i class="fa-solid fa-clock"></i>
+                            11:00 AM
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Youth Center
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <a href="404-client.html"
+                   class="stackly-youth-client-event-action orange">
+
+                    Register
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </article>
+
+
+            <!-- Event 3 -->
+
+            <article class="stackly-youth-client-event-card"
+                     data-aos="fade-up"
+                     data-aos-delay="240">
+
+                <div class="stackly-youth-client-event-date">
+
+                    <strong>
+                        05
+                    </strong>
+
+                    <span>
+                        NOV
+                    </span>
+
+                    <small>
+                        2026
+                    </small>
+
+                </div>
+
+
+                <div class="stackly-youth-client-event-main">
+
+                    <span class="stackly-youth-client-event-tag">
+                        Skills
+                    </span>
+
+                    <h3>
+                        Career Skills Discovery Day
+                    </h3>
+
+                    <p>
+                        Explore career awareness, practical skills,
+                        confidence building, and future opportunities.
+                    </p>
+
+                    <div class="stackly-youth-client-event-meta">
+
+                        <span>
+                            <i class="fa-solid fa-clock"></i>
+                            09:30 AM
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Learning Hub
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <a href="404-client.html"
+                   class="stackly-youth-client-event-action">
+
+                    Register
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </article>
+
+
+            <!-- Event 4 -->
+
+            <article class="stackly-youth-client-event-card"
+                     data-aos="fade-up"
+                     data-aos-delay="360">
+
+                <div class="stackly-youth-client-event-date orange">
+
+                    <strong>
+                        14
+                    </strong>
+
+                    <span>
+                        NOV
+                    </span>
+
+                    <small>
+                        2026
+                    </small>
+
+                </div>
+
+
+                <div class="stackly-youth-client-event-main">
+
+                    <span class="stackly-youth-client-event-tag orange">
+                        Community
+                    </span>
+
+                    <h3>
+                        Youth Community Connect
+                    </h3>
+
+                    <p>
+                        Meet local youth groups, volunteers, mentors,
+                        and community partners through interactive activities.
+                    </p>
+
+                    <div class="stackly-youth-client-event-meta">
+
+                        <span>
+                            <i class="fa-solid fa-clock"></i>
+                            10:30 AM
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Community Park
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <a href="404-client.html"
+                   class="stackly-youth-client-event-action orange">
+
+                    Register
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         EVENT CALENDAR HIGHLIGHT
+    ====================================================== -->
+
+    <section class="stackly-youth-client-events-calendar">
+
+        <div class="stackly-youth-client-events-calendar-content"
+             data-aos="fade-right">
+
+            <span>
+                YOUR EVENT CALENDAR
+            </span>
+
+            <h2>
+                Keep Your
+                <span>Calendar Active.</span>
+            </h2>
+
+            <p>
+                Stay updated with workshops, volunteer opportunities,
+                community programs, and special youth activities.
+            </p>
+
+            <a href="404-client.html"
+               class="stackly-youth-client-events-calendar-btn">
+
+                Open Full Calendar
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+        <div class="stackly-youth-client-events-mini-calendar"
+             data-aos="fade-left">
+
+            <div class="stackly-youth-client-events-calendar-top">
+
+                <button type="button"
+                        aria-label="Previous month">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <strong>
+                    October 2026
+                </strong>
+
+                <button type="button"
+                        aria-label="Next month">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+            </div>
+
+
+            <div class="stackly-youth-client-events-calendar-weekdays">
+
+                <span>MON</span>
+                <span>TUE</span>
+                <span>WED</span>
+                <span>THU</span>
+                <span>FRI</span>
+                <span>SAT</span>
+                <span>SUN</span>
+
+            </div>
+
+
+            <div class="stackly-youth-client-events-calendar-days">
+
+                <span>28</span>
+                <span>29</span>
+                <span>30</span>
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+
+                <span>5</span>
+                <span>6</span>
+                <span>7</span>
+                <span>8</span>
+                <span>9</span>
+                <span>10</span>
+                <span>11</span>
+
+                <span>12</span>
+                <span>13</span>
+                <span>14</span>
+                <span>15</span>
+                <span>16</span>
+                <span>17</span>
+
+                <span class="event-day">
+                    18
+                    <small></small>
+                </span>
+
+                <span>19</span>
+                <span>20</span>
+                <span>21</span>
+                <span>22</span>
+                <span>23</span>
+                <span>24</span>
+                <span>25</span>
+
+                <span class="event-day orange">
+                    26
+                    <small></small>
+                </span>
+
+                <span>27</span>
+                <span>28</span>
+                <span>29</span>
+                <span>30</span>
+                <span>31</span>
+                <span>1</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PARTICIPATION BENEFITS
+    ====================================================== -->
+
+    <section class="stackly-youth-client-events-benefits">
+
+        <div class="stackly-youth-client-events-section-heading"
+             data-aos="fade-up">
+
+            <span>
+                WHY JOIN OUR EVENTS
+            </span>
+
+            <h2>
+                More Than Just
+                <span>An Event.</span>
+            </h2>
+
+            <p>
+                Each activity is designed to create meaningful connections,
+                practical learning, and positive experiences.
+            </p>
+
+        </div>
+
+
+        <div class="stackly-youth-client-events-benefit-grid">
+
+
+            <article class="stackly-youth-client-event-benefit-card"
+                     data-aos="fade-up">
+
+                <div class="stackly-youth-client-event-benefit-icon">
+
+                    <i class="fa-solid fa-users-rays"></i>
+
+                </div>
+
+                <h3>
+                    Meet New People
+                </h3>
+
+                <p>
+                    Connect with young people, mentors,
+                    volunteers, and community partners.
+                </p>
+
+            </article>
+
+
+            <article class="stackly-youth-client-event-benefit-card orange"
+                     data-aos="fade-up"
+                     data-aos-delay="100">
+
+                <div class="stackly-youth-client-event-benefit-icon">
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                </div>
+
+                <h3>
+                    Learn New Skills
+                </h3>
+
+                <p>
+                    Take part in practical workshops and
+                    interactive learning sessions.
+                </p>
+
+            </article>
+
+
+            <article class="stackly-youth-client-event-benefit-card"
+                     data-aos="fade-up"
+                     data-aos-delay="180">
+
+                <div class="stackly-youth-client-event-benefit-icon">
+
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+
+                </div>
+
+                <h3>
+                    Make an Impact
+                </h3>
+
+                <p>
+                    Contribute your time, ideas, and energy
+                    to meaningful community initiatives.
+                </p>
+
+            </article>
+
+
+            <article class="stackly-youth-client-event-benefit-card orange"
+                     data-aos="fade-up"
+                     data-aos-delay="260">
+
+                <div class="stackly-youth-client-event-benefit-icon">
+
+                    <i class="fa-solid fa-award"></i>
+
+                </div>
+
+                <h3>
+                    Earn Recognition
+                </h3>
+
+                <p>
+                    Receive participation recognition and
+                    certificates for selected activities.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PAST EVENTS
+    ====================================================== -->
+
+    <section class="stackly-youth-client-events-past">
+
+        <div class="stackly-youth-client-events-upcoming-head"
+             data-aos="fade-up">
+
+            <div>
+
+                <span>
+                    EVENT HIGHLIGHTS
+                </span>
+
+                <h2>
+                    Past Events
+                </h2>
+
+            </div>
+
+            <a href="404-client.html"
+               class="stackly-youth-client-events-view-all">
+
+                View Event Archive
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+        <div class="stackly-youth-client-events-past-grid">
+
+
+            <!-- Past Event 1 -->
+
+            <article class="stackly-youth-client-past-event"
+                     data-aos="fade-up">
+
+                <div class="stackly-youth-client-past-event-image">
+
+                    <img src="youth-education.webp"
+                         alt="Youth education event">
+
+                    <span>
+                        EDUCATION
+                    </span>
+
+                </div>
+
+                <div class="stackly-youth-client-past-event-content">
+
+                    <small>
+                        August 2026
+                    </small>
+
+                    <h3>
+                        Learning Together Workshop
+                    </h3>
+
+                    <p>
+                        A youth learning session focused on study support,
+                        confidence, and educational opportunities.
+                    </p>
+
+                    <a href="404-client.html">
+                        View Highlights
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- Past Event 2 -->
+
+            <article class="stackly-youth-client-past-event"
+                     data-aos="fade-up"
+                     data-aos-delay="120">
+
+                <div class="stackly-youth-client-past-event-image">
+
+                    <img src="youth-health.webp"
+                         alt="Youth wellness program">
+
+                    <span class="orange">
+                        WELLNESS
+                    </span>
+
+                </div>
+
+                <div class="stackly-youth-client-past-event-content">
+
+                    <small>
+                        July 2026
+                    </small>
+
+                    <h3>
+                        Youth Wellness Day Event
+                    </h3>
+
+                    <p>
+                        A community wellness gathering focused on health, 
+                        nutrition awareness, and wellbeing.
+                    </p>
+
+                    <a href="404-client.html">
+                        View Highlights
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- Past Event 3 -->
+
+            <article class="stackly-youth-client-past-event"
+                     data-aos="fade-up"
+                     data-aos-delay="240">
+
+                <div class="stackly-youth-client-past-event-image">
+
+                    <img src="youth-skills.webp"
+                         alt="Youth career development event">
+
+                    <span>
+                        CAREER
+                    </span>
+
+                </div>
+
+                <div class="stackly-youth-client-past-event-content">
+
+                    <small>
+                        June 2026
+                    </small>
+
+                    <h3>
+                        Future Skills Meetup Event
+                    </h3>
+
+                    <p>
+                        A practical session introducing career skills,
+                        professional confidence, and future pathways.
+                    </p>
+
+                    <a href="404-client.html">
+                        View Highlights
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         EVENTS CTA
+    ====================================================== -->
+
+    <section class="stackly-youth-client-events-cta"
+             data-aos="zoom-in">
+
+        <div class="stackly-youth-client-events-cta-circle
+                    stackly-youth-client-events-cta-circle-one"></div>
+
+        <div class="stackly-youth-client-events-cta-circle
+                    stackly-youth-client-events-cta-circle-two"></div>
+
+
+        <div class="stackly-youth-client-events-cta-content">
+
+            <span>
+                <i class="fa-solid fa-calendar-plus"></i>
+                STAY CONNECTED
+            </span>
+
+            <h2>
+                Find Your Next
+                <br>
+                Meaningful Experience.
+            </h2>
+
+            <p>
+                Explore upcoming activities and discover new ways
+                to learn, connect, participate, and contribute.
+            </p>
+
+            <div class="stackly-youth-client-events-cta-actions">
+
+                <a href="#upcoming-events"
+                   class="stackly-youth-client-events-cta-primary">
+
+                    Browse Upcoming Events
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+                <a href="client-messages.html"
+                   class="stackly-youth-client-events-cta-secondary">
+
+                    Contact Foundation
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         EVENT NOTE
+    ====================================================== -->
+
+    <div class="stackly-youth-client-events-note"
+         data-aos="fade-up">
+
+        <i class="fa-solid fa-circle-info"></i>
+
+        <p>
+            Event schedules, locations, and registration details may be
+            updated periodically. Please check the event details before attending.
+        </p>
+
+    </div>
+
+</div>
+
+</main>
+
+
+    <!-- ==============================
+         JAVASCRIPT
+    ============================== -->
+    <script src="client.js"></script>
+</body>
+</html>

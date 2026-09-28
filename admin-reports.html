@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- =========================================================
+         STACKLY YOUTH WELFARE FOUNDATION
+         ADMIN DASHBOARD
+    ========================================================== -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stackly Youth Welfare Foundation | Admin Dashboard</title>
+
+    <!-- =========================================================
+         GOOGLE FONTS
+    ========================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- =========================================================
+         FONT AWESOME
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <!-- =========================================================
+         AOS ANIMATION
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    >
+
+    <!-- =========================================================
+         ADMIN CSS
+    ========================================================== -->
+
+    <link rel="stylesheet" href="admin.css">
+
+</head>
+
+
+<body>
+
+    <!-- =========================================================
+         MOBILE OVERLAY
+    ========================================================== -->
+
+    <div
+        class="stackly-youth-admin-overlay"
+        id="stacklyYouthAdminOverlay"
+    ></div>
+
+
+    <!-- =========================================================
+         ADMIN SIDEBAR
+    ========================================================== -->
+
+    <aside
+        class="stackly-youth-admin-sidebar"
+        id="stacklyYouthAdminSidebar"
+    >
+
+        <!-- =====================================================
+             SIDEBAR HEADER
+        ====================================================== -->
+
+        <div class="stackly-youth-admin-sidebar-header">
+
+            <!-- Logo -->
+            <a
+                href="admin.html"
+                class="stackly-youth-admin-brand"
+            >
+
+                <img
+                    src="Stackly-logo-Blue.webp"
+                    alt="Stackly Youth Welfare Foundation Logo"
+                >
+
+
+            </a>
+
+
+            <!-- Mobile Close -->
+            <button
+                type="button"
+                class="stackly-youth-admin-sidebar-close"
+                id="stacklyYouthAdminSidebarClose"
+                aria-label="Close navigation"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- =====================================================
+             SIDEBAR NAVIGATION
+        ====================================================== -->
+
+        <nav class="stackly-youth-admin-navigation">
+
+            <span class="stackly-youth-admin-nav-label">
+                MAIN MENU
+            </span>
+
+
+            <!-- Dashboard -->
+            <a
+                href="admin.html"
+                class="stackly-youth-admin-nav-link"
+            >
+
+                <span class="stackly-youth-admin-nav-icon">
+                    <i class="fa-solid fa-chart-pie"></i>
+                </span>
+
+                <span class="stackly-youth-admin-nav-text">
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <!-- Volunteers -->
+            <a
+                href="admin-volunteers.html"
+                class="stackly-youth-admin-nav-link"
+            >
+
+                <span class="stackly-youth-admin-nav-icon">
+                    <i class="fa-solid fa-users"></i>
+                </span>
+
+                <span class="stackly-youth-admin-nav-text">
+                    Volunteers
+                </span>
+
+            </a>
+
+
+            <!-- Donations -->
+            <a
+                href="admin-donations.html"
+                class="stackly-youth-admin-nav-link"
+            >
+
+                <span class="stackly-youth-admin-nav-icon">
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                </span>
+
+                <span class="stackly-youth-admin-nav-text">
+                    Donations
+                </span>
+
+            </a>
+
+
+            <!-- =================================================
+                 MANAGEMENT
+            ================================================== -->
+
+            <span class="stackly-youth-admin-nav-label">
+                MANAGEMENT
+            </span>
+
+            <!-- Events -->
+            <a
+                href="admin-events.html"
+                class="stackly-youth-admin-nav-link"
+            >
+
+                <span class="stackly-youth-admin-nav-icon">
+                    <i class="fa-solid fa-calendar-days"></i>
+                </span>
+
+                <span class="stackly-youth-admin-nav-text">
+                    Events
+                </span>
+
+            </a>
+
+
+            <!-- Reports -->
+            <a
+                href="admin-reports.html"
+                class="stackly-youth-admin-nav-link active"
+            >
+
+                <span class="stackly-youth-admin-nav-icon">
+                    <i class="fa-solid fa-chart-column"></i>
+                </span>
+
+                <span class="stackly-youth-admin-nav-text">
+                    Reports
+                </span>
+
+            </a>
+
+
+            <!-- =================================================
+                 SYSTEM
+            ================================================== -->
+
+            <span class="stackly-youth-admin-nav-label">
+                SYSTEM
+            </span>
+
+
+            <!-- Messages -->
+            <a
+                href="admin-messages.html"
+                class="stackly-youth-admin-nav-link"
+            >
+
+                <span class="stackly-youth-admin-nav-icon">
+                    <i class="fa-regular fa-envelope"></i>
+                </span>
+
+                <span class="stackly-youth-admin-nav-text">
+                    Messages
+                </span>
+
+                <span class="stackly-youth-admin-nav-badge">
+                    8
+                </span>
+
+            </a>
+
+
+            <!-- Settings -->
+            <a
+                href="admin-settings.html"
+                class="stackly-youth-admin-nav-link"
+            >
+
+                <span class="stackly-youth-admin-nav-icon">
+                    <i class="fa-solid fa-gear"></i>
+                </span>
+
+                <span class="stackly-youth-admin-nav-text">
+                    Settings
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- =====================================================
+             SIDEBAR FOOTER
+        ====================================================== -->
+
+        <div class="stackly-youth-admin-sidebar-footer">
+
+            <a
+                href="index.html"
+                class="stackly-youth-admin-logout"
+            >
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>
+                    Logout
+                </span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =========================================================
+         MAIN DASHBOARD AREA
+    ========================================================== -->
+
+    <main class="stackly-youth-admin-main">
+
+
+        <!-- =====================================================
+             TOP HEADER
+        ====================================================== -->
+
+        <header class="stackly-youth-admin-topbar">
+
+
+            <!-- Mobile Hamburger -->
+            <button
+                type="button"
+                class="stackly-youth-admin-menu-toggle"
+                id="stacklyYouthAdminMenuToggle"
+                aria-label="Open navigation"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <!-- Page Heading -->
+            <div
+                class="stackly-youth-admin-page-heading"
+                data-aos="fade-down"
+            >
+
+                <span>
+                    ADMINISTRATION
+                </span>
+
+                <h1>
+                    Admin Dashboard
+                </h1>
+
+            </div>
+
+
+            <!-- =================================================
+                 TOP RIGHT
+            ================================================== -->
+
+            <div class="stackly-youth-admin-top-actions">
+
+
+                <!-- Notification -->
+                <a href="404-admin.html"><button
+                    type="button"
+                    class="stackly-youth-admin-notification"
+                    aria-label="Notifications"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span>
+                        3
+                    </span>
+
+                </button></a>
+
+
+                <!-- Admin Email -->
+                <div class="stackly-youth-admin-profile">
+
+                    <div class="stackly-youth-admin-profile-avatar">
+
+                        <i class="fa-solid fa-user-shield"></i>
+
+                    </div>
+
+                    <div class="stackly-youth-admin-profile-info">
+
+                        <strong>
+                            Admin
+                        </strong>
+
+                        <span id="stacklyYouthAdminEmail">
+                            admin@stacklyyouth.org
+                        </span>
+
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down stackly-youth-admin-profile-arrow"></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+<!-- =========================================================
+     STACKLY YOUTH WELFARE FOUNDATION
+     ADMIN REPORTS PAGE
+     IMPACT & REPORTING CENTER
+========================================================= -->
+
+<section class="stackly-youth-admin-reports-content">
+
+
+    <!-- =====================================================
+         REPORTS HERO
+    ====================================================== -->
+
+    <section
+        class="stackly-youth-admin-reports-hero"
+        data-aos="fade-up"
+    >
+
+        <div class="stackly-youth-admin-reports-hero-glow"></div>
+
+        <div class="stackly-youth-admin-reports-hero-content">
+
+            <div
+                class="stackly-youth-admin-reports-hero-copy"
+                data-aos="fade-right"
+            >
+
+                <span class="stackly-youth-admin-reports-eyebrow">
+                    <i class="fa-solid fa-chart-line"></i>
+                    IMPACT & INSIGHTS
+                </span>
+
+                <h2>
+                    Turn Community
+                    <span>Impact Into Insight.</span>
+                </h2>
+
+                <p>
+                    Monitor programs, understand youth engagement,
+                    measure community reach, and transform foundation
+                    activities into meaningful reports.
+                </p>
+
+                <div class="stackly-youth-admin-reports-hero-actions">
+
+                    <a
+                        href="404-admin.html"
+                        class="stackly-youth-admin-reports-primary-btn"
+                    >
+                        <i class="fa-solid fa-file-export"></i>
+                        Generate Report
+                    </a>
+
+                    <a
+                        href="404-admin.html"
+                        class="stackly-youth-admin-reports-secondary-btn"
+                    >
+                        <i class="fa-solid fa-chart-column"></i>
+                        View Analytics
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 HERO REPORT VISUAL
+            ================================================== -->
+
+            <div
+                class="stackly-youth-admin-reports-hero-visual"
+                data-aos="zoom-in"
+            >
+
+                <div class="stackly-youth-admin-reports-insight-card">
+
+                    <div class="stackly-youth-admin-reports-insight-top">
+
+                        <div>
+
+                            <span>
+                                COMMUNITY IMPACT
+                            </span>
+
+                            <strong>
+                                92.6%
+                            </strong>
+
+                        </div>
+
+                        <div class="stackly-youth-admin-reports-insight-icon">
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stackly-youth-admin-reports-chart">
+
+                        <span style="height: 38%;"></span>
+                        <span style="height: 52%;"></span>
+                        <span style="height: 46%;"></span>
+                        <span style="height: 68%;"></span>
+                        <span style="height: 61%;"></span>
+                        <span style="height: 78%;"></span>
+                        <span style="height: 91%;"></span>
+
+                    </div>
+
+
+                    <div class="stackly-youth-admin-reports-chart-labels">
+
+                        <span>APR</span>
+                        <span>MAY</span>
+                        <span>JUN</span>
+                        <span>JUL</span>
+                        <span>AUG</span>
+                        <span>SEP</span>
+                        <span>OCT</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-youth-admin-report-floating-card report-float-one">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <div>
+
+                        <strong>
+                            12,480
+                        </strong>
+
+                        <span>
+                            Youth Reached
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-youth-admin-report-floating-card report-float-two">
+
+                    <i class="fa-solid fa-handshake"></i>
+
+                    <div>
+
+                        <strong>
+                            86
+                        </strong>
+
+                        <span>
+                            Active Programs
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         REPORT OVERVIEW
+    ====================================================== -->
+
+    <section class="stackly-youth-admin-reports-overview">
+
+        <div
+            class="stackly-youth-admin-reports-overview-card"
+            data-aos="fade-up"
+            data-aos-delay="50"
+        >
+
+            <div class="stackly-youth-admin-reports-overview-icon green">
+                <i class="fa-solid fa-users"></i>
+            </div>
+
+            <div>
+
+                <span>
+                    Youth Reached
+                </span>
+
+                <strong>
+                    12,480
+                </strong>
+
+                <small class="positive">
+                    <i class="fa-solid fa-arrow-up"></i>
+                    18.4% this year
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="stackly-youth-admin-reports-overview-card"
+            data-aos="fade-up"
+            data-aos-delay="100"
+        >
+
+            <div class="stackly-youth-admin-reports-overview-icon orange">
+                <i class="fa-solid fa-calendar-check"></i>
+            </div>
+
+            <div>
+
+                <span>
+                    Programs Delivered
+                </span>
+
+                <strong>
+                    148
+                </strong>
+
+                <small class="positive">
+                    <i class="fa-solid fa-arrow-up"></i>
+                    12.8% this year
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="stackly-youth-admin-reports-overview-card"
+            data-aos="fade-up"
+            data-aos-delay="150"
+        >
+
+            <div class="stackly-youth-admin-reports-overview-icon blue">
+                <i class="fa-solid fa-user-group"></i>
+            </div>
+
+            <div>
+
+                <span>
+                    Active Volunteers
+                </span>
+
+                <strong>
+                    1,284
+                </strong>
+
+                <small class="positive">
+                    <i class="fa-solid fa-arrow-up"></i>
+                    9.6% this year
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="stackly-youth-admin-reports-overview-card"
+            data-aos="fade-up"
+            data-aos-delay="200"
+        >
+
+            <div class="stackly-youth-admin-reports-overview-icon purple">
+                <i class="fa-solid fa-location-dot"></i>
+            </div>
+
+            <div>
+
+                <span>
+                    Communities Reached
+                </span>
+
+                <strong>
+                    42
+                </strong>
+
+                <small class="positive">
+                    <i class="fa-solid fa-arrow-up"></i>
+                    6 new communities
+                </small>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         COMMUNITY REACH SECTION
+    ====================================================== -->
+
+    <section
+        class="stackly-youth-admin-reports-reach"
+        data-aos="fade-up"
+    >
+
+        <div class="stackly-youth-admin-reports-section-heading">
+
+            <div>
+
+                <span>
+                    COMMUNITY REACH
+                </span>
+
+                <h3>
+                    Where Our Impact Is Growing
+                </h3>
+
+            </div>
+
+            <a href="404-admin.html">
+                Explore Communities
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="stackly-youth-admin-reports-location-grid">
+
+
+            <div class="stackly-youth-admin-location-card">
+
+                <div class="location-card-top">
+
+                    <div class="location-icon green">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+
+                    <span>
+                        #01
+                    </span>
+
+                </div>
+
+                <h4>
+                    Chennai
+                </h4>
+
+                <strong>
+                    4,280
+                </strong>
+
+                <span>
+                    Youth reached
+                </span>
+
+                <div class="location-progress">
+                    <span style="width:92%;"></span>
+                </div>
+
+                <small>
+                    92% program coverage
+                </small>
+
+            </div>
+
+
+
+            <div class="stackly-youth-admin-location-card">
+
+                <div class="location-card-top">
+
+                    <div class="location-icon orange">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+
+                    <span>
+                        #02
+                    </span>
+
+                </div>
+
+                <h4>
+                    Coimbatore
+                </h4>
+
+                <strong>
+                    3,160
+                </strong>
+
+                <span>
+                    Youth reached
+                </span>
+
+                <div class="location-progress">
+                    <span style="width:78%;"></span>
+                </div>
+
+                <small>
+                    78% program coverage
+                </small>
+
+            </div>
+
+
+
+            <div class="stackly-youth-admin-location-card">
+
+                <div class="location-card-top">
+
+                    <div class="location-icon blue">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+
+                    <span>
+                        #03
+                    </span>
+
+                </div>
+
+                <h4>
+                    Madurai
+                </h4>
+
+                <strong>
+                    2,740
+                </strong>
+
+                <span>
+                    Youth reached
+                </span>
+
+                <div class="location-progress">
+                    <span style="width:69%;"></span>
+                </div>
+
+                <small>
+                    69% program coverage
+                </small>
+
+            </div>
+
+
+
+            <div class="stackly-youth-admin-location-card">
+
+                <div class="location-card-top">
+
+                    <div class="location-icon purple">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+
+                    <span>
+                        #04
+                    </span>
+
+                </div>
+
+                <h4>
+                    Salem
+                </h4>
+
+                <strong>
+                    2,300
+                </strong>
+
+                <span>
+                    Youth reached
+                </span>
+
+                <div class="location-progress">
+                    <span style="width:61%;"></span>
+                </div>
+
+                <small>
+                    61% program coverage
+                </small>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         MONTHLY REPORTS
+    ====================================================== -->
+
+    <section class="stackly-youth-admin-reports-monthly-grid">
+
+
+        <!-- MONTHLY SUMMARY -->
+
+        <div
+            class="stackly-youth-admin-reports-panel monthly-summary-panel"
+            data-aos="fade-right"
+        >
+
+            <div class="stackly-youth-admin-reports-panel-header">
+
+                <div>
+
+                    <span>
+                        MONTHLY SUMMARY
+                    </span>
+
+                    <h3>
+                        October 2026
+                    </h3>
+
+                </div>
+
+                <a href="404-admin.html">
+                    Full Report
+                </a>
+
+            </div>
+
+
+            <div class="stackly-youth-admin-monthly-stats">
+
+                <div>
+                    <span>Participants</span>
+                    <strong>2,486</strong>
+                </div>
+
+                <div>
+                    <span>Events</span>
+                    <strong>18</strong>
+                </div>
+
+                <div>
+                    <span>Volunteers</span>
+                    <strong>326</strong>
+                </div>
+
+                <div>
+                    <span>Hours Served</span>
+                    <strong>1,842</strong>
+                </div>
+
+            </div>
+
+
+            <div class="stackly-youth-admin-monthly-highlight">
+
+                <i class="fa-solid fa-lightbulb"></i>
+
+                <div>
+
+                    <strong>
+                        Impact Highlight
+                    </strong>
+
+                    <p>
+                        Youth participation increased by
+                        <b>18.4%</b> compared with the previous month.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- REPORT HEALTH -->
+
+        <div
+            class="stackly-youth-admin-reports-panel report-health-panel"
+            data-aos="fade-left"
+        >
+
+            <div class="stackly-youth-admin-reports-panel-header">
+
+                <div>
+
+                    <span>
+                        REPORT HEALTH
+                    </span>
+
+                    <h3>
+                        Data Quality
+                    </h3>
+
+                </div>
+
+                <i class="fa-solid fa-shield-heart"></i>
+
+            </div>
+
+
+            <div class="stackly-youth-admin-report-health-score">
+
+                <div class="health-score-circle">
+
+                    <strong>
+                        96%
+                    </strong>
+
+                    <span>
+                        Complete
+                    </span>
+
+                </div>
+
+                <div class="health-score-copy">
+
+                    <strong>
+                        Reporting data is healthy
+                    </strong>
+
+                    <p>
+                        Most program, participant, and
+                        volunteer records are up to date.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="health-check-list">
+
+                <div>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Participant records
+                    <strong>98%</strong>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Program records
+                    <strong>96%</strong>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Volunteer records
+                    <strong>94%</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         RECENT REPORTS
+    ====================================================== -->
+
+    <section
+        class="stackly-youth-admin-reports-recent"
+        data-aos="fade-up"
+    >
+
+        <div class="stackly-youth-admin-reports-section-heading">
+
+            <div>
+
+                <span>
+                    REPORT LIBRARY
+                </span>
+
+                <h3>
+                    Recently Generated Reports
+                </h3>
+
+            </div>
+
+            <a href="404-admin.html">
+                View All Reports
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="stackly-youth-admin-reports-table">
+
+
+            <div class="stackly-youth-admin-report-row report-row-head">
+
+                <span>
+                    REPORT
+                </span>
+
+                <span>
+                    TYPE
+                </span>
+
+                <span>
+                    PERIOD
+                </span>
+
+                <span>
+                    STATUS
+                </span>
+
+                <span>
+                    ACTION
+                </span>
+
+            </div>
+
+
+            <div class="stackly-youth-admin-report-row">
+
+                <div class="report-name">
+
+                    <div class="report-file-icon">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </div>
+
+                    <div>
+                        <strong>
+                            Monthly Impact Report
+                        </strong>
+
+                        <span>
+                            Generated Oct 01, 2026
+                        </span>
+                    </div>
+
+                </div>
+
+                <span>
+                    Impact
+                </span>
+
+                <span>
+                    September 2026
+                </span>
+
+                <span class="report-status completed">
+                    Completed
+                </span>
+
+                <a
+                    href="404-admin.html"
+                    class="report-action"
+                >
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+            </div>
+
+
+
+            <div class="stackly-youth-admin-report-row">
+
+                <div class="report-name">
+
+                    <div class="report-file-icon">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </div>
+
+                    <div>
+                        <strong>
+                            Volunteer Activity Report
+                        </strong>
+
+                        <span>
+                            Generated Sep 28, 2026
+                        </span>
+                    </div>
+
+                </div>
+
+                <span>
+                    Volunteer
+                </span>
+
+                <span>
+                    September 2026
+                </span>
+
+                <span class="report-status completed">
+                    Completed
+                </span>
+
+                <a
+                    href="404-admin.html"
+                    class="report-action"
+                >
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+            </div>
+
+
+
+            <div class="stackly-youth-admin-report-row">
+
+                <div class="report-name">
+
+                    <div class="report-file-icon">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </div>
+
+                    <div>
+                        <strong>
+                            Program Performance Report
+                        </strong>
+
+                        <span>
+                            Generated Sep 24, 2026
+                        </span>
+                    </div>
+
+                </div>
+
+                <span>
+                    Program
+                </span>
+
+                <span>
+                    Q3 2026
+                </span>
+
+                <span class="report-status completed">
+                    Completed
+                </span>
+
+                <a
+                    href="404-admin.html"
+                    class="report-action"
+                >
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         QUICK REPORT ACTIONS
+    ====================================================== -->
+
+    <section
+        class="stackly-youth-admin-reports-actions"
+        data-aos="fade-up"
+    >
+
+        <div class="stackly-youth-admin-reports-actions-copy">
+
+            <span>
+                REPORT CENTER
+            </span>
+
+            <h3>
+                What would you like to measure?
+            </h3>
+
+            <p>
+                Create focused reports to understand programs,
+                people, participation, and community impact.
+            </p>
+
+        </div>
+
+
+        <div class="stackly-youth-admin-reports-action-grid">
+
+
+            <a
+                href="404-admin.html"
+                class="stackly-youth-admin-report-action-card"
+            >
+
+                <div class="action-card-icon green">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+
+                <div>
+
+                    <strong>
+                        Participant Report
+                    </strong>
+
+                    <span>
+                        Analyze youth participation
+                    </span>
+
+                </div>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+
+            <a
+                href="404-admin.html"
+                class="stackly-youth-admin-report-action-card"
+            >
+
+                <div class="action-card-icon orange">
+                    <i class="fa-solid fa-handshake"></i>
+                </div>
+
+                <div>
+
+                    <strong>
+                        Volunteer Report
+                    </strong>
+
+                    <span>
+                        Review volunteer activity
+                    </span>
+
+                </div>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+
+            <a
+                href="404-admin.html"
+                class="stackly-youth-admin-report-action-card"
+            >
+
+                <div class="action-card-icon blue">
+                    <i class="fa-solid fa-calendar-days"></i>
+                </div>
+
+                <div>
+
+                    <strong>
+                        Event Report
+                    </strong>
+
+                    <span>
+                        Measure event performance
+                    </span>
+
+                </div>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+
+            <a
+                href="404-admin.html"
+                class="stackly-youth-admin-report-action-card"
+            >
+
+                <div class="action-card-icon purple">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div>
+
+                    <strong>
+                        Impact Report
+                    </strong>
+
+                    <span>
+                        Understand community outcomes
+                    </span>
+
+                </div>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+</section>
+
+
+    </main>
+
+
+    <!-- =========================================================
+         AOS JS
+    ========================================================== -->
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js">
+    </script>
+
+
+    <!-- =========================================================
+         ADMIN JS
+    ========================================================== -->
+
+    <script src="admin.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,3495 @@
+/* =========================================================
+   STACKLY YOUTH WELFARE FOUNDATION
+   LOGIN + SIGN UP PAGE
+   COMPLETE RESPONSIVE CSS
+========================================================= */
+
+
+/* =========================================================
+   GOOGLE FONT FALLBACK
+========================================================= */
+
+:root {
+
+    --stackly-youth-green: #78a92f;
+    --stackly-youth-green-dark: #507b1e;
+    --stackly-youth-green-light: #eef7e5;
+
+    --stackly-youth-orange: #ff9418;
+    --stackly-youth-orange-light: #fff2df;
+
+    --stackly-youth-black: #101510;
+    --stackly-youth-text: #273027;
+    --stackly-youth-muted: #687169;
+
+    --stackly-youth-white: #ffffff;
+    --stackly-youth-cream: #f7faf2;
+
+    --stackly-youth-border:
+        rgba(16, 21, 16, 0.12);
+
+    --stackly-youth-shadow:
+        0 30px 80px rgba(35, 55, 30, 0.13);
+
+    --stackly-youth-font:
+        "DM Sans",
+        sans-serif;
+
+    --stackly-youth-display:
+        "Space Grotesk",
+        sans-serif;
+
+    --stackly-youth-transition:
+        0.3s ease;
+
+}
+
+
+/* =========================================================
+   GLOBAL RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    min-height: 100vh;
+
+    background:
+        #f7faf2;
+
+    color:
+        var(--stackly-youth-text);
+
+    font-family:
+        var(--stackly-youth-font);
+
+    overflow-x: hidden;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+
+button {
+    border: 0;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* =========================================================
+   PAGE WRAPPER
+========================================================= */
+
+.stackly-youth-auth-page {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    padding:
+        0 6% 70px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(120, 169, 47, 0.10),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(255, 148, 24, 0.08),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #f7faf2 0%,
+            #ffffff 48%,
+            #eef7e5 100%
+        );
+
+}
+
+
+/* =========================================================
+   BACKGROUND CIRCLES
+========================================================= */
+
+.stackly-youth-auth-bg-circle {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    filter: blur(1px);
+
+}
+
+
+/* Circle One */
+
+.auth-circle-one {
+
+    width: 480px;
+    height: 480px;
+
+    top: -220px;
+    left: -190px;
+
+    background:
+        rgba(120, 169, 47, 0.08);
+
+    border:
+        1px solid rgba(120, 169, 47, 0.12);
+
+    animation:
+        stacklyYouthAuthFloatOne
+        9s
+        ease-in-out
+        infinite;
+
+}
+
+
+/* Circle Two */
+
+.auth-circle-two {
+
+    width: 360px;
+    height: 360px;
+
+    right: -150px;
+    top: 28%;
+
+    background:
+        rgba(255, 148, 24, 0.07);
+
+    border:
+        1px solid rgba(255, 148, 24, 0.12);
+
+    animation:
+        stacklyYouthAuthFloatTwo
+        11s
+        ease-in-out
+        infinite;
+
+}
+
+
+/* Circle Three */
+
+.auth-circle-three {
+
+    width: 240px;
+    height: 240px;
+
+    left: 36%;
+    bottom: -130px;
+
+    background:
+        rgba(120, 169, 47, 0.07);
+
+    border:
+        1px solid rgba(120, 169, 47, 0.10);
+
+    animation:
+        stacklyYouthAuthFloatThree
+        8s
+        ease-in-out
+        infinite;
+
+}
+
+
+/* =========================================================
+   BACKGROUND ANIMATIONS
+========================================================= */
+
+@keyframes stacklyYouthAuthFloatOne {
+
+    0%,
+    100% {
+        transform:
+            translate3d(0, 0, 0)
+            rotate(0deg);
+    }
+
+    50% {
+        transform:
+            translate3d(30px, 25px, 0)
+            rotate(8deg);
+    }
+
+}
+
+
+@keyframes stacklyYouthAuthFloatTwo {
+
+    0%,
+    100% {
+        transform:
+            translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform:
+            translate3d(-30px, -35px, 0);
+    }
+
+}
+
+
+@keyframes stacklyYouthAuthFloatThree {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translateY(-25px)
+            scale(1.05);
+    }
+
+}
+
+
+/* =========================================================
+   TOP HEADER
+========================================================= */
+
+.stackly-youth-auth-header {
+
+    position: relative;
+
+    z-index: 20;
+
+    width: 100%;
+
+    min-height: 92px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+.stackly-youth-auth-logo {
+    width: 170px;
+    height: 170px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        filter 0.3s ease;
+
+    filter:
+        brightness(0)
+        saturate(100%)
+        invert(63%)
+        sepia(91%)
+        saturate(2257%)
+        hue-rotate(359deg)
+        brightness(103%)
+        contrast(102%);
+}
+
+/* Logo Image */
+.stackly-youth-auth-logo img {
+    width: 140px;
+    height: 140px;
+
+    object-fit: contain;
+
+    transition:
+        transform 0.3s ease,
+        filter 0.3s ease;
+}
+
+/* Simple Hover Effect */
+.stackly-youth-auth-logo:hover {
+    transform: translateY(-3px);
+}
+
+.stackly-youth-auth-logo:hover img {
+    transform: scale(1.06);
+    filter: drop-shadow(0 6px 12px rgba(120, 169, 47, 0.22));
+}
+
+/* =========================================================
+   BACK HOME
+========================================================= */
+
+.stackly-youth-auth-home {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding:
+        12px 19px;
+
+    border:
+        1px solid rgba(16, 21, 16, 0.10);
+
+    border-radius: 100px;
+
+    background:
+        rgba(255, 255, 255, 0.80);
+
+    color:
+        var(--stackly-youth-text);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 8px 25px rgba(30, 50, 25, 0.05);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.stackly-youth-auth-home i {
+
+    color:
+        var(--stackly-youth-green);
+
+    font-size: 13px;
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+
+.stackly-youth-auth-home:hover {
+
+    transform:
+        translateY(-3px);
+
+    background:
+        var(--stackly-youth-green);
+
+    color:
+        #ffffff;
+
+    box-shadow:
+        0 14px 30px rgba(80, 123, 30, 0.20);
+
+}
+
+
+.stackly-youth-auth-home:hover i {
+
+    color: #ffffff;
+
+    transform:
+        translateX(-4px);
+
+}
+
+
+/* =========================================================
+   MAIN AUTH SECTION
+========================================================= */
+
+.stackly-youth-auth-section {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(
+        1320px,
+        100%
+    );
+
+    min-height:
+        calc(100vh - 160px);
+
+    margin:
+        0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 0.92fr)
+        minmax(500px, 0.78fr);
+
+    align-items: center;
+
+    gap:
+        clamp(60px, 7vw, 125px);
+
+}
+
+
+/* =========================================================
+   LEFT INTRO
+========================================================= */
+
+.stackly-youth-auth-intro {
+
+    max-width: 650px;
+
+    padding:
+        35px 0;
+
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.stackly-youth-auth-eyebrow {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-bottom: 22px;
+
+    padding:
+        9px 14px;
+
+    border:
+        1px solid rgba(120, 169, 47, 0.18);
+
+    border-radius: 100px;
+
+    background:
+        rgba(120, 169, 47, 0.08);
+
+    color:
+        var(--stackly-youth-green-dark);
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing:
+        0.14em;
+
+}
+
+
+.stackly-youth-auth-eyebrow i {
+
+    color:
+        var(--stackly-youth-green);
+
+    font-size: 14px;
+
+    animation:
+        stacklyYouthSeedPulse
+        2.5s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes stacklyYouthSeedPulse {
+
+    0%,
+    100% {
+        transform:
+            rotate(-8deg)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            rotate(8deg)
+            scale(1.15);
+    }
+
+}
+
+
+/* =========================================================
+   INTRO HEADING
+========================================================= */
+
+.stackly-youth-auth-intro h1 {
+
+    max-width: 680px;
+
+    margin-bottom: 25px;
+
+    color:
+        var(--stackly-youth-black);
+
+    font-family:
+        var(--stackly-youth-display);
+
+    font-size:
+        clamp(46px, 5vw, 76px);
+
+    line-height:
+        0.98;
+
+    letter-spacing:
+        -0.055em;
+
+    font-weight:
+        700;
+
+}
+
+
+.stackly-youth-auth-intro h1 span {
+
+    position: relative;
+
+    display: inline-block;
+
+    color:
+        var(--stackly-youth-green);
+
+}
+
+
+.stackly-youth-auth-intro h1 span::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 4px;
+    right: 4px;
+
+    bottom: -5px;
+
+    height: 5px;
+
+    border-radius: 100px;
+
+    background:
+        var(--stackly-youth-orange);
+
+    transform:
+        scaleX(0);
+
+    transform-origin:
+        left;
+
+    animation:
+        stacklyYouthUnderline
+        1.2s
+        1s
+        ease
+        forwards;
+
+}
+
+
+@keyframes stacklyYouthUnderline {
+
+    to {
+        transform:
+            scaleX(1);
+    }
+
+}
+
+
+/* =========================================================
+   INTRO DESCRIPTION
+========================================================= */
+
+.stackly-youth-auth-intro > p {
+
+    max-width: 610px;
+
+    margin-bottom: 34px;
+
+    color:
+        var(--stackly-youth-muted);
+
+    font-size:
+        clamp(16px, 1.25vw, 19px);
+
+    line-height:
+        1.8;
+
+}
+
+
+/* =========================================================
+   FEATURE CARD
+========================================================= */
+
+.stackly-youth-auth-feature {
+
+    max-width: 590px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 17px;
+
+    padding:
+        19px 21px;
+
+    margin-bottom: 35px;
+
+    border:
+        1px solid rgba(120, 169, 47, 0.13);
+
+    border-radius: 18px;
+
+    background:
+        rgba(255, 255, 255, 0.78);
+
+    box-shadow:
+        0 15px 40px rgba(30, 55, 25, 0.06);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+
+}
+
+
+.stackly-youth-auth-feature:hover {
+
+    transform:
+        translateY(-6px);
+
+    border-color:
+        rgba(120, 169, 47, 0.30);
+
+    box-shadow:
+        0 22px 50px rgba(30, 55, 25, 0.10);
+
+}
+
+
+.stackly-youth-auth-feature-icon {
+
+    width: 54px;
+    height: 54px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background:
+        var(--stackly-youth-green-light);
+
+    color:
+        var(--stackly-youth-green-dark);
+
+    font-size: 20px;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease;
+
+}
+
+
+.stackly-youth-auth-feature:hover
+.stackly-youth-auth-feature-icon {
+
+    transform:
+        rotate(-7deg)
+        scale(1.08);
+
+    background:
+        var(--stackly-youth-green);
+
+    color:
+        #ffffff;
+
+}
+
+
+.stackly-youth-auth-feature div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+}
+
+
+.stackly-youth-auth-feature strong {
+
+    color:
+        var(--stackly-youth-text);
+
+    font-family:
+        var(--stackly-youth-display);
+
+    font-size:
+        16px;
+
+}
+
+
+.stackly-youth-auth-feature div span {
+
+    color:
+        var(--stackly-youth-muted);
+
+    font-size:
+        13px;
+
+    line-height:
+        1.5;
+
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+/* =========================================================
+   STACKLY YOUTH AUTH — STATS HOVER EFFECT
+========================================================= */
+
+.stackly-youth-auth-stats {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+
+/* =========================================================
+   STAT ITEM
+========================================================= */
+
+.stackly-youth-auth-stats > div {
+    position: relative;
+    min-width: 115px;
+
+    padding:
+        12px 25px;
+
+    border-right:
+        1px solid rgba(16, 21, 16, 0.10);
+
+    border-radius: 14px;
+
+    cursor: default;
+
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+/* =========================================================
+   FIRST ITEM
+========================================================= */
+
+.stackly-youth-auth-stats > div:first-child {
+    padding-left: 12px;
+}
+
+
+/* =========================================================
+   LAST ITEM
+========================================================= */
+
+.stackly-youth-auth-stats > div:last-child {
+    border-right: 0;
+}
+
+
+/* =========================================================
+   HOVER ITEM
+========================================================= */
+
+.stackly-youth-auth-stats > div:hover {
+    transform:
+        translateY(-6px);
+
+    background:
+        rgba(120, 169, 47, 0.07);
+
+    border-right-color:
+        rgba(120, 169, 47, 0.25);
+
+    box-shadow:
+        0 12px 28px rgba(16, 21, 16, 0.08);
+}
+
+
+/* =========================================================
+   TOP ACCENT LINE
+========================================================= */
+
+.stackly-youth-auth-stats > div::before {
+    content: "";
+
+    position: absolute;
+
+    left: 14px;
+    right: 14px;
+    top: 0;
+
+    height: 3px;
+
+    border-radius: 0 0 6px 6px;
+
+    background:
+        var(--stackly-youth-green);
+
+    transform:
+        scaleX(0);
+
+    transform-origin:
+        center;
+
+    transition:
+        transform 0.35s ease;
+}
+
+
+.stackly-youth-auth-stats > div:hover::before {
+    transform:
+        scaleX(1);
+}
+
+
+/* =========================================================
+   STAT NUMBER
+========================================================= */
+
+.stackly-youth-auth-stats strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color:
+        var(--stackly-youth-black);
+
+    font-family:
+        var(--stackly-youth-display);
+
+    font-size:
+        26px;
+
+    font-weight:
+        700;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.stackly-youth-auth-stats > div:hover strong {
+    color:
+        var(--stackly-youth-green);
+
+    transform:
+        translateX(3px);
+}
+
+
+/* =========================================================
+   STAT LABEL
+========================================================= */
+
+.stackly-youth-auth-stats span {
+    color:
+        var(--stackly-youth-muted);
+
+    font-size:
+        12px;
+
+    font-weight:
+        600;
+
+    transition:
+        color 0.3s ease;
+}
+
+
+.stackly-youth-auth-stats > div:hover span {
+    color:
+        var(--stackly-youth-green-dark);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 576px) {
+
+    .stackly-youth-auth-stats {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .stackly-youth-auth-stats > div {
+        min-width: 0;
+        flex: 1;
+
+        padding:
+            10px 14px;
+    }
+
+    .stackly-youth-auth-stats > div:first-child {
+        padding-left: 14px;
+    }
+
+    .stackly-youth-auth-stats strong {
+        font-size: 22px;
+    }
+
+    .stackly-youth-auth-stats span {
+        font-size: 11px;
+    }
+
+    .stackly-youth-auth-stats > div:hover {
+        transform:
+            translateY(-3px);
+    }
+}
+/* =========================================================
+   AUTH CARD
+========================================================= */
+
+.stackly-youth-auth-card {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 560px;
+
+    justify-self: end;
+
+    padding:
+        34px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.90);
+
+    border-radius:
+        30px;
+
+    background:
+        rgba(255, 255, 255, 0.93);
+
+    box-shadow:
+        var(--stackly-youth-shadow);
+
+    backdrop-filter:
+        blur(20px);
+
+    -webkit-backdrop-filter:
+        blur(20px);
+
+    overflow: visible;
+
+}
+
+
+.stackly-youth-auth-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+
+    top: -40px;
+    right: -35px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(120, 169, 47, 0.10);
+
+    z-index: -1;
+
+}
+
+
+.stackly-youth-auth-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 70px;
+    height: 70px;
+
+    bottom: -25px;
+    left: -25px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 148, 24, 0.09);
+
+    z-index: -1;
+
+}
+
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.stackly-youth-auth-card-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    margin-bottom: 27px;
+
+}
+
+
+.stackly-youth-auth-card-icon {
+
+    width: 58px;
+    height: 58px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 17px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #78a92f,
+            #507b1e
+        );
+
+    color:
+        #ffffff;
+
+    font-size: 21px;
+
+    box-shadow:
+        0 12px 25px rgba(80, 123, 30, 0.22);
+
+    animation:
+        stacklyYouthHeartFloat
+        3.5s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes stacklyYouthHeartFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-4px);
+    }
+
+}
+
+
+.stackly-youth-auth-card-label {
+
+    display: block;
+
+    margin-bottom: 3px;
+
+    color:
+        var(--stackly-youth-green-dark);
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.16em;
+
+}
+
+
+.stackly-youth-auth-card-header h2 {
+
+    margin-bottom: 3px;
+
+    color:
+        var(--stackly-youth-black);
+
+    font-family:
+        var(--stackly-youth-display);
+
+    font-size:
+        clamp(25px, 2vw, 31px);
+
+    line-height:
+        1.15;
+
+}
+
+
+.stackly-youth-auth-card-header p {
+
+    color:
+        var(--stackly-youth-muted);
+
+    font-size:
+        13px;
+
+    line-height:
+        1.5;
+
+}
+
+
+/* =========================================================
+   LOGIN / SIGNUP TABS
+========================================================= */
+
+.stackly-youth-auth-tabs {
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    min-height: 54px;
+
+    margin-bottom: 28px;
+
+    padding: 5px;
+
+    border-radius: 15px;
+
+    background:
+        #f0f5eb;
+
+}
+
+
+.stackly-youth-auth-tab {
+
+    position: relative;
+
+    z-index: 2;
+
+    min-height: 44px;
+
+    border-radius: 11px;
+
+    background:
+        transparent;
+
+    color:
+        var(--stackly-youth-muted);
+
+    font-size:
+        14px;
+
+    font-weight:
+        700;
+
+    cursor: pointer;
+
+    transition:
+        color 0.3s ease;
+
+}
+
+
+.stackly-youth-auth-tab.active {
+
+    color:
+        var(--stackly-youth-black);
+
+}
+
+
+.stackly-youth-auth-tab:hover {
+
+    color:
+        var(--stackly-youth-green-dark);
+
+}
+
+
+.stackly-youth-auth-tab-slider {
+
+    position: absolute;
+
+    z-index: 1;
+
+    top: 5px;
+    bottom: 5px;
+
+    left: 5px;
+
+    width:
+        calc(50% - 5px);
+
+    border-radius: 11px;
+
+    background:
+        #ffffff;
+
+    box-shadow:
+        0 5px 15px rgba(30, 50, 25, 0.08);
+
+    transition:
+        transform 0.35s ease;
+
+}
+
+
+.stackly-youth-auth-tabs.signup-active
+.stackly-youth-auth-tab-slider {
+
+    transform:
+        translateX(100%);
+
+}
+
+
+/* =========================================================
+   AUTH FORMS
+========================================================= */
+
+.stackly-youth-auth-form {
+
+    display: none;
+
+    animation:
+        stacklyYouthFormIn
+        0.45s
+        ease
+        both;
+
+}
+
+
+.stackly-youth-auth-form.active {
+
+    display: block;
+
+}
+
+
+@keyframes stacklyYouthFormIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(12px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   FORM FIELD
+========================================================= */
+
+.stackly-youth-auth-field {
+
+    position: relative;
+
+    margin-bottom: 19px;
+
+}
+
+
+.stackly-youth-auth-field label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color:
+        var(--stackly-youth-text);
+
+    font-size:
+        14px;
+
+    font-weight:
+        700;
+
+}
+
+
+/* =========================================================
+   STANDARD INPUT WRAPPER
+========================================================= */
+
+.stackly-youth-auth-input-wrapper {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    min-height: 56px;
+
+    border:
+        1px solid rgba(16, 21, 16, 0.13);
+
+    border-radius:
+        14px;
+
+    background:
+        #ffffff;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease,
+        background 0.25s ease;
+
+}
+
+
+.stackly-youth-auth-input-wrapper > i {
+
+    width: 54px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    color:
+        var(--stackly-youth-green-dark);
+
+    font-size:
+        15px;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+
+}
+
+
+.stackly-youth-auth-input-wrapper input {
+
+    width: 100%;
+
+    min-width: 0;
+
+    height: 54px;
+
+    padding:
+        0 14px 0 0;
+
+    border: 0;
+
+    outline: 0;
+
+    background:
+        transparent;
+
+    color:
+        var(--stackly-youth-text);
+
+    font-size:
+        14px;
+
+    font-weight:
+        500;
+
+}
+
+
+.stackly-youth-auth-input-wrapper input::placeholder {
+
+    color:
+        #a0a8a1;
+
+}
+
+
+.stackly-youth-auth-input-wrapper:focus-within {
+
+    border-color:
+        var(--stackly-youth-green);
+
+    box-shadow:
+        0 0 0 4px rgba(120, 169, 47, 0.10);
+
+    transform:
+        translateY(-1px);
+
+    background:
+        #ffffff;
+
+}
+
+
+.stackly-youth-auth-input-wrapper:focus-within > i {
+
+    color:
+        var(--stackly-youth-green);
+
+    transform:
+        scale(1.08);
+
+}
+
+
+/* =========================================================
+   PASSWORD EYE BUTTON
+========================================================= */
+
+.stackly-youth-password-toggle {
+
+    width: 46px;
+    height: 46px;
+
+    margin-right: 5px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background:
+        transparent;
+
+    color:
+        #7d867e;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+
+}
+
+
+.stackly-youth-password-toggle:hover {
+
+    background:
+        var(--stackly-youth-green-light);
+
+    color:
+        var(--stackly-youth-green-dark);
+
+    transform:
+        scale(1.05);
+
+}
+
+
+/* =========================================================
+   CUSTOM ROLE DROPDOWN
+========================================================= */
+
+.stackly-youth-custom-dropdown {
+
+    position: relative;
+
+    width: 100%;
+
+    z-index: 30;
+
+}
+
+
+/* =========================================================
+   DROPDOWN TRIGGER
+========================================================= */
+
+.stackly-youth-custom-dropdown-trigger {
+
+    width: 100%;
+
+    min-height: 56px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding:
+        0 16px;
+
+    border:
+        1px solid rgba(16, 21, 16, 0.14);
+
+    border-radius:
+        14px;
+
+    background:
+        #ffffff;
+
+    color:
+        var(--stackly-youth-text);
+
+    font-family:
+        var(--stackly-youth-font);
+
+    font-size:
+        14px;
+
+    font-weight:
+        600;
+
+    text-align:
+        left;
+
+    cursor:
+        pointer;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease;
+
+}
+
+
+.stackly-youth-custom-dropdown-trigger:hover {
+
+    border-color:
+        rgba(120, 169, 47, 0.55);
+
+    background:
+        #fbfdf8;
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+.stackly-youth-custom-dropdown.open
+.stackly-youth-custom-dropdown-trigger {
+
+    border-color:
+        var(--stackly-youth-green);
+
+    box-shadow:
+        0 0 0 4px rgba(120, 169, 47, 0.10);
+
+}
+
+
+/* =========================================================
+   DROPDOWN ICON
+========================================================= */
+
+.stackly-youth-custom-dropdown-icon {
+
+    width: 36px;
+    height: 36px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius:
+        10px;
+
+    background:
+        var(--stackly-youth-green-light);
+
+    color:
+        var(--stackly-youth-green-dark);
+
+    font-size:
+        14px;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+
+}
+
+
+.stackly-youth-custom-dropdown.open
+.stackly-youth-custom-dropdown-icon {
+
+    background:
+        var(--stackly-youth-green);
+
+    color:
+        #ffffff;
+
+    transform:
+        rotate(-3deg);
+
+}
+
+
+/* =========================================================
+   DROPDOWN TEXT
+========================================================= */
+
+.stackly-youth-custom-dropdown-text {
+
+    flex: 1;
+
+    color:
+        var(--stackly-youth-muted);
+
+    white-space:
+        nowrap;
+
+    overflow:
+        hidden;
+
+    text-overflow:
+        ellipsis;
+
+}
+
+
+.stackly-youth-custom-dropdown.has-value
+.stackly-youth-custom-dropdown-text {
+
+    color:
+        var(--stackly-youth-text);
+
+}
+
+
+/* =========================================================
+   DROPDOWN ARROW
+========================================================= */
+
+.stackly-youth-custom-dropdown-arrow {
+
+    flex-shrink: 0;
+
+    color:
+        var(--stackly-youth-muted);
+
+    font-size:
+        11px;
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+
+}
+
+
+.stackly-youth-custom-dropdown.open
+.stackly-youth-custom-dropdown-arrow {
+
+    transform:
+        rotate(180deg);
+
+    color:
+        var(--stackly-youth-green);
+
+}
+
+
+/* =========================================================
+   DROPDOWN MENU
+========================================================= */
+
+.stackly-youth-custom-dropdown-menu {
+
+    position: absolute;
+
+    top:
+        calc(100% + 9px);
+
+    left: 0;
+    right: 0;
+
+    z-index: 100;
+
+    padding:
+        8px;
+
+    border:
+        1px solid rgba(16, 21, 16, 0.09);
+
+    border-radius:
+        16px;
+
+    background:
+        rgba(255, 255, 255, 0.98);
+
+    box-shadow:
+        0 22px 50px rgba(20, 40, 20, 0.15);
+
+    opacity:
+        0;
+
+    visibility:
+        hidden;
+
+    pointer-events:
+        none;
+
+    transform:
+        translateY(-10px)
+        scale(0.97);
+
+    transform-origin:
+        top center;
+
+    transition:
+        opacity 0.22s ease,
+        visibility 0.22s ease,
+        transform 0.22s ease;
+
+}
+
+
+.stackly-youth-custom-dropdown.open
+.stackly-youth-custom-dropdown-menu {
+
+    opacity:
+        1;
+
+    visibility:
+        visible;
+
+    pointer-events:
+        auto;
+
+    transform:
+        translateY(0)
+        scale(1);
+
+}
+
+
+/* =========================================================
+   DROPDOWN OPTION
+========================================================= */
+
+.stackly-youth-custom-dropdown-option {
+
+    width: 100%;
+
+    min-height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding:
+        10px 11px;
+
+    border-radius:
+        12px;
+
+    background:
+        transparent;
+
+    text-align:
+        left;
+
+    cursor:
+        pointer;
+
+    font-family:
+        var(--stackly-youth-font);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+.stackly-youth-custom-dropdown-option:hover {
+
+    background:
+        #f3f8ed;
+
+    transform:
+        translateX(3px);
+
+}
+
+
+/* =========================================================
+   OPTION ICON
+========================================================= */
+
+.stackly-youth-custom-option-icon {
+
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius:
+        11px;
+
+    background:
+        #f0f7e8;
+
+    color:
+        var(--stackly-youth-green-dark);
+
+    font-size:
+        14px;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+.stackly-youth-custom-dropdown-option:hover
+.stackly-youth-custom-option-icon {
+
+    background:
+        var(--stackly-youth-green);
+
+    color:
+        #ffffff;
+
+    transform:
+        rotate(-4deg);
+
+}
+
+
+/* =========================================================
+   OPTION TEXT
+========================================================= */
+
+.stackly-youth-custom-option-content {
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap:
+        3px;
+
+}
+
+
+.stackly-youth-custom-option-content strong {
+
+    color:
+        var(--stackly-youth-text);
+
+    font-family:
+        var(--stackly-youth-display);
+
+    font-size:
+        14px;
+
+    font-weight:
+        700;
+
+}
+
+
+.stackly-youth-custom-option-content small {
+
+    color:
+        var(--stackly-youth-muted);
+
+    font-size:
+        11px;
+
+    line-height:
+        1.4;
+
+}
+
+
+/* =========================================================
+   OPTION CHECK
+========================================================= */
+
+.stackly-youth-custom-option-check {
+
+    opacity:
+        0;
+
+    color:
+        var(--stackly-youth-green);
+
+    font-size:
+        13px;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+.stackly-youth-custom-dropdown-option.selected {
+
+    background:
+        #f3f8ed;
+
+}
+
+
+.stackly-youth-custom-dropdown-option.selected
+.stackly-youth-custom-option-check {
+
+    opacity:
+        1;
+
+    transform:
+        scale(1.1);
+
+}
+
+
+.stackly-youth-custom-dropdown-option.selected
+.stackly-youth-custom-option-icon {
+
+    background:
+        var(--stackly-youth-green);
+
+    color:
+        #ffffff;
+
+}
+
+
+/* =========================================================
+   DROPDOWN ERROR
+========================================================= */
+
+.stackly-youth-custom-dropdown-error
+.stackly-youth-custom-dropdown-trigger {
+
+    border-color:
+        #d9534f;
+
+    box-shadow:
+        0 0 0 4px rgba(217, 83, 79, 0.08);
+
+}
+
+
+/* =========================================================
+   AUTH OPTIONS
+========================================================= */
+
+.stackly-youth-auth-options {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin:
+        2px 0 22px;
+
+}
+
+
+/* =========================================================
+   REMEMBER
+========================================================= */
+
+.stackly-youth-remember {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color:
+        var(--stackly-youth-muted);
+
+    font-size:
+        12px;
+
+    font-weight:
+        600;
+
+    cursor:
+        pointer;
+
+}
+
+
+.stackly-youth-remember input {
+
+    width: 16px;
+    height: 16px;
+
+    accent-color:
+        var(--stackly-youth-green);
+
+    cursor:
+        pointer;
+
+}
+
+
+/* =========================================================
+   FORGOT PASSWORD
+========================================================= */
+
+.stackly-youth-forgot {
+
+    color:
+        var(--stackly-youth-green-dark);
+
+    font-size:
+        12px;
+
+    font-weight:
+        700;
+
+    transition:
+        color 0.25s ease;
+
+}
+
+
+.stackly-youth-forgot:hover {
+
+    color:
+        var(--stackly-youth-orange);
+
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+========================================================= */
+
+.stackly-youth-auth-submit {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height:
+        58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    padding:
+        0 22px;
+
+    overflow: hidden;
+
+    border-radius:
+        15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #78a92f 0%,
+            #507b1e 100%
+        );
+
+    color:
+        #ffffff;
+
+    font-family:
+        var(--stackly-youth-font);
+
+    font-size:
+        15px;
+
+    font-weight:
+        800;
+
+    cursor:
+        pointer;
+
+    box-shadow:
+        0 13px 28px rgba(80, 123, 30, 0.22);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        filter 0.3s ease;
+
+}
+
+
+.stackly-youth-auth-submit::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 80%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.25),
+            transparent
+        );
+
+    transform:
+        skewX(-20deg);
+
+    transition:
+        left 0.7s ease;
+
+}
+
+
+.stackly-youth-auth-submit:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 18px 38px rgba(80, 123, 30, 0.28);
+
+    filter:
+        saturate(1.08);
+
+}
+
+
+.stackly-youth-auth-submit:hover::before {
+
+    left:
+        140%;
+
+}
+
+
+.stackly-youth-auth-submit i {
+
+    font-size:
+        13px;
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+
+.stackly-youth-auth-submit:hover i {
+
+    transform:
+        translateX(5px);
+
+}
+
+
+/* =========================================================
+   AUTH MESSAGE
+========================================================= */
+
+.stackly-youth-auth-message {
+
+    min-height:
+        20px;
+
+    margin-top:
+        12px;
+
+    font-size:
+        12px;
+
+    line-height:
+        1.5;
+
+    text-align:
+        center;
+
+}
+
+
+.stackly-youth-auth-message.error {
+
+    padding:
+        10px 12px;
+
+    border-radius:
+        10px;
+
+    background:
+        rgba(217, 83, 79, 0.08);
+
+    color:
+        #b63d39;
+
+}
+
+
+.stackly-youth-auth-message.success {
+
+    padding:
+        10px 12px;
+
+    border-radius:
+        10px;
+
+    background:
+        rgba(120, 169, 47, 0.10);
+
+    color:
+        var(--stackly-youth-green-dark);
+
+}
+
+
+/* =========================================================
+   INPUT ERROR
+========================================================= */
+
+.stackly-youth-input-error {
+
+    border-color:
+        #d9534f !important;
+
+    box-shadow:
+        0 0 0 4px rgba(217, 83, 79, 0.07) !important;
+
+}
+
+
+select.stackly-youth-input-error {
+
+    border-color:
+        #d9534f !important;
+
+}
+
+
+/* =========================================================
+   AUTH SWITCH
+========================================================= */
+
+.stackly-youth-auth-switch {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap:
+        7px;
+
+    margin-top:
+        20px;
+
+    padding-top:
+        18px;
+
+    border-top:
+        1px solid var(--stackly-youth-border);
+
+    color:
+        var(--stackly-youth-muted);
+
+    font-size:
+        13px;
+
+}
+
+
+.stackly-youth-auth-switch-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap:
+        6px;
+
+    padding:
+        0;
+
+    background:
+        transparent;
+
+    color:
+        var(--stackly-youth-green-dark);
+
+    font-size:
+        13px;
+
+    font-weight:
+        800;
+
+    cursor:
+        pointer;
+
+    transition:
+        color 0.25s ease;
+
+}
+
+
+.stackly-youth-auth-switch-button i {
+
+    font-size:
+        11px;
+
+    transition:
+        transform 0.25s ease;
+
+}
+
+
+.stackly-youth-auth-switch-button:hover {
+
+    color:
+        var(--stackly-youth-orange);
+
+}
+
+
+.stackly-youth-auth-switch-button:hover i {
+
+    transform:
+        translateX(4px);
+
+}
+
+
+/* =========================================================
+   TERMS
+========================================================= */
+
+.stackly-youth-auth-terms {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap:
+        9px;
+
+    margin:
+        2px 0 21px;
+
+    color:
+        var(--stackly-youth-muted);
+
+    font-size:
+        12px;
+
+    line-height:
+        1.6;
+
+    cursor:
+        pointer;
+
+}
+
+
+.stackly-youth-auth-terms input {
+
+    width:
+        16px;
+
+    height:
+        16px;
+
+    flex-shrink:
+        0;
+
+    margin-top:
+        2px;
+
+    accent-color:
+        var(--stackly-youth-green);
+
+}
+
+
+.stackly-youth-auth-terms a {
+
+    color:
+        var(--stackly-youth-green-dark);
+
+    font-weight:
+        700;
+
+    transition:
+        color 0.25s ease;
+
+}
+
+
+.stackly-youth-auth-terms a:hover {
+
+    color:
+        var(--stackly-youth-orange);
+
+}
+
+
+/* =========================================================
+   CARD FOOTER
+========================================================= */
+
+.stackly-youth-auth-footer {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap:
+        15px;
+
+    margin-top:
+        25px;
+
+    padding-top:
+        17px;
+
+    border-top:
+        1px solid var(--stackly-youth-border);
+
+    color:
+        #879087;
+
+    font-size:
+        11px;
+
+}
+
+
+.stackly-youth-auth-footer > div {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap:
+        6px;
+
+    color:
+        var(--stackly-youth-green-dark);
+
+    font-weight:
+        700;
+
+}
+
+
+.stackly-youth-auth-footer i {
+
+    font-size:
+        12px;
+
+}
+
+
+/* =========================================================
+   AOS / LOAD SUPPORT
+========================================================= */
+
+[data-aos] {
+
+    will-change:
+        transform,
+        opacity;
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .stackly-youth-auth-page {
+
+        padding:
+            0 4% 60px;
+
+    }
+
+
+    .stackly-youth-auth-section {
+
+        grid-template-columns:
+            minmax(0, 0.9fr)
+            minmax(430px, 0.85fr);
+
+        gap:
+            45px;
+
+    }
+
+
+    .stackly-youth-auth-intro h1 {
+
+        font-size:
+            clamp(42px, 5vw, 60px);
+
+    }
+
+
+    .stackly-youth-auth-card {
+
+        padding:
+            29px;
+
+    }
+
+}
+
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .stackly-youth-auth-section {
+
+        grid-template-columns:
+            1fr;
+
+        max-width:
+            680px;
+
+        margin:
+            0 auto;
+
+        padding:
+            50px 0 20px;
+
+    }
+
+
+    .stackly-youth-auth-intro {
+
+        max-width:
+            680px;
+
+        text-align:
+            center;
+
+        padding:
+            10px 0;
+
+    }
+
+
+    .stackly-youth-auth-eyebrow {
+
+        margin-left:
+            auto;
+
+        margin-right:
+            auto;
+
+    }
+
+
+    .stackly-youth-auth-intro h1 {
+
+        margin-left:
+            auto;
+
+        margin-right:
+            auto;
+
+    }
+
+
+    .stackly-youth-auth-intro > p {
+
+        margin-left:
+            auto;
+
+        margin-right:
+            auto;
+
+    }
+
+
+    .stackly-youth-auth-feature {
+
+        margin-left:
+            auto;
+
+        margin-right:
+            auto;
+
+        text-align:
+            left;
+
+    }
+
+
+    .stackly-youth-auth-stats {
+
+        justify-content:
+            center;
+
+    }
+
+
+    .stackly-youth-auth-card {
+
+        max-width:
+            600px;
+
+        width:
+            100%;
+
+        justify-self:
+            center;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .stackly-youth-auth-page {
+
+        padding:
+            0 18px 45px;
+
+    }
+
+
+    /* Header */
+
+    .stackly-youth-auth-header {
+
+        min-height:
+            78px;
+
+    }
+
+
+    .stackly-youth-auth-logo {
+
+        width:
+            54px;
+
+        height:
+            54px;
+
+        border-radius:
+            15px;
+
+    }
+
+
+    .stackly-youth-auth-logo img {
+
+        width:
+            44px;
+
+        height:
+            44px;
+
+    }
+
+
+    .stackly-youth-auth-home {
+
+        padding:
+            10px 14px;
+
+        font-size:
+            12px;
+
+    }
+
+
+    .stackly-youth-auth-home i {
+
+        font-size:
+            11px;
+
+    }
+
+
+    /* Main */
+
+    .stackly-youth-auth-section {
+
+        min-height:
+            auto;
+
+        padding:
+            42px 0 10px;
+
+        gap:
+            42px;
+
+    }
+
+
+    /* Intro */
+
+    .stackly-youth-auth-intro {
+
+        padding:
+            0;
+
+    }
+
+
+    .stackly-youth-auth-eyebrow {
+
+        margin-bottom:
+            18px;
+
+        padding:
+            8px 12px;
+
+        font-size:
+            10px;
+
+    }
+
+
+    .stackly-youth-auth-intro h1 {
+
+        font-size:
+            clamp(38px, 11vw, 52px);
+
+        line-height:
+            1.02;
+
+        letter-spacing:
+            -0.045em;
+
+        margin-bottom:
+            20px;
+
+    }
+
+
+    .stackly-youth-auth-intro > p {
+
+        font-size:
+            14px;
+
+        line-height:
+            1.75;
+
+        margin-bottom:
+            25px;
+
+    }
+
+
+    /* Feature */
+
+    .stackly-youth-auth-feature {
+
+        padding:
+            15px;
+
+        gap:
+            13px;
+
+        border-radius:
+            15px;
+
+        margin-bottom:
+            27px;
+
+    }
+
+
+    .stackly-youth-auth-feature-icon {
+
+        width:
+            45px;
+
+        height:
+            45px;
+
+        border-radius:
+            12px;
+
+        font-size:
+            16px;
+
+    }
+
+
+    .stackly-youth-auth-feature strong {
+
+        font-size:
+            13px;
+
+    }
+
+
+    .stackly-youth-auth-feature div span {
+
+        font-size:
+            11px;
+
+    }
+
+
+    /* Stats */
+
+    .stackly-youth-auth-stats {
+
+        width:
+            100%;
+
+    }
+
+
+    .stackly-youth-auth-stats > div {
+
+        flex:
+            1;
+
+        min-width:
+            0;
+
+        padding:
+            0 10px;
+
+    }
+
+
+    .stackly-youth-auth-stats > div:first-child {
+
+        padding-left:
+            0;
+
+    }
+
+
+    .stackly-youth-auth-stats > div:last-child {
+
+        padding-right:
+            0;
+
+    }
+
+
+    .stackly-youth-auth-stats strong {
+
+        font-size:
+            21px;
+
+    }
+
+
+    .stackly-youth-auth-stats span {
+
+        font-size:
+            10px;
+
+    }
+
+
+    /* Auth Card */
+
+    .stackly-youth-auth-card {
+
+        padding:
+            23px 18px;
+
+        border-radius:
+            23px;
+
+    }
+
+
+    /* Card Header */
+
+    .stackly-youth-auth-card-header {
+
+        gap:
+            12px;
+
+        margin-bottom:
+            21px;
+
+    }
+
+
+    .stackly-youth-auth-card-icon {
+
+        width:
+            48px;
+
+        height:
+            48px;
+
+        border-radius:
+            14px;
+
+        font-size:
+            17px;
+
+    }
+
+
+    .stackly-youth-auth-card-label {
+
+        font-size:
+            9px;
+
+    }
+
+
+    .stackly-youth-auth-card-header h2 {
+
+        font-size:
+            24px;
+
+    }
+
+
+    .stackly-youth-auth-card-header p {
+
+        font-size:
+            11px;
+
+    }
+
+
+    /* Tabs */
+
+    .stackly-youth-auth-tabs {
+
+        margin-bottom:
+            23px;
+
+    }
+
+
+    .stackly-youth-auth-tab {
+
+        font-size:
+            13px;
+
+    }
+
+
+    /* Labels */
+
+    .stackly-youth-auth-field label {
+
+        font-size:
+            13px;
+
+        margin-bottom:
+            7px;
+
+    }
+
+
+    /* Inputs */
+
+    .stackly-youth-auth-input-wrapper {
+
+        min-height:
+            53px;
+
+    }
+
+
+    .stackly-youth-auth-input-wrapper input {
+
+        height:
+            51px;
+
+        font-size:
+            13px;
+
+    }
+
+
+    .stackly-youth-auth-input-wrapper > i {
+
+        width:
+            47px;
+
+        font-size:
+            14px;
+
+    }
+
+
+    /* Dropdown */
+
+    .stackly-youth-custom-dropdown-trigger {
+
+        min-height:
+            53px;
+
+        padding:
+            0 13px;
+
+        font-size:
+            13px;
+
+    }
+
+
+    .stackly-youth-custom-dropdown-icon {
+
+        width:
+            33px;
+
+        height:
+            33px;
+
+        font-size:
+            13px;
+
+    }
+
+
+    .stackly-youth-custom-dropdown-option {
+
+        min-height:
+            55px;
+
+        padding:
+            9px;
+
+    }
+
+
+    .stackly-youth-custom-option-icon {
+
+        width:
+            35px;
+
+        height:
+            35px;
+
+    }
+
+
+    .stackly-youth-custom-option-content strong {
+
+        font-size:
+            13px;
+
+    }
+
+
+    .stackly-youth-custom-option-content small {
+
+        font-size:
+            10px;
+
+    }
+
+
+    /* Options */
+
+    .stackly-youth-auth-options {
+
+        margin-bottom:
+            19px;
+
+    }
+
+
+    .stackly-youth-remember,
+    .stackly-youth-forgot {
+
+        font-size:
+            11px;
+
+    }
+
+
+    /* Submit */
+
+    .stackly-youth-auth-submit {
+
+        min-height:
+            54px;
+
+        border-radius:
+            13px;
+
+        font-size:
+            14px;
+
+    }
+
+
+    /* Terms */
+
+    .stackly-youth-auth-terms {
+
+        font-size:
+            11px;
+
+        margin-bottom:
+            18px;
+
+    }
+
+
+    /* Switch */
+
+    .stackly-youth-auth-switch {
+
+        margin-top:
+            16px;
+
+        padding-top:
+            15px;
+
+        font-size:
+            12px;
+
+    }
+
+
+    .stackly-youth-auth-switch-button {
+
+        font-size:
+            12px;
+
+    }
+
+
+    /* Footer */
+
+    .stackly-youth-auth-footer {
+
+        margin-top:
+            21px;
+
+        padding-top:
+            15px;
+
+        font-size:
+            10px;
+
+    }
+
+
+    /* Background */
+
+    .auth-circle-one {
+
+        width:
+            280px;
+
+        height:
+            280px;
+
+        top:
+            -150px;
+
+        left:
+            -140px;
+
+    }
+
+
+    .auth-circle-two {
+
+        width:
+            220px;
+
+        height:
+            220px;
+
+        right:
+            -120px;
+
+    }
+
+
+    .auth-circle-three {
+
+        width:
+            160px;
+
+        height:
+            160px;
+
+        left:
+            30%;
+
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .stackly-youth-auth-page {
+
+        padding-left:
+            13px;
+
+        padding-right:
+            13px;
+
+    }
+
+
+    .stackly-youth-auth-home span {
+
+        display:
+            none;
+
+    }
+
+
+    .stackly-youth-auth-home {
+
+        width:
+            40px;
+
+        height:
+            40px;
+
+        padding:
+            0;
+
+        justify-content:
+            center;
+
+    }
+
+
+    .stackly-youth-auth-intro h1 {
+
+        font-size:
+            36px;
+
+    }
+
+
+    .stackly-youth-auth-card {
+
+        padding:
+            20px 15px;
+
+    }
+
+
+    .stackly-youth-auth-stats strong {
+
+        font-size:
+            19px;
+
+    }
+
+
+    .stackly-youth-auth-stats span {
+
+        font-size:
+            9px;
+
+    }
+
+
+    .stackly-youth-auth-options {
+
+        flex-direction:
+            column;
+
+        align-items:
+            flex-start;
+
+        gap:
+            10px;
+
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        scroll-behavior:
+            auto !important;
+
+        animation-duration:
+            0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            0.01ms !important;
+
+    }
+
+}

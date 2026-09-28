@@ -1,0 +1,1883 @@
+/* =========================================================
+   YOUTH WELFARE FOUNDATION - 404 PAGE
+   FULL SCREEN / NO SCROLL VERSION
+========================================================= */
+
+
+/* =========================================================
+   ROOT VARIABLES
+========================================================= */
+
+:root {
+
+    --ywf-orange: #f47c20;
+    --ywf-orange-dark: #d9650d;
+    --ywf-orange-light: #ffb45d;
+
+    --ywf-black: #171717;
+    --ywf-text: #555555;
+    --ywf-muted: #777777;
+
+    --ywf-white: #ffffff;
+    --ywf-cream: #fff9f3;
+
+    --ywf-border: rgba(244, 124, 32, 0.15);
+
+    --ywf-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.10);
+
+    --ywf-transition:
+        all 0.4s ease;
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+}
+
+
+body {
+    font-family: "DM Sans", Arial, sans-serif;
+
+    background: var(--ywf-white);
+
+    color: var(--ywf-black);
+}
+
+
+/* =========================================================
+   MAIN 404 PAGE
+========================================================= */
+
+.ywf-error-page {
+
+    width: 100%;
+    height: 100vh;
+    height: 100svh;
+
+    min-height: 560px;
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 8% 15%,
+            rgba(244, 124, 32, 0.07),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 92% 85%,
+            rgba(244, 124, 32, 0.06),
+            transparent 25%
+        ),
+
+        #ffffff;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.ywf-error-container {
+
+    width: min(90%, 1250px);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        0.85fr 1.15fr;
+
+    align-items: center;
+
+    gap: 70px;
+
+    position: relative;
+
+    z-index: 10;
+}
+
+
+/* =========================================================
+   LEFT VISUAL
+========================================================= */
+
+.ywf-error-visual {
+
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+
+    height: 420px;
+}
+
+
+/* =========================================================
+   404 CIRCLE
+========================================================= */
+
+.ywf-error-circle {
+
+    width: 370px;
+
+    height: 370px;
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            #ffffff 0%,
+            #fff9f3 65%,
+            #fff0df 100%
+        );
+
+    border:
+        2px solid
+        rgba(244, 124, 32, 0.15);
+
+    box-shadow:
+        0 25px 70px
+        rgba(244, 124, 32, 0.14),
+
+        inset 0 0 50px
+        rgba(244, 124, 32, 0.05);
+
+    animation:
+        ywfCircleFloat 5s ease-in-out infinite;
+
+    transition:
+        transform 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+
+/* =========================================================
+   CIRCLE HOVER
+========================================================= */
+
+.ywf-error-visual:hover .ywf-error-circle {
+
+    transform:
+        translateY(-8px)
+        scale(1.02);
+
+    box-shadow:
+        0 35px 90px
+        rgba(244, 124, 32, 0.20),
+
+        inset 0 0 60px
+        rgba(244, 124, 32, 0.08);
+}
+
+
+/* =========================================================
+   404 NUMBER
+========================================================= */
+
+.ywf-error-number {
+
+    display: block;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 110px;
+
+    line-height: 0.9;
+
+    font-weight: 800;
+
+    letter-spacing: -5px;
+
+    color: var(--ywf-orange);
+
+    text-shadow:
+        4px 5px 0
+        rgba(244, 124, 32, 0.08);
+
+    transition:
+        transform 0.4s ease,
+        color 0.4s ease;
+}
+
+
+.ywf-error-visual:hover
+.ywf-error-number {
+
+    transform:
+        scale(1.05);
+
+    color:
+        var(--ywf-orange-dark);
+}
+
+
+/* =========================================================
+   ERROR ICON
+========================================================= */
+
+.ywf-error-icon {
+
+    width: 62px;
+
+    height: 62px;
+
+    margin-top: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        var(--ywf-orange);
+
+    color: #ffffff;
+
+    font-size: 27px;
+
+    box-shadow:
+        0 12px 25px
+        rgba(244, 124, 32, 0.28);
+
+    animation:
+        ywfIconPulse 3s ease-in-out infinite;
+
+    transition:
+        transform 0.4s ease,
+        background 0.4s ease;
+}
+
+
+.ywf-error-visual:hover
+.ywf-error-icon {
+
+    transform:
+        rotate(-8deg)
+        scale(1.12);
+
+    background:
+        var(--ywf-black);
+}
+
+
+/* =========================================================
+   DECORATIVE DOTS
+========================================================= */
+
+.ywf-error-dot {
+
+    position: absolute;
+
+    display: block;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* DOT ONE */
+
+.ywf-dot-one {
+
+    width: 20px;
+    height: 20px;
+
+    top: 30px;
+    left: 45px;
+
+    background: var(--ywf-orange);
+
+    animation:
+        ywfDotFloatOne 4s ease-in-out infinite;
+}
+
+
+/* DOT TWO */
+
+.ywf-dot-two {
+
+    width: 13px;
+    height: 13px;
+
+    top: 85px;
+    right: 35px;
+
+    background: var(--ywf-orange-light);
+
+    animation:
+        ywfDotFloatTwo 5s ease-in-out infinite;
+}
+
+
+/* DOT THREE */
+
+.ywf-dot-three {
+
+    width: 25px;
+    height: 25px;
+
+    bottom: 45px;
+    left: 75px;
+
+    border: 4px solid var(--ywf-orange);
+
+    background: transparent;
+
+    animation:
+        ywfDotFloatThree 6s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   RIGHT CONTENT
+========================================================= */
+
+.ywf-error-content {
+
+    width: 100%;
+
+    max-width: 680px;
+}
+
+
+/* =========================================================
+   SMALL LABEL
+========================================================= */
+
+.ywf-error-label {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 15px;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    color: var(--ywf-orange);
+
+    text-transform: uppercase;
+}
+
+
+.ywf-error-label::before {
+
+    content: "";
+
+    width: 34px;
+
+    height: 3px;
+
+    border-radius: 10px;
+
+    background:
+        var(--ywf-orange);
+}
+
+
+/* =========================================================
+   MAIN TITLE
+========================================================= */
+
+.ywf-error-title {
+
+    margin: 0 0 20px;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(44px, 5vw, 68px);
+
+    font-weight: 800;
+
+    line-height: 1.03;
+
+    letter-spacing: -2px;
+
+    color: var(--ywf-black);
+
+    transition:
+        transform 0.4s ease,
+        color 0.4s ease;
+}
+
+
+.ywf-error-content:hover
+.ywf-error-title {
+
+    transform:
+        translateX(4px);
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.ywf-error-description {
+
+    max-width: 650px;
+
+    margin-bottom: 13px;
+
+    font-size: 17px;
+
+    font-weight: 400;
+
+    line-height: 1.7;
+
+    color: var(--ywf-text);
+}
+
+
+/* =========================================================
+   SECOND MESSAGE
+========================================================= */
+
+.ywf-error-message {
+
+    max-width: 650px;
+
+    margin-bottom: 25px;
+
+    font-size: 16px;
+
+    line-height: 1.65;
+
+    color: var(--ywf-muted);
+}
+
+
+/* =========================================================
+   BUTTON AREA
+========================================================= */
+
+.ywf-error-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 22px;
+}
+
+
+/* =========================================================
+   COMMON BUTTON
+========================================================= */
+
+.ywf-error-home-btn,
+.ywf-error-back-btn {
+
+    min-width: 165px;
+
+    height: 55px;
+
+    padding:
+        0 24px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 11px;
+
+    border-radius: 3px;
+
+    font-family:
+        "DM Sans",
+        Arial,
+        sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    text-decoration: none;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        background 0.4s ease,
+        color 0.4s ease,
+        border-color 0.4s ease;
+}
+
+
+/* =========================================================
+   HOME BUTTON
+========================================================= */
+
+.ywf-error-home-btn {
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        var(--ywf-orange);
+
+    color: #ffffff;
+
+    border:
+        2px solid
+        var(--ywf-orange);
+
+    box-shadow:
+        0 10px 25px
+        rgba(244, 124, 32, 0.20);
+}
+
+
+/* =========================================================
+   HOME BUTTON SHINE
+========================================================= */
+
+.ywf-error-home-btn::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 60px;
+
+    height: 140%;
+
+    top: -20%;
+
+    left: -90px;
+
+    background:
+        rgba(255, 255, 255, 0.25);
+
+    transform:
+        rotate(20deg);
+
+    transition:
+        left 0.7s ease;
+}
+
+
+.ywf-error-home-btn:hover::before {
+
+    left: 120%;
+}
+
+
+/* =========================================================
+   HOME HOVER
+========================================================= */
+
+.ywf-error-home-btn:hover {
+
+    transform:
+        translateY(-5px);
+
+    background:
+        var(--ywf-black);
+
+    border-color:
+        var(--ywf-black);
+
+    box-shadow:
+        0 16px 32px
+        rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.ywf-error-back-btn {
+
+    background:
+        #ffffff;
+
+    color:
+        var(--ywf-black);
+
+    border:
+        2px solid
+        rgba(23, 23, 23, 0.14);
+}
+
+
+/* =========================================================
+   BACK HOVER
+========================================================= */
+
+.ywf-error-back-btn:hover {
+
+    transform:
+        translateY(-5px);
+
+    background:
+        var(--ywf-orange);
+
+    color:
+        #ffffff;
+
+    border-color:
+        var(--ywf-orange);
+
+    box-shadow:
+        0 14px 30px
+        rgba(244, 124, 32, 0.20);
+}
+
+
+/* =========================================================
+   BUTTON ICON
+========================================================= */
+
+.ywf-error-home-btn i,
+.ywf-error-back-btn i {
+
+    font-size: 15px;
+
+    transition:
+        transform 0.35s ease;
+}
+
+
+.ywf-error-home-btn:hover i {
+
+    transform:
+        scale(1.15);
+}
+
+
+.ywf-error-back-btn:hover i {
+
+    transform:
+        translateX(-5px);
+}
+
+
+/* =========================================================
+   SUPPORT MESSAGE
+========================================================= */
+
+.ywf-error-support {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    max-width: 550px;
+
+    padding-top: 17px;
+
+    border-top:
+        1px solid
+        var(--ywf-border);
+}
+
+
+/* =========================================================
+   SUPPORT ICON
+========================================================= */
+
+.ywf-support-icon {
+
+    width: 38px;
+
+    min-width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(244, 124, 32, 0.10);
+
+    color:
+        var(--ywf-orange);
+
+    font-size: 16px;
+
+    transition:
+        transform 0.4s ease,
+        background 0.4s ease;
+}
+
+
+.ywf-error-support:hover
+.ywf-support-icon {
+
+    transform:
+        scale(1.12)
+        rotate(8deg);
+
+    background:
+        var(--ywf-orange);
+
+    color:
+        #ffffff;
+}
+
+
+/* =========================================================
+   SUPPORT TEXT
+========================================================= */
+
+.ywf-error-support p {
+
+    margin: 0;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    color:
+        var(--ywf-muted);
+}
+
+
+/* =========================================================
+   BOTTOM BRAND
+========================================================= */
+
+.ywf-error-bottom {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 24px;
+
+    transform:
+        translateX(-50%);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    width: max-content;
+
+    max-width: 90%;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.4px;
+
+    color:
+        #9a9a9a;
+
+    text-align: center;
+}
+
+
+.ywf-error-bottom i {
+
+    font-size: 5px;
+
+    color:
+        var(--ywf-orange);
+}
+
+
+/* =========================================================
+   BACKGROUND DECORATIONS
+========================================================= */
+
+.ywf-error-decoration {
+
+    position: absolute;
+
+    pointer-events: none;
+
+    z-index: 1;
+
+    border-radius: 50%;
+}
+
+
+/* DECORATION ONE */
+
+.ywf-error-decoration-one {
+
+    width: 240px;
+
+    height: 240px;
+
+    left: -100px;
+
+    top: -80px;
+
+    border:
+        35px solid
+        rgba(244, 124, 32, 0.045);
+
+    animation:
+        ywfBackgroundFloatOne 8s ease-in-out infinite;
+}
+
+
+/* DECORATION TWO */
+
+.ywf-error-decoration-two {
+
+    width: 160px;
+
+    height: 160px;
+
+    right: -50px;
+
+    top: 12%;
+
+    background:
+        rgba(244, 124, 32, 0.045);
+
+    animation:
+        ywfBackgroundFloatTwo 7s ease-in-out infinite;
+}
+
+
+/* DECORATION THREE */
+
+.ywf-error-decoration-three {
+
+    width: 280px;
+
+    height: 280px;
+
+    right: -120px;
+
+    bottom: -130px;
+
+    border:
+        35px solid
+        rgba(244, 124, 32, 0.045);
+
+    animation:
+        ywfBackgroundFloatThree 9s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes ywfCircleFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-12px);
+    }
+
+}
+
+
+@keyframes ywfIconPulse {
+
+    0%,
+    100% {
+        transform:
+            scale(1);
+    }
+
+    50% {
+        transform:
+            scale(1.08);
+    }
+
+}
+
+
+@keyframes ywfDotFloatOne {
+
+    0%,
+    100% {
+        transform:
+            translate(0, 0);
+    }
+
+    50% {
+        transform:
+            translate(12px, -15px);
+    }
+
+}
+
+
+@keyframes ywfDotFloatTwo {
+
+    0%,
+    100% {
+        transform:
+            translate(0, 0);
+    }
+
+    50% {
+        transform:
+            translate(-10px, 15px);
+    }
+
+}
+
+
+@keyframes ywfDotFloatThree {
+
+    0%,
+    100% {
+        transform:
+            translate(0, 0)
+            rotate(0deg);
+    }
+
+    50% {
+        transform:
+            translate(10px, -12px)
+            rotate(90deg);
+    }
+
+}
+
+
+@keyframes ywfBackgroundFloatOne {
+
+    0%,
+    100% {
+        transform:
+            translate(0, 0);
+    }
+
+    50% {
+        transform:
+            translate(30px, 25px);
+    }
+
+}
+
+
+@keyframes ywfBackgroundFloatTwo {
+
+    0%,
+    100% {
+        transform:
+            translate(0, 0)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translate(-20px, 25px)
+            scale(1.08);
+    }
+
+}
+
+
+@keyframes ywfBackgroundFloatThree {
+
+    0%,
+    100% {
+        transform:
+            translate(0, 0);
+    }
+
+    50% {
+        transform:
+            translate(-25px, -20px);
+    }
+
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1400px) {
+
+    .ywf-error-container {
+
+        width: min(88%, 1350px);
+
+        gap: 100px;
+    }
+
+    .ywf-error-circle {
+
+        width: 410px;
+        height: 410px;
+    }
+
+    .ywf-error-number {
+
+        font-size: 125px;
+    }
+
+    .ywf-error-title {
+
+        font-size: 72px;
+    }
+
+    .ywf-error-description {
+
+        font-size: 18px;
+    }
+
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .ywf-error-container {
+
+        width: 90%;
+
+        gap: 45px;
+    }
+
+    .ywf-error-visual {
+
+        height: 380px;
+    }
+
+    .ywf-error-circle {
+
+        width: 320px;
+
+        height: 320px;
+    }
+
+    .ywf-error-number {
+
+        font-size: 95px;
+    }
+
+    .ywf-error-title {
+
+        font-size: 50px;
+
+        letter-spacing: -1.5px;
+    }
+
+    .ywf-error-description {
+
+        font-size: 16px;
+
+        line-height: 1.6;
+    }
+
+    .ywf-error-message {
+
+        font-size: 15px;
+
+        margin-bottom: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+    html,
+    body {
+
+        overflow: hidden;
+    }
+
+
+    .ywf-error-page {
+
+        min-height: 600px;
+    }
+
+
+    .ywf-error-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+
+        width: 88%;
+
+        text-align: center;
+    }
+
+
+    .ywf-error-visual {
+
+        height: 220px;
+
+        min-height: 220px;
+    }
+
+
+    .ywf-error-circle {
+
+        width: 205px;
+
+        height: 205px;
+    }
+
+
+    .ywf-error-number {
+
+        font-size: 65px;
+
+        letter-spacing: -3px;
+    }
+
+
+    .ywf-error-icon {
+
+        width: 43px;
+
+        height: 43px;
+
+        margin-top: 10px;
+
+        font-size: 18px;
+    }
+
+
+    .ywf-error-label {
+
+        margin-bottom: 10px;
+
+        font-size: 13px;
+    }
+
+
+    .ywf-error-label::before {
+
+        display: none;
+    }
+
+
+    .ywf-error-title {
+
+        margin-bottom: 13px;
+
+        font-size: 40px;
+
+        letter-spacing: -1px;
+    }
+
+
+    .ywf-error-description {
+
+        max-width: 650px;
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+        margin-bottom: 8px;
+
+        font-size: 14px;
+
+        line-height: 1.5;
+    }
+
+
+    .ywf-error-message {
+
+        max-width: 650px;
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+        margin-bottom: 15px;
+
+        font-size: 13px;
+
+        line-height: 1.5;
+    }
+
+
+    .ywf-error-actions {
+
+        justify-content: center;
+
+        margin-bottom: 14px;
+    }
+
+
+    .ywf-error-home-btn,
+    .ywf-error-back-btn {
+
+        min-width: 145px;
+
+        height: 48px;
+
+        font-size: 12px;
+    }
+
+
+    .ywf-error-support {
+
+        max-width: 500px;
+
+        margin: 0 auto;
+
+        justify-content: center;
+
+        padding-top: 12px;
+    }
+
+
+    .ywf-error-support p {
+
+        font-size: 12px;
+
+        text-align: left;
+    }
+
+
+    .ywf-error-bottom {
+
+        bottom: 14px;
+
+        font-size: 9px;
+
+        letter-spacing: 1px;
+    }
+
+
+    .ywf-dot-one {
+
+        top: 10px;
+
+        left: 25%;
+    }
+
+
+    .ywf-dot-two {
+
+        top: 15px;
+
+        right: 25%;
+    }
+
+
+    .ywf-dot-three {
+
+        bottom: 10px;
+
+        left: 28%;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .ywf-error-page {
+
+        min-height: 100svh;
+
+        padding:
+            15px 0 50px;
+    }
+
+
+    .ywf-error-container {
+
+        width: 88%;
+
+        gap: 14px;
+    }
+
+
+    .ywf-error-visual {
+
+        height: 155px;
+
+        min-height: 155px;
+    }
+
+
+    .ywf-error-circle {
+
+        width: 145px;
+
+        height: 145px;
+
+        box-shadow:
+            0 15px 35px
+            rgba(244, 124, 32, 0.12);
+    }
+
+
+    .ywf-error-number {
+
+        font-size: 48px;
+
+        letter-spacing: -2px;
+    }
+
+
+    .ywf-error-icon {
+
+        width: 34px;
+
+        height: 34px;
+
+        margin-top: 7px;
+
+        font-size: 14px;
+    }
+
+
+    .ywf-error-dot {
+
+        transform: scale(0.65);
+    }
+
+
+    .ywf-dot-one {
+
+        top: 4px;
+
+        left: 20%;
+    }
+
+
+    .ywf-dot-two {
+
+        top: 15px;
+
+        right: 20%;
+    }
+
+
+    .ywf-dot-three {
+
+        bottom: 0;
+
+        left: 25%;
+    }
+
+
+    .ywf-error-content {
+
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    .ywf-error-label {
+
+        font-size: 11px;
+
+        letter-spacing: 1.2px;
+
+        margin-bottom: 7px;
+    }
+
+
+    .ywf-error-title {
+
+        font-size: 30px;
+
+        line-height: 1.05;
+
+        letter-spacing: -0.8px;
+
+        margin-bottom: 11px;
+    }
+
+
+    .ywf-error-description {
+
+        font-size: 12px;
+
+        line-height: 1.45;
+
+        margin-bottom: 6px;
+    }
+
+
+    .ywf-error-message {
+
+        font-size: 11.5px;
+
+        line-height: 1.4;
+
+        margin-bottom: 11px;
+    }
+
+
+    .ywf-error-actions {
+
+        gap: 8px;
+
+        margin-bottom: 10px;
+
+        flex-wrap: nowrap;
+    }
+
+
+    .ywf-error-home-btn,
+    .ywf-error-back-btn {
+
+        flex: 1;
+
+        min-width: 0;
+
+        height: 42px;
+
+        padding: 0 12px;
+
+        gap: 7px;
+
+        font-size: 10px;
+
+        letter-spacing: 0.3px;
+    }
+
+
+    .ywf-error-home-btn i,
+    .ywf-error-back-btn i {
+
+        font-size: 12px;
+    }
+
+
+    .ywf-error-support {
+
+        padding-top: 9px;
+
+        gap: 8px;
+
+        justify-content: center;
+    }
+
+
+    .ywf-support-icon {
+
+        width: 28px;
+
+        min-width: 28px;
+
+        height: 28px;
+
+        font-size: 11px;
+    }
+
+
+    .ywf-error-support p {
+
+        font-size: 10px;
+
+        line-height: 1.3;
+
+        text-align: left;
+    }
+
+
+    .ywf-error-bottom {
+
+        bottom: 9px;
+
+        gap: 7px;
+
+        font-size: 7px;
+
+        letter-spacing: 0.8px;
+    }
+
+
+    .ywf-error-bottom i {
+
+        font-size: 3px;
+    }
+
+
+    .ywf-error-decoration-one {
+
+        width: 130px;
+
+        height: 130px;
+
+        left: -70px;
+
+        top: -45px;
+
+        border-width: 20px;
+    }
+
+
+    .ywf-error-decoration-two {
+
+        width: 90px;
+
+        height: 90px;
+
+        right: -35px;
+    }
+
+
+    .ywf-error-decoration-three {
+
+        width: 150px;
+
+        height: 150px;
+
+        right: -70px;
+
+        bottom: -70px;
+
+        border-width: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .ywf-error-page {
+
+        padding-bottom: 42px;
+    }
+
+
+    .ywf-error-container {
+
+        gap: 9px;
+    }
+
+
+    .ywf-error-visual {
+
+        height: 125px;
+
+        min-height: 125px;
+    }
+
+
+    .ywf-error-circle {
+
+        width: 120px;
+
+        height: 120px;
+    }
+
+
+    .ywf-error-number {
+
+        font-size: 40px;
+    }
+
+
+    .ywf-error-icon {
+
+        width: 29px;
+
+        height: 29px;
+
+        margin-top: 5px;
+
+        font-size: 12px;
+    }
+
+
+    .ywf-error-title {
+
+        font-size: 26px;
+
+        margin-bottom: 8px;
+    }
+
+
+    .ywf-error-description {
+
+        font-size: 10.5px;
+
+        line-height: 1.35;
+    }
+
+
+    .ywf-error-message {
+
+        font-size: 10px;
+
+        line-height: 1.3;
+
+        margin-bottom: 8px;
+    }
+
+
+    .ywf-error-actions {
+
+        gap: 6px;
+
+        margin-bottom: 7px;
+    }
+
+
+    .ywf-error-home-btn,
+    .ywf-error-back-btn {
+
+        height: 38px;
+
+        font-size: 9px;
+    }
+
+
+    .ywf-error-support {
+
+        padding-top: 7px;
+    }
+
+
+    .ywf-support-icon {
+
+        width: 24px;
+
+        min-width: 24px;
+
+        height: 24px;
+
+        font-size: 9px;
+    }
+
+
+    .ywf-error-support p {
+
+        font-size: 8.5px;
+    }
+
+
+    .ywf-error-bottom {
+
+        font-size: 6px;
+
+        bottom: 7px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+========================================================= */
+
+@media (max-width: 320px) {
+
+    .ywf-error-container {
+
+        gap: 5px;
+    }
+
+
+    .ywf-error-visual {
+
+        height: 105px;
+
+        min-height: 105px;
+    }
+
+
+    .ywf-error-circle {
+
+        width: 100px;
+
+        height: 100px;
+    }
+
+
+    .ywf-error-number {
+
+        font-size: 34px;
+    }
+
+
+    .ywf-error-icon {
+
+        width: 25px;
+
+        height: 25px;
+
+        font-size: 10px;
+
+        margin-top: 4px;
+    }
+
+
+    .ywf-error-title {
+
+        font-size: 23px;
+
+        margin-bottom: 6px;
+    }
+
+
+    .ywf-error-description {
+
+        font-size: 9px;
+
+        line-height: 1.25;
+    }
+
+
+    .ywf-error-message {
+
+        font-size: 8.5px;
+
+        margin-bottom: 6px;
+    }
+
+
+    .ywf-error-home-btn,
+    .ywf-error-back-btn {
+
+        height: 35px;
+
+        font-size: 8px;
+    }
+
+
+    .ywf-error-support p {
+
+        font-size: 7.5px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .ywf-error-circle,
+    .ywf-error-icon,
+    .ywf-error-dot,
+    .ywf-error-decoration-one,
+    .ywf-error-decoration-two,
+    .ywf-error-decoration-three {
+
+        animation: none;
+    }
+
+
+    .ywf-error-home-btn,
+    .ywf-error-back-btn,
+    .ywf-error-circle,
+    .ywf-error-number,
+    .ywf-error-icon,
+    .ywf-support-icon,
+    .ywf-error-title {
+
+        transition: none;
+    }
+
+}

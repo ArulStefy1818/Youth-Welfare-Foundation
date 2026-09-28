@@ -1,0 +1,1601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- =========================================================
+         STACKLY YOUTH WELFARE FOUNDATION
+         ADMIN DASHBOARD
+    ========================================================== -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stackly Youth Welfare Foundation | Admin Dashboard</title>
+
+    <!-- =========================================================
+         GOOGLE FONTS
+    ========================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- =========================================================
+         FONT AWESOME
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <!-- =========================================================
+         AOS ANIMATION
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    >
+
+    <!-- =========================================================
+         ADMIN CSS
+    ========================================================== -->
+
+    <link rel="stylesheet" href="admin.css">
+
+</head>
+
+
+<body>
+
+    <!-- =========================================================
+         MOBILE OVERLAY
+    ========================================================== -->
+
+    <div
+        class="stackly-youth-admin-overlay"
+        id="stacklyYouthAdminOverlay"
+    ></div>
+
+
+    <!-- =========================================================
+         ADMIN SIDEBAR
+    ========================================================== -->
+
+    <aside
+        class="stackly-youth-admin-sidebar"
+        id="stacklyYouthAdminSidebar"
+    >
+
+        <!-- =====================================================
+             SIDEBAR HEADER
+        ====================================================== -->
+
+        <div class="stackly-youth-admin-sidebar-header">
+
+            <!-- Logo -->
+            <a
+                href="admin.html"
+                class="stackly-youth-admin-brand"
+            >
+
+                <img
+                    src="Stackly-logo-Blue.webp"
+                    alt="Stackly Youth Welfare Foundation Logo"
+                >
+
+
+            </a>
+
+
+            <!-- Mobile Close -->
+            <button
+                type="button"
+                class="stackly-youth-admin-sidebar-close"
+                id="stacklyYouthAdminSidebarClose"
+                aria-label="Close navigation"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- =====================================================
+             SIDEBAR NAVIGATION
+        ====================================================== -->
+
+        <nav class="stackly-youth-admin-navigation">
+
+            <span class="stackly-youth-admin-nav-label">
+                MAIN MENU
+            </span>
+
+
+            <!-- Dashboard -->
+            <a
+                href="admin.html"
+                class="stackly-youth-admin-nav-link"
+            >
+
+                <span class="stackly-youth-admin-nav-icon">
+                    <i class="fa-solid fa-chart-pie"></i>
+                </span>
+
+                <span class="stackly-youth-admin-nav-text">
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <!-- Volunteers -->
+            <a
+                href="admin-volunteers.html"
+                class="stackly-youth-admin-nav-link"
+            >
+
+                <span class="stackly-youth-admin-nav-icon">
+                    <i class="fa-solid fa-users"></i>
+                </span>
+
+                <span class="stackly-youth-admin-nav-text">
+                    Volunteers
+                </span>
+
+            </a>
+
+
+            <!-- Donations -->
+            <a
+                href="admin-donations.html"
+                class="stackly-youth-admin-nav-link"
+            >
+
+                <span class="stackly-youth-admin-nav-icon">
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                </span>
+
+                <span class="stackly-youth-admin-nav-text">
+                    Donations
+                </span>
+
+            </a>
+
+
+            <!-- =================================================
+                 MANAGEMENT
+            ================================================== -->
+
+            <span class="stackly-youth-admin-nav-label">
+                MANAGEMENT
+            </span>
+
+            <!-- Events -->
+            <a
+                href="admin-events.html"
+                class="stackly-youth-admin-nav-link"
+            >
+
+                <span class="stackly-youth-admin-nav-icon">
+                    <i class="fa-solid fa-calendar-days"></i>
+                </span>
+
+                <span class="stackly-youth-admin-nav-text">
+                    Events
+                </span>
+
+            </a>
+
+
+            <!-- Reports -->
+            <a
+                href="admin-reports.html"
+                class="stackly-youth-admin-nav-link"
+            >
+
+                <span class="stackly-youth-admin-nav-icon">
+                    <i class="fa-solid fa-chart-column"></i>
+                </span>
+
+                <span class="stackly-youth-admin-nav-text">
+                    Reports
+                </span>
+
+            </a>
+
+
+            <!-- =================================================
+                 SYSTEM
+            ================================================== -->
+
+            <span class="stackly-youth-admin-nav-label">
+                SYSTEM
+            </span>
+
+
+            <!-- Messages -->
+            <a
+                href="admin-messages.html"
+                class="stackly-youth-admin-nav-link active"
+            >
+
+                <span class="stackly-youth-admin-nav-icon">
+                    <i class="fa-regular fa-envelope"></i>
+                </span>
+
+                <span class="stackly-youth-admin-nav-text">
+                    Messages
+                </span>
+
+                <span class="stackly-youth-admin-nav-badge">
+                    8
+                </span>
+
+            </a>
+
+
+            <!-- Settings -->
+            <a
+                href="admin-settings.html"
+                class="stackly-youth-admin-nav-link"
+            >
+
+                <span class="stackly-youth-admin-nav-icon">
+                    <i class="fa-solid fa-gear"></i>
+                </span>
+
+                <span class="stackly-youth-admin-nav-text">
+                    Settings
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- =====================================================
+             SIDEBAR FOOTER
+        ====================================================== -->
+
+        <div class="stackly-youth-admin-sidebar-footer">
+
+            <a
+                href="index.html"
+                class="stackly-youth-admin-logout"
+            >
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>
+                    Logout
+                </span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =========================================================
+         MAIN DASHBOARD AREA
+    ========================================================== -->
+
+    <main class="stackly-youth-admin-main">
+
+
+        <!-- =====================================================
+             TOP HEADER
+        ====================================================== -->
+
+        <header class="stackly-youth-admin-topbar">
+
+
+            <!-- Mobile Hamburger -->
+            <button
+                type="button"
+                class="stackly-youth-admin-menu-toggle"
+                id="stacklyYouthAdminMenuToggle"
+                aria-label="Open navigation"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <!-- Page Heading -->
+            <div
+                class="stackly-youth-admin-page-heading"
+                data-aos="fade-down"
+            >
+
+                <span>
+                    ADMINISTRATION
+                </span>
+
+                <h1>
+                    Admin Dashboard
+                </h1>
+
+            </div>
+
+
+            <!-- =================================================
+                 TOP RIGHT
+            ================================================== -->
+
+            <div class="stackly-youth-admin-top-actions">
+
+
+                <!-- Notification -->
+                <a href="404-admin.html"><button
+                    type="button"
+                    class="stackly-youth-admin-notification"
+                    aria-label="Notifications"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span>
+                        3
+                    </span>
+
+                </button></a>
+
+
+                <!-- Admin Email -->
+                <div class="stackly-youth-admin-profile">
+
+                    <div class="stackly-youth-admin-profile-avatar">
+
+                        <i class="fa-solid fa-user-shield"></i>
+
+                    </div>
+
+                    <div class="stackly-youth-admin-profile-info">
+
+                        <strong>
+                            Admin
+                        </strong>
+
+                        <span id="stacklyYouthAdminEmail">
+                            admin@stacklyyouth.org
+                        </span>
+
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down stackly-youth-admin-profile-arrow"></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- =========================================================
+             STACKLY YOUTH WELFARE FOUNDATION
+             ADMIN MESSAGES PAGE
+             COMMUNICATION CENTER
+        ========================================================== -->
+
+        <section class="stackly-youth-admin-messages-content">
+
+
+            <!-- =====================================================
+                 MESSAGES HERO
+            ====================================================== -->
+
+            <section
+                class="stackly-youth-admin-messages-hero"
+                data-aos="fade-up"
+            >
+
+                <div class="stackly-youth-admin-messages-hero-glow"></div>
+
+                <div class="stackly-youth-admin-messages-hero-copy">
+
+                    <span class="stackly-youth-admin-messages-eyebrow">
+                        <i class="fa-regular fa-comments"></i>
+                        COMMUNICATION CENTER
+                    </span>
+
+                    <h2>
+                        Every Message Is a
+                        <span>Meaningful Connection.</span>
+                    </h2>
+
+                    <p>
+                        Stay connected with volunteers, donors, community
+                        members, partners, and young people through one
+                        organized communication workspace.
+                    </p>
+
+                    <div class="stackly-youth-admin-messages-hero-actions">
+
+                        <a
+                            href="404-admin.html"
+                            class="stackly-youth-admin-messages-primary-btn"
+                        >
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            Compose Message
+                        </a>
+
+                        <a
+                            href="404-admin.html"
+                            class="stackly-youth-admin-messages-secondary-btn"
+                        >
+                            <i class="fa-solid fa-inbox"></i>
+                            Open Inbox
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Communication Visual -->
+
+                <div class="stackly-youth-admin-messages-hero-visual">
+
+                    <div class="stackly-youth-admin-message-orbit orbit-one"></div>
+                    <div class="stackly-youth-admin-message-orbit orbit-two"></div>
+
+                    <div class="stackly-youth-admin-message-focus-card">
+
+                        <div class="stackly-youth-admin-message-focus-icon">
+                            <i class="fa-regular fa-paper-plane"></i>
+                        </div>
+
+                        <div>
+
+                            <span>
+                                RESPONSE RATE
+                            </span>
+
+                            <strong>
+                                94.8%
+                            </strong>
+
+                        </div>
+
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+
+                    </div>
+
+
+                    <div class="stackly-youth-admin-message-floating-card message-float-one">
+
+                        <i class="fa-solid fa-user-group"></i>
+
+                        <div>
+                            <strong>1,284</strong>
+                            <span>Active Contacts</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stackly-youth-admin-message-floating-card message-float-two">
+
+                        <i class="fa-regular fa-clock"></i>
+
+                        <div>
+                            <strong>18 min</strong>
+                            <span>Avg. Response</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =====================================================
+                 MESSAGE OVERVIEW
+            ====================================================== -->
+
+            <section class="stackly-youth-admin-message-overview">
+
+                <div
+                    class="stackly-youth-admin-message-stat-card"
+                    data-aos="fade-up"
+                    data-aos-delay="50"
+                >
+
+                    <div class="stackly-youth-admin-message-stat-icon green">
+                        <i class="fa-regular fa-envelope"></i>
+                    </div>
+
+                    <div class="stackly-youth-admin-message-stat-content">
+
+                        <span>
+                            TOTAL MESSAGES
+                        </span>
+
+                        <strong>
+                            2,486
+                        </strong>
+
+                        <small class="positive">
+                            <i class="fa-solid fa-arrow-up"></i>
+                            14.6% this month
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="stackly-youth-admin-message-stat-card"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                >
+
+                    <div class="stackly-youth-admin-message-stat-icon orange">
+                        <i class="fa-regular fa-envelope-open"></i>
+                    </div>
+
+                    <div class="stackly-youth-admin-message-stat-content">
+
+                        <span>
+                            UNREAD
+                        </span>
+
+                        <strong>
+                            38
+                        </strong>
+
+                        <small>
+                            12 priority messages
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="stackly-youth-admin-message-stat-card"
+                    data-aos="fade-up"
+                    data-aos-delay="150"
+                >
+
+                    <div class="stackly-youth-admin-message-stat-icon blue">
+                        <i class="fa-solid fa-reply"></i>
+                    </div>
+
+                    <div class="stackly-youth-admin-message-stat-content">
+
+                        <span>
+                            RESPONDED
+                        </span>
+
+                        <strong>
+                            2,148
+                        </strong>
+
+                        <small class="positive">
+                            94.8% response rate
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="stackly-youth-admin-message-stat-card"
+                    data-aos="fade-up"
+                    data-aos-delay="200"
+                >
+
+                    <div class="stackly-youth-admin-message-stat-icon purple">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <div class="stackly-youth-admin-message-stat-content">
+
+                        <span>
+                            CONTACTS
+                        </span>
+
+                        <strong>
+                            1,284
+                        </strong>
+
+                        <small>
+                            Across all groups
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =====================================================
+                 MESSAGE WORKSPACE
+            ====================================================== -->
+
+            <section
+                class="stackly-youth-admin-message-workspace"
+                data-aos="fade-up"
+            >
+
+                <!-- Workspace Header -->
+
+                <div class="stackly-youth-admin-message-workspace-header">
+
+                    <div>
+
+                        <span class="stackly-youth-admin-message-section-label">
+                            INBOX MANAGEMENT
+                        </span>
+
+                        <h3>
+                            Message Center
+                        </h3>
+
+                        <p>
+                            Organize conversations and stay on top of
+                            important community communications.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="404-admin.html"
+                        class="stackly-youth-admin-message-view-all"
+                    >
+                        View All
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <!-- Message Filters -->
+
+                <div class="stackly-youth-admin-message-filters">
+
+                    <button
+                        type="button"
+                        class="stackly-youth-admin-message-filter active"
+                    >
+                        All Messages
+                        <span>38</span>
+                    </button>
+
+                    <button
+                        type="button"
+                        class="stackly-youth-admin-message-filter"
+                    >
+                        Unread
+                        <span>12</span>
+                    </button>
+
+                    <button
+                        type="button"
+                        class="stackly-youth-admin-message-filter"
+                    >
+                        Priority
+                        <span>8</span>
+                    </button>
+
+                    <button
+                        type="button"
+                        class="stackly-youth-admin-message-filter"
+                    >
+                        Volunteers
+                        <span>7</span>
+                    </button>
+
+                    <button
+                        type="button"
+                        class="stackly-youth-admin-message-filter"
+                    >
+                        Donors
+                        <span>6</span>
+                    </button>
+
+                </div>
+
+
+                <!-- Message List -->
+
+                <div class="stackly-youth-admin-message-list">
+
+
+                    <!-- Message 01 -->
+
+                    <article
+                        class="stackly-youth-admin-message-item unread priority"
+                        data-aos="fade-up"
+                        data-aos-delay="50"
+                    >
+
+                        <div class="stackly-youth-admin-message-avatar green">
+                            AR
+                        </div>
+
+                        <div class="stackly-youth-admin-message-main">
+
+                            <div class="stackly-youth-admin-message-top">
+
+                                <div>
+
+                                    <h4>
+                                        Ananya Rao
+                                    </h4>
+
+                                    <span>
+                                        Volunteer
+                                    </span>
+
+                                </div>
+
+                                <time>
+                                    10 min ago
+                                </time>
+
+                            </div>
+
+                            <p>
+                                I would like to know more about the upcoming
+                                youth leadership workshop and volunteer roles.
+                            </p>
+
+                            <div class="stackly-youth-admin-message-meta">
+
+                                <span class="priority-tag">
+                                    <i class="fa-solid fa-star"></i>
+                                    Priority
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-tag"></i>
+                                    Programs
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="stackly-youth-admin-message-actions">
+
+                            <a href="404-admin.html" aria-label="Reply">
+                                <i class="fa-solid fa-reply"></i>
+                            </a>
+
+                            <a href="404-admin.html" aria-label="Open message">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- Message 02 -->
+
+                    <article
+                        class="stackly-youth-admin-message-item unread"
+                        data-aos="fade-up"
+                        data-aos-delay="100"
+                    >
+
+                        <div class="stackly-youth-admin-message-avatar orange">
+                            VK
+                        </div>
+
+                        <div class="stackly-youth-admin-message-main">
+
+                            <div class="stackly-youth-admin-message-top">
+
+                                <div>
+
+                                    <h4>
+                                        Vikram Kumar
+                                    </h4>
+
+                                    <span>
+                                        Donor
+                                    </span>
+
+                                </div>
+
+                                <time>
+                                    32 min ago
+                                </time>
+
+                            </div>
+
+                            <p>
+                                Thank you for sharing the latest impact update.
+                                Could you send me the annual community report?
+                            </p>
+
+                            <div class="stackly-youth-admin-message-meta">
+
+                                <span>
+                                    <i class="fa-solid fa-tag"></i>
+                                    Donations
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="stackly-youth-admin-message-actions">
+
+                            <a href="404-admin.html">
+                                <i class="fa-solid fa-reply"></i>
+                            </a>
+
+                            <a href="404-admin.html">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- Message 03 -->
+
+                    <article
+                        class="stackly-youth-admin-message-item"
+                        data-aos="fade-up"
+                        data-aos-delay="150"
+                    >
+
+                        <div class="stackly-youth-admin-message-avatar blue">
+                            SM
+                        </div>
+
+                        <div class="stackly-youth-admin-message-main">
+
+                            <div class="stackly-youth-admin-message-top">
+
+                                <div>
+
+                                    <h4>
+                                        Sarah Mathew
+                                    </h4>
+
+                                    <span>
+                                        Community Partner
+                                    </span>
+
+                                </div>
+
+                                <time>
+                                    1 hr ago
+                                </time>
+
+                            </div>
+
+                            <p>
+                                Our team would be happy to collaborate on the
+                                next community outreach initiative.
+                            </p>
+
+                            <div class="stackly-youth-admin-message-meta">
+
+                                <span>
+                                    <i class="fa-solid fa-tag"></i>
+                                    Partnerships
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="stackly-youth-admin-message-actions">
+
+                            <a href="404-admin.html">
+                                <i class="fa-solid fa-reply"></i>
+                            </a>
+
+                            <a href="404-admin.html">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- Message 04 -->
+
+                    <article
+                        class="stackly-youth-admin-message-item"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                    >
+
+                        <div class="stackly-youth-admin-message-avatar purple">
+                            RJ
+                        </div>
+
+                        <div class="stackly-youth-admin-message-main">
+
+                            <div class="stackly-youth-admin-message-top">
+
+                                <div>
+
+                                    <h4>
+                                        Rahul Joseph
+                                    </h4>
+
+                                    <span>
+                                        Youth Participant
+                                    </span>
+
+                                </div>
+
+                                <time>
+                                    2 hrs ago
+                                </time>
+
+                            </div>
+
+                            <p>
+                                I wanted to share feedback about the digital
+                                skills program. The sessions were very helpful.
+                            </p>
+
+                            <div class="stackly-youth-admin-message-meta">
+
+                                <span>
+                                    <i class="fa-solid fa-tag"></i>
+                                    Feedback
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="stackly-youth-admin-message-actions">
+
+                            <a href="404-admin.html">
+                                <i class="fa-solid fa-reply"></i>
+                            </a>
+
+                            <a href="404-admin.html">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =====================================================
+                 COMMUNICATION ANALYTICS
+            ====================================================== -->
+
+            <section class="stackly-youth-admin-message-analytics">
+
+
+                <!-- Response Performance -->
+
+                <div
+                    class="stackly-youth-admin-message-panel"
+                    data-aos="fade-right"
+                >
+
+                    <div class="stackly-youth-admin-message-panel-header">
+
+                        <div>
+
+                            <span>
+                                RESPONSE PERFORMANCE
+                            </span>
+
+                            <h3>
+                                Communication Efficiency
+                            </h3>
+
+                        </div>
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                    </div>
+
+
+                    <div class="stackly-youth-admin-response-score">
+
+                        <div class="stackly-youth-admin-response-circle">
+
+                            <div>
+
+                                <strong>
+                                    94.8%
+                                </strong>
+
+                                <span>
+                                    Response Rate
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="stackly-youth-admin-response-details">
+
+                            <div>
+                                <span>Average Response</span>
+                                <strong>18 min</strong>
+                            </div>
+
+                            <div>
+                                <span>Resolved Today</span>
+                                <strong>46</strong>
+                            </div>
+
+                            <div>
+                                <span>Pending Replies</span>
+                                <strong>12</strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Message Categories -->
+
+                <div
+                    class="stackly-youth-admin-message-panel"
+                    data-aos="fade-left"
+                >
+
+                    <div class="stackly-youth-admin-message-panel-header">
+
+                        <div>
+
+                            <span>
+                                MESSAGE CATEGORIES
+                            </span>
+
+                            <h3>
+                                Communication Sources
+                            </h3>
+
+                        </div>
+
+                        <i class="fa-solid fa-layer-group"></i>
+
+                    </div>
+
+
+                    <div class="stackly-youth-admin-message-category-list">
+
+                        <div class="stackly-youth-admin-message-category">
+
+                            <div class="category-icon green">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+
+                            <div>
+                                <strong>Volunteers</strong>
+                                <span>824 messages</span>
+                            </div>
+
+                            <b>33%</b>
+
+                        </div>
+
+
+                        <div class="stackly-youth-admin-message-category">
+
+                            <div class="category-icon orange">
+                                <i class="fa-solid fa-hand-holding-heart"></i>
+                            </div>
+
+                            <div>
+                                <strong>Donors</strong>
+                                <span>618 messages</span>
+                            </div>
+
+                            <b>25%</b>
+
+                        </div>
+
+
+                        <div class="stackly-youth-admin-message-category">
+
+                            <div class="category-icon blue">
+                                <i class="fa-solid fa-people-group"></i>
+                            </div>
+
+                            <div>
+                                <strong>Community</strong>
+                                <span>572 messages</span>
+                            </div>
+
+                            <b>23%</b>
+
+                        </div>
+
+
+                        <div class="stackly-youth-admin-message-category">
+
+                            <div class="category-icon purple">
+                                <i class="fa-solid fa-user-graduate"></i>
+                            </div>
+
+                            <div>
+                                <strong>Youth</strong>
+                                <span>472 messages</span>
+                            </div>
+
+                            <b>19%</b>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =====================================================
+                 PRIORITY MESSAGES
+            ====================================================== -->
+
+            <section
+                class="stackly-youth-admin-message-priority"
+                data-aos="fade-up"
+            >
+
+                <div class="stackly-youth-admin-message-priority-heading">
+
+                    <div>
+
+                        <span>
+                            NEEDS ATTENTION
+                        </span>
+
+                        <h3>
+                            Priority Conversations
+                        </h3>
+
+                        <p>
+                            Messages that may require a faster response
+                            from the foundation team.
+                        </p>
+
+                    </div>
+
+                    <a href="404-admin.html">
+                        View Priority Inbox
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <div class="stackly-youth-admin-priority-grid">
+
+
+                    <article class="stackly-youth-admin-priority-card">
+
+                        <div class="priority-card-icon orange">
+                            <i class="fa-solid fa-handshake"></i>
+                        </div>
+
+                        <div>
+
+                            <span>
+                                PARTNERSHIP
+                            </span>
+
+                            <h4>
+                                Community Collaboration Request
+                            </h4>
+
+                            <p>
+                                New collaboration opportunity for the
+                                upcoming youth development initiative.
+                            </p>
+
+                            <small>
+                                Received 24 min ago
+                            </small>
+
+                        </div>
+
+                        <a href="404-admin.html">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+
+                    </article>
+
+
+                    <article class="stackly-youth-admin-priority-card">
+
+                        <div class="priority-card-icon green">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+
+                        <div>
+
+                            <span>
+                                EVENT
+                            </span>
+
+                            <h4>
+                                Youth Leadership Summit Inquiry
+                            </h4>
+
+                            <p>
+                                Request for event participation details
+                                and registration information.
+                            </p>
+
+                            <small>
+                                Received 48 min ago
+                            </small>
+
+                        </div>
+
+                        <a href="404-admin.html">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+
+                    </article>
+
+
+                    <article class="stackly-youth-admin-priority-card">
+
+                        <div class="priority-card-icon blue">
+                            <i class="fa-solid fa-circle-question"></i>
+                        </div>
+
+                        <div>
+
+                            <span>
+                                SUPPORT
+                            </span>
+
+                            <h4>
+                                Program Information Request
+                            </h4>
+
+                            <p>
+                                A participant is requesting additional
+                                information about available programs.
+                            </p>
+
+                            <small>
+                                Received 1 hr ago
+                            </small>
+
+                        </div>
+
+                        <a href="404-admin.html">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =====================================================
+                 MESSAGE ACTIVITY
+            ====================================================== -->
+
+            <section
+                class="stackly-youth-admin-message-activity"
+                data-aos="fade-up"
+            >
+
+                <div class="stackly-youth-admin-message-activity-header">
+
+                    <div>
+
+                        <span>
+                            COMMUNICATION ACTIVITY
+                        </span>
+
+                        <h3>
+                            Recent Message Activity
+                        </h3>
+
+                    </div>
+
+                    <a href="404-admin.html">
+                        Activity History
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <div class="stackly-youth-admin-message-timeline">
+
+
+                    <div class="stackly-youth-admin-message-event">
+
+                        <div class="message-event-dot green"></div>
+
+                        <div class="message-event-content">
+
+                            <strong>
+                                New volunteer message received
+                            </strong>
+
+                            <span>
+                                Ananya Rao submitted a program inquiry.
+                            </span>
+
+                        </div>
+
+                        <time>
+                            10 min
+                        </time>
+
+                    </div>
+
+
+                    <div class="stackly-youth-admin-message-event">
+
+                        <div class="message-event-dot orange"></div>
+
+                        <div class="message-event-content">
+
+                            <strong>
+                                Donor inquiry responded
+                            </strong>
+
+                            <span>
+                                Annual impact report request was answered.
+                            </span>
+
+                        </div>
+
+                        <time>
+                            32 min
+                        </time>
+
+                    </div>
+
+
+                    <div class="stackly-youth-admin-message-event">
+
+                        <div class="message-event-dot blue"></div>
+
+                        <div class="message-event-content">
+
+                            <strong>
+                                Partnership conversation updated
+                            </strong>
+
+                            <span>
+                                Community collaboration details were shared.
+                            </span>
+
+                        </div>
+
+                        <time>
+                            1 hr
+                        </time>
+
+                    </div>
+
+
+                    <div class="stackly-youth-admin-message-event">
+
+                        <div class="message-event-dot purple"></div>
+
+                        <div class="message-event-content">
+
+                            <strong>
+                                Feedback message received
+                            </strong>
+
+                            <span>
+                                Youth participant shared program feedback.
+                            </span>
+
+                        </div>
+
+                        <time>
+                            2 hrs
+                        </time>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =====================================================
+                 QUICK COMMUNICATION ACTIONS
+            ====================================================== -->
+
+            <section
+                class="stackly-youth-admin-message-quick-actions"
+                data-aos="fade-up"
+            >
+
+                <div class="stackly-youth-admin-message-quick-copy">
+
+                    <span>
+                        QUICK COMMUNICATION
+                    </span>
+
+                    <h3>
+                        Manage Conversations Faster
+                    </h3>
+
+                    <p>
+                        Use quick actions to handle common communication
+                        tasks across the foundation.
+                    </p>
+
+                </div>
+
+
+                <div class="stackly-youth-admin-message-action-grid">
+
+
+                    <a
+                        href="404-admin.html"
+                        class="stackly-youth-admin-message-action-card"
+                    >
+
+                        <div class="quick-action-icon green">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Compose Message
+                            </strong>
+
+                            <span>
+                                Start a new conversation
+                            </span>
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                    <a
+                        href="404-admin.html"
+                        class="stackly-youth-admin-message-action-card"
+                    >
+
+                        <div class="quick-action-icon orange">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Contact Volunteers
+                            </strong>
+
+                            <span>
+                                Communicate with volunteers
+                            </span>
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                    <a
+                        href="404-admin.html"
+                        class="stackly-youth-admin-message-action-card"
+                    >
+
+                        <div class="quick-action-icon blue">
+                            <i class="fa-solid fa-hand-holding-heart"></i>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Contact Donors
+                            </strong>
+
+                            <span>
+                                Manage donor conversations
+                            </span>
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                    <a
+                        href="404-admin.html"
+                        class="stackly-youth-admin-message-action-card"
+                    >
+
+                        <div class="quick-action-icon purple">
+                            <i class="fa-solid fa-file-circle-check"></i>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Message Templates
+                            </strong>
+
+                            <span>
+                                Use saved communication templates
+                            </span>
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================================================
+         AOS JS
+    ========================================================== -->
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js">
+    </script>
+
+
+    <!-- =========================================================
+         ADMIN JS
+    ========================================================== -->
+
+    <script src="admin.js"></script>
+
+</body>
+
+</html>

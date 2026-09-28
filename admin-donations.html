@@ -1,0 +1,1606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- =========================================================
+         STACKLY YOUTH WELFARE FOUNDATION
+         ADMIN DASHBOARD
+    ========================================================== -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stackly Youth Welfare Foundation | Admin Dashboard</title>
+
+    <!-- =========================================================
+         GOOGLE FONTS
+    ========================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- =========================================================
+         FONT AWESOME
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <!-- =========================================================
+         AOS ANIMATION
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    >
+
+    <!-- =========================================================
+         ADMIN CSS
+    ========================================================== -->
+
+    <link rel="stylesheet" href="admin.css">
+
+</head>
+
+
+<body>
+
+    <!-- =========================================================
+         MOBILE OVERLAY
+    ========================================================== -->
+
+    <div
+        class="stackly-youth-admin-overlay"
+        id="stacklyYouthAdminOverlay"
+    ></div>
+
+
+    <!-- =========================================================
+         ADMIN SIDEBAR
+    ========================================================== -->
+
+    <aside
+        class="stackly-youth-admin-sidebar"
+        id="stacklyYouthAdminSidebar"
+    >
+
+        <!-- =====================================================
+             SIDEBAR HEADER
+        ====================================================== -->
+
+        <div class="stackly-youth-admin-sidebar-header">
+
+            <!-- Logo -->
+            <a
+                href="admin.html"
+                class="stackly-youth-admin-brand"
+            >
+
+                <img
+                    src="Stackly-logo-Blue.webp"
+                    alt="Stackly Youth Welfare Foundation Logo"
+                >
+
+
+            </a>
+
+
+            <!-- Mobile Close -->
+            <button
+                type="button"
+                class="stackly-youth-admin-sidebar-close"
+                id="stacklyYouthAdminSidebarClose"
+                aria-label="Close navigation"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- =====================================================
+             SIDEBAR NAVIGATION
+        ====================================================== -->
+
+        <nav class="stackly-youth-admin-navigation">
+
+            <span class="stackly-youth-admin-nav-label">
+                MAIN MENU
+            </span>
+
+
+            <!-- Dashboard -->
+            <a
+                href="admin.html"
+                class="stackly-youth-admin-nav-link"
+            >
+
+                <span class="stackly-youth-admin-nav-icon">
+                    <i class="fa-solid fa-chart-pie"></i>
+                </span>
+
+                <span class="stackly-youth-admin-nav-text">
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <!-- Volunteers -->
+            <a
+                href="admin-volunteers.html"
+                class="stackly-youth-admin-nav-link"
+            >
+
+                <span class="stackly-youth-admin-nav-icon">
+                    <i class="fa-solid fa-users"></i>
+                </span>
+
+                <span class="stackly-youth-admin-nav-text">
+                    Volunteers
+                </span>
+
+            </a>
+
+
+            <!-- Donations -->
+            <a
+                href="admin-donations.html"
+                class="stackly-youth-admin-nav-link active"
+            >
+
+                <span class="stackly-youth-admin-nav-icon">
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                </span>
+
+                <span class="stackly-youth-admin-nav-text">
+                    Donations
+                </span>
+
+            </a>
+
+
+            <!-- =================================================
+                 MANAGEMENT
+            ================================================== -->
+
+            <span class="stackly-youth-admin-nav-label">
+                MANAGEMENT
+            </span>
+
+            <!-- Events -->
+            <a
+                href="admin-events.html"
+                class="stackly-youth-admin-nav-link"
+            >
+
+                <span class="stackly-youth-admin-nav-icon">
+                    <i class="fa-solid fa-calendar-days"></i>
+                </span>
+
+                <span class="stackly-youth-admin-nav-text">
+                    Events
+                </span>
+
+            </a>
+
+
+            <!-- Reports -->
+            <a
+                href="admin-reports.html"
+                class="stackly-youth-admin-nav-link"
+            >
+
+                <span class="stackly-youth-admin-nav-icon">
+                    <i class="fa-solid fa-chart-column"></i>
+                </span>
+
+                <span class="stackly-youth-admin-nav-text">
+                    Reports
+                </span>
+
+            </a>
+
+
+            <!-- =================================================
+                 SYSTEM
+            ================================================== -->
+
+            <span class="stackly-youth-admin-nav-label">
+                SYSTEM
+            </span>
+
+
+            <!-- Messages -->
+            <a
+                href="admin-messages.html"
+                class="stackly-youth-admin-nav-link"
+            >
+
+                <span class="stackly-youth-admin-nav-icon">
+                    <i class="fa-regular fa-envelope"></i>
+                </span>
+
+                <span class="stackly-youth-admin-nav-text">
+                    Messages
+                </span>
+
+                <span class="stackly-youth-admin-nav-badge">
+                    8
+                </span>
+
+            </a>
+
+
+            <!-- Settings -->
+            <a
+                href="admin-settings.html"
+                class="stackly-youth-admin-nav-link"
+            >
+
+                <span class="stackly-youth-admin-nav-icon">
+                    <i class="fa-solid fa-gear"></i>
+                </span>
+
+                <span class="stackly-youth-admin-nav-text">
+                    Settings
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- =====================================================
+             SIDEBAR FOOTER
+        ====================================================== -->
+
+        <div class="stackly-youth-admin-sidebar-footer">
+
+            <a
+                href="index.html"
+                class="stackly-youth-admin-logout"
+            >
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>
+                    Logout
+                </span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =========================================================
+         MAIN DASHBOARD AREA
+    ========================================================== -->
+
+    <main class="stackly-youth-admin-main">
+
+
+        <!-- =====================================================
+             TOP HEADER
+        ====================================================== -->
+
+        <header class="stackly-youth-admin-topbar">
+
+
+            <!-- Mobile Hamburger -->
+            <button
+                type="button"
+                class="stackly-youth-admin-menu-toggle"
+                id="stacklyYouthAdminMenuToggle"
+                aria-label="Open navigation"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <!-- Page Heading -->
+            <div
+                class="stackly-youth-admin-page-heading"
+                data-aos="fade-down"
+            >
+
+                <span>
+                    ADMINISTRATION
+                </span>
+
+                <h1>
+                    Admin Dashboard
+                </h1>
+
+            </div>
+
+
+            <!-- =================================================
+                 TOP RIGHT
+            ================================================== -->
+
+            <div class="stackly-youth-admin-top-actions">
+
+
+                <!-- Notification -->
+                <a href="404-admin.html"><button
+                    type="button"
+                    class="stackly-youth-admin-notification"
+                    aria-label="Notifications"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span>
+                        3
+                    </span>
+
+                </button></a>
+
+
+                <!-- Admin Email -->
+                <div class="stackly-youth-admin-profile">
+
+                    <div class="stackly-youth-admin-profile-avatar">
+
+                        <i class="fa-solid fa-user-shield"></i>
+
+                    </div>
+
+                    <div class="stackly-youth-admin-profile-info">
+
+                        <strong>
+                            Admin
+                        </strong>
+
+                        <span id="stacklyYouthAdminEmail">
+                            admin@stacklyyouth.org
+                        </span>
+
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down stackly-youth-admin-profile-arrow"></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+<!-- =========================================================
+     STACKLY YOUTH WELFARE FOUNDATION
+     ADMIN DONATIONS PAGE
+     DONATION MANAGEMENT CONTENT
+========================================================= -->
+
+<div class="stackly-youth-admin-donation-content">
+
+
+    <!-- =====================================================
+         DONATION HERO / OVERVIEW
+    ====================================================== -->
+
+    <section
+        class="stackly-youth-admin-donation-hero"
+        data-aos="fade-up"
+    >
+
+        <!-- Decorative Background -->
+        <div class="stackly-youth-admin-donation-hero-glow"></div>
+        <div class="stackly-youth-admin-donation-hero-ring"></div>
+
+        <div class="stackly-youth-admin-donation-hero-content">
+
+            <div class="stackly-youth-admin-donation-hero-copy">
+
+                <span
+                    class="stackly-youth-admin-donation-eyebrow"
+                    data-aos="fade-right"
+                >
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+                    DONATION CENTER
+                </span>
+
+                <h2 data-aos="fade-up" data-aos-delay="100">
+                    Turn Every
+                    <span>Contribution</span>
+                    Into Impact.
+                </h2>
+
+                <p
+                    data-aos="fade-up"
+                    data-aos-delay="180"
+                >
+                    Monitor donations, track fundraising campaigns,
+                    understand donor activity, and manage every
+                    contribution that supports young people and
+                    community programs.
+                </p>
+
+
+                <div
+                    class="stackly-youth-admin-donation-hero-actions"
+                    data-aos="fade-up"
+                    data-aos-delay="250"
+                >
+
+                    <a
+                        href="404-admin.html"
+                        class="stackly-youth-admin-donation-primary-btn"
+                    >
+                        <i class="fa-solid fa-plus"></i>
+                        Add Donation
+                    </a>
+
+                    <a
+                        href="404-admin.html"
+                        class="stackly-youth-admin-donation-secondary-btn"
+                    >
+                        <i class="fa-solid fa-file-export"></i>
+                        Export Report
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Hero Visual -->
+
+            <div
+                class="stackly-youth-admin-donation-hero-visual"
+                data-aos="zoom-in"
+                data-aos-delay="200"
+            >
+
+                <div class="stackly-youth-admin-donation-visual-orbit"></div>
+
+                <div class="stackly-youth-admin-donation-visual-card">
+
+                    <div class="stackly-youth-admin-donation-visual-icon">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                    </div>
+
+                    <span>
+                        TOTAL FUNDS RAISED
+                    </span>
+
+                    <strong>
+                        ₹48.72L
+                    </strong>
+
+                    <small>
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                        18.6% this year
+                    </small>
+
+                </div>
+
+
+                <div class="stackly-youth-admin-donation-floating-card donation-float-one">
+
+                    <i class="fa-solid fa-heart"></i>
+
+                    <div>
+                        <strong>1,284</strong>
+                        <span>Donors</span>
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-youth-admin-donation-floating-card donation-float-two">
+
+                    <i class="fa-solid fa-seedling"></i>
+
+                    <div>
+                        <strong>32</strong>
+                        <span>Campaigns</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         DONATION ANALYTICS GRID
+    ====================================================== -->
+
+    <section class="stackly-youth-admin-donation-analytics-grid">
+
+
+        <!-- =================================================
+             DONATION TREND
+        ================================================== -->
+
+        <div
+            class="stackly-youth-admin-donation-panel donation-trend-panel"
+            data-aos="fade-up"
+        >
+
+            <div class="stackly-youth-admin-donation-panel-header">
+
+                <div>
+
+                    <span>
+                        FUNDING OVERVIEW
+                    </span>
+
+                    <h3>
+                        Donation Trends
+                    </h3>
+
+                </div>
+
+                <!-- =========================================================
+     CUSTOM DONATION PERIOD DROPDOWN
+========================================================= -->
+
+<div class="stackly-youth-admin-donation-custom-dropdown"
+     id="stacklyYouthDonationPeriodDropdown">
+
+    <button
+        type="button"
+        class="stackly-youth-admin-donation-dropdown-trigger"
+        id="stacklyYouthDonationPeriodTrigger"
+        aria-haspopup="listbox"
+        aria-expanded="false"
+    >
+
+        <span id="stacklyYouthDonationPeriodText">
+            Last 7 Months
+        </span>
+
+        <i class="fa-solid fa-chevron-down"></i>
+
+    </button>
+
+
+    <div
+        class="stackly-youth-admin-donation-dropdown-menu"
+        id="stacklyYouthDonationPeriodMenu"
+        role="listbox"
+    >
+
+        <button
+            type="button"
+            class="stackly-youth-admin-donation-dropdown-option active"
+            data-value="7-months"
+            role="option"
+            aria-selected="true"
+        >
+            <span>
+                <i class="fa-solid fa-chart-column"></i>
+                Last 7 Months
+            </span>
+
+            <i class="fa-solid fa-check"></i>
+        </button>
+
+
+        <button
+            type="button"
+            class="stackly-youth-admin-donation-dropdown-option"
+            data-value="12-months"
+            role="option"
+            aria-selected="false"
+        >
+            <span>
+                <i class="fa-solid fa-calendar-days"></i>
+                Last 12 Months
+            </span>
+
+            <i class="fa-solid fa-check"></i>
+        </button>
+
+
+        <button
+            type="button"
+            class="stackly-youth-admin-donation-dropdown-option"
+            data-value="this-year"
+            role="option"
+            aria-selected="false"
+        >
+            <span>
+                <i class="fa-solid fa-calendar-check"></i>
+                This Year
+            </span>
+
+            <i class="fa-solid fa-check"></i>
+        </button>
+
+    </div>
+
+</div>
+
+            </div>
+
+
+            <div class="stackly-youth-admin-donation-chart">
+
+                <div class="stackly-youth-admin-donation-chart-scale">
+
+                    <span>₹8L</span>
+                    <span>₹6L</span>
+                    <span>₹4L</span>
+                    <span>₹2L</span>
+                    <span>₹0</span>
+
+                </div>
+
+
+                <div class="stackly-youth-admin-donation-chart-area">
+
+                    <div class="stackly-youth-admin-donation-chart-grid-line"></div>
+                    <div class="stackly-youth-admin-donation-chart-grid-line"></div>
+                    <div class="stackly-youth-admin-donation-chart-grid-line"></div>
+                    <div class="stackly-youth-admin-donation-chart-grid-line"></div>
+
+
+                    <div class="stackly-youth-admin-donation-bars">
+
+                        <div class="donation-bar-column">
+                            <div
+                                class="donation-bar"
+                                style="height:42%;"
+                            ></div>
+                            <span>Apr</span>
+                        </div>
+
+                        <div class="donation-bar-column">
+                            <div
+                                class="donation-bar"
+                                style="height:56%;"
+                            ></div>
+                            <span>May</span>
+                        </div>
+
+                        <div class="donation-bar-column">
+                            <div
+                                class="donation-bar"
+                                style="height:48%;"
+                            ></div>
+                            <span>Jun</span>
+                        </div>
+
+                        <div class="donation-bar-column">
+                            <div
+                                class="donation-bar"
+                                style="height:71%;"
+                            ></div>
+                            <span>Jul</span>
+                        </div>
+
+                        <div class="donation-bar-column">
+                            <div
+                                class="donation-bar"
+                                style="height:64%;"
+                            ></div>
+                            <span>Aug</span>
+                        </div>
+
+                        <div class="donation-bar-column">
+                            <div
+                                class="donation-bar"
+                                style="height:82%;"
+                            ></div>
+                            <span>Sep</span>
+                        </div>
+
+                        <div class="donation-bar-column active">
+                            <div
+                                class="donation-bar"
+                                style="height:92%;"
+                            ></div>
+                            <span>Oct</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="stackly-youth-admin-donation-chart-footer">
+
+                <div>
+                    <span>Average Monthly Donation</span>
+                    <strong>₹6,96,120</strong>
+                </div>
+
+                <div>
+                    <span>Highest Month</span>
+                    <strong>October</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             DONATION SOURCES
+        ================================================== -->
+
+        <div
+            class="stackly-youth-admin-donation-panel donation-source-panel"
+            data-aos="fade-left"
+            data-aos-delay="120"
+        >
+
+            <div class="stackly-youth-admin-donation-panel-header">
+
+                <div>
+
+                    <span>
+                        CONTRIBUTION MIX
+                    </span>
+
+                    <h3>
+                        Donation Sources
+                    </h3>
+
+                </div>
+
+                <a href="404-admin.html">
+                    View Details
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="stackly-youth-admin-donation-source-content">
+
+                <div class="stackly-youth-admin-donation-donut">
+
+                    <div class="stackly-youth-admin-donation-donut-inner">
+
+                        <strong>₹48.7L</strong>
+
+                        <span>Total</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-youth-admin-donation-source-list">
+
+                    <div class="stackly-youth-admin-donation-source-item">
+
+                        <span class="source-dot individual"></span>
+
+                        <div>
+                            <strong>Individual Donors</strong>
+                            <span>52%</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stackly-youth-admin-donation-source-item">
+
+                        <span class="source-dot corporate"></span>
+
+                        <div>
+                            <strong>Corporate Partners</strong>
+                            <span>27%</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stackly-youth-admin-donation-source-item">
+
+                        <span class="source-dot events"></span>
+
+                        <div>
+                            <strong>Fundraising Events</strong>
+                            <span>13%</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stackly-youth-admin-donation-source-item">
+
+                        <span class="source-dot other"></span>
+
+                        <div>
+                            <strong>Other Sources</strong>
+                            <span>8%</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FUNDRAISING CAMPAIGNS
+    ====================================================== -->
+
+    <section
+        class="stackly-youth-admin-donation-campaign-section"
+        data-aos="fade-up"
+    >
+
+        <div class="stackly-youth-admin-donation-section-heading">
+
+            <div>
+
+                <span>
+                    FUNDRAISING PROGRAMS
+                </span>
+
+                <h3>
+                    Active Campaigns
+                </h3>
+
+                <p>
+                    Track the progress of current fundraising
+                    initiatives and community goals.
+                </p>
+
+            </div>
+
+            <a
+                href="404-admin.html"
+                class="stackly-youth-admin-donation-view-all"
+            >
+                View All Campaigns
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="stackly-youth-admin-donation-campaign-grid">
+
+
+            <!-- Campaign 01 -->
+
+            <article
+                class="stackly-youth-admin-donation-campaign-card"
+                data-aos="zoom-in"
+                data-aos-delay="50"
+            >
+
+                <div class="stackly-youth-admin-donation-campaign-top">
+
+                    <div class="campaign-icon green">
+                        <i class="fa-solid fa-school"></i>
+                    </div>
+
+                    <span class="campaign-status active">
+                        Active
+                    </span>
+
+                </div>
+
+                <h4>
+                    Education For Every Child
+                </h4>
+
+                <p>
+                    Support school supplies, learning resources,
+                    and educational opportunities.
+                </p>
+
+
+                <div class="stackly-youth-admin-donation-campaign-progress">
+
+                    <div class="campaign-progress-label">
+
+                        <span>
+                            Raised
+                        </span>
+
+                        <strong>
+                            ₹8,42,500
+                        </strong>
+
+                    </div>
+
+                    <div class="campaign-progress-track">
+                        <span style="width:78%;"></span>
+                    </div>
+
+                    <div class="campaign-progress-bottom">
+
+                        <span>
+                            78% funded
+                        </span>
+
+                        <span>
+                            Goal ₹10.8L
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="404-admin.html"
+                    class="stackly-youth-admin-donation-campaign-link"
+                >
+                    Manage Campaign
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+
+            <!-- Campaign 02 -->
+
+            <article
+                class="stackly-youth-admin-donation-campaign-card"
+                data-aos="zoom-in"
+                data-aos-delay="120"
+            >
+
+                <div class="stackly-youth-admin-donation-campaign-top">
+
+                    <div class="campaign-icon orange">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+
+                    <span class="campaign-status active">
+                        Active
+                    </span>
+
+                </div>
+
+                <h4>
+                    Youth Wellness Initiative
+                </h4>
+
+                <p>
+                    Help fund health awareness, wellness programs,
+                    and essential care.
+                </p>
+
+
+                <div class="stackly-youth-admin-donation-campaign-progress">
+
+                    <div class="campaign-progress-label">
+
+                        <span>
+                            Raised
+                        </span>
+
+                        <strong>
+                            ₹5,68,240
+                        </strong>
+
+                    </div>
+
+                    <div class="campaign-progress-track">
+                        <span style="width:64%;"></span>
+                    </div>
+
+                    <div class="campaign-progress-bottom">
+
+                        <span>
+                            64% funded
+                        </span>
+
+                        <span>
+                            Goal ₹8.8L
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="404-admin.html"
+                    class="stackly-youth-admin-donation-campaign-link"
+                >
+                    Manage Campaign
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+
+            <!-- Campaign 03 -->
+
+            <article
+                class="stackly-youth-admin-donation-campaign-card"
+                data-aos="zoom-in"
+                data-aos-delay="190"
+            >
+
+                <div class="stackly-youth-admin-donation-campaign-top">
+
+                    <div class="campaign-icon blue">
+                        <i class="fa-solid fa-laptop"></i>
+                    </div>
+
+                    <span class="campaign-status active">
+                        Active
+                    </span>
+
+                </div>
+
+                <h4>
+                    Digital Skills For Youth Development
+                </h4>
+
+                <p>
+                    Provide technology access, digital training,
+                    and career development opportunities.
+                </p>
+
+
+                <div class="stackly-youth-admin-donation-campaign-progress">
+
+                    <div class="campaign-progress-label">
+
+                        <span>
+                            Raised
+                        </span>
+
+                        <strong>
+                            ₹3,26,800
+                        </strong>
+
+                    </div>
+
+                    <div class="campaign-progress-track">
+                        <span style="width:46%;"></span>
+                    </div>
+
+                    <div class="campaign-progress-bottom">
+
+                        <span>
+                            46% funded
+                        </span>
+
+                        <span>
+                            Goal ₹7.1L
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="404-admin.html"
+                    class="stackly-youth-admin-donation-campaign-link"
+                >
+                    Manage Campaign
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         RECENT DONATIONS
+    ====================================================== -->
+
+    <section
+        class="stackly-youth-admin-donation-recent-section"
+        data-aos="fade-up"
+    >
+
+        <div class="stackly-youth-admin-donation-section-heading">
+
+            <div>
+
+                <span>
+                    DONATION ACTIVITY
+                </span>
+
+                <h3>
+                    Recent Contributions
+                </h3>
+
+            </div>
+
+            <a
+                href="404-admin.html"
+                class="stackly-youth-admin-donation-view-all"
+            >
+                View All Donations
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="stackly-youth-admin-donation-table-wrapper">
+
+            <table class="stackly-youth-admin-donation-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Donor
+                        </th>
+
+                        <th>
+                            Campaign
+                        </th>
+
+                        <th>
+                            Date
+                        </th>
+
+                        <th>
+                            Method
+                        </th>
+
+                        <th>
+                            Amount
+                        </th>
+
+                        <th>
+                            Status
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr>
+
+                        <td>
+
+                            <div class="stackly-youth-admin-donor-cell">
+
+                                <div class="donor-avatar green">
+                                    AS
+                                </div>
+
+                                <div>
+                                    <strong>
+                                        Ananya Sharma
+                                    </strong>
+
+                                    <span>
+                                        ananya@example.com
+                                    </span>
+                                </div>
+
+                            </div>
+
+                        </td>
+
+                        <td>
+                            Education For Every Child
+                        </td>
+
+                        <td>
+                            28 Sep 2026
+                        </td>
+
+                        <td>
+                            UPI
+                        </td>
+
+                        <td>
+                            <strong>₹25,000</strong>
+                        </td>
+
+                        <td>
+                            <span class="donation-payment-status completed">
+                                Completed
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+
+                            <div class="stackly-youth-admin-donor-cell">
+
+                                <div class="donor-avatar orange">
+                                    RK
+                                </div>
+
+                                <div>
+                                    <strong>
+                                        Rohan Kumar
+                                    </strong>
+
+                                    <span>
+                                        rohan@example.com
+                                    </span>
+                                </div>
+
+                            </div>
+
+                        </td>
+
+                        <td>
+                            Youth Wellness Initiative
+                        </td>
+
+                        <td>
+                            27 Sep 2026
+                        </td>
+
+                        <td>
+                            Card
+                        </td>
+
+                        <td>
+                            <strong>₹12,500</strong>
+                        </td>
+
+                        <td>
+                            <span class="donation-payment-status completed">
+                                Completed
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+
+                            <div class="stackly-youth-admin-donor-cell">
+
+                                <div class="donor-avatar blue">
+                                    MP
+                                </div>
+
+                                <div>
+                                    <strong>
+                                        Meera Patel
+                                    </strong>
+
+                                    <span>
+                                        meera@example.com
+                                    </span>
+                                </div>
+
+                            </div>
+
+                        </td>
+
+                        <td>
+                            Digital Skills For Youth
+                        </td>
+
+                        <td>
+                            26 Sep 2026
+                        </td>
+
+                        <td>
+                            Net Banking
+                        </td>
+
+                        <td>
+                            <strong>₹18,000</strong>
+                        </td>
+
+                        <td>
+                            <span class="donation-payment-status pending">
+                                Pending
+                            </span>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+
+                            <div class="stackly-youth-admin-donor-cell">
+
+                                <div class="donor-avatar purple">
+                                    VN
+                                </div>
+
+                                <div>
+                                    <strong>
+                                        Vikram Nair
+                                    </strong>
+
+                                    <span>
+                                        vikram@example.com
+                                    </span>
+                                </div>
+
+                            </div>
+
+                        </td>
+
+                        <td>
+                            General Support Fund
+                        </td>
+
+                        <td>
+                            25 Sep 2026
+                        </td>
+
+                        <td>
+                            UPI
+                        </td>
+
+                        <td>
+                            <strong>₹7,500</strong>
+                        </td>
+
+                        <td>
+                            <span class="donation-payment-status completed">
+                                Completed
+                            </span>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         DONOR ENGAGEMENT SECTION
+    ====================================================== -->
+
+    <section
+        class="stackly-youth-admin-donation-engagement"
+        data-aos="fade-up"
+    >
+
+        <div class="stackly-youth-admin-donation-engagement-content">
+
+            <div class="stackly-youth-admin-donation-engagement-icon">
+
+                <i class="fa-solid fa-people-arrows"></i>
+
+            </div>
+
+            <div class="stackly-youth-admin-donation-engagement-copy">
+
+                <span>
+                    DONOR RELATIONSHIPS
+                </span>
+
+                <h3>
+                    Build Long-Term Community Support
+                </h3>
+
+                <p>
+                    Keep donors connected with meaningful updates,
+                    impact stories, campaign progress, and recurring
+                    giving opportunities.
+                </p>
+
+            </div>
+
+            <a
+                href="404-admin.html"
+                class="stackly-youth-admin-donation-engagement-btn"
+            >
+                Manage Donors
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         QUICK DONATION ACTIONS
+    ====================================================== -->
+
+    <section
+        class="stackly-youth-admin-donation-quick-section"
+        data-aos="fade-up"
+    >
+
+        <div class="stackly-youth-admin-donation-section-heading">
+
+            <div>
+
+                <span>
+                    QUICK MANAGEMENT
+                </span>
+
+                <h3>
+                    Donation Actions
+                </h3>
+
+            </div>
+
+        </div>
+
+
+        <div class="stackly-youth-admin-donation-action-grid">
+
+
+            <a
+                href="404-admin.html"
+                class="stackly-youth-admin-donation-action-card"
+            >
+
+                <span>
+                    <i class="fa-solid fa-circle-plus"></i>
+                </span>
+
+                <div>
+
+                    <strong>
+                        Add Donation
+                    </strong>
+
+                    <small>
+                        Record a new contribution
+                    </small>
+
+                </div>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <a
+                href="404-admin.html"
+                class="stackly-youth-admin-donation-action-card"
+            >
+
+                <span>
+                    <i class="fa-solid fa-bullhorn"></i>
+                </span>
+
+                <div>
+
+                    <strong>
+                        Create Campaign
+                    </strong>
+
+                    <small>
+                        Start a new fundraising goal
+                    </small>
+
+                </div>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <a
+                href="404-admin.html"
+                class="stackly-youth-admin-donation-action-card"
+            >
+
+                <span>
+                    <i class="fa-solid fa-file-invoice"></i>
+                </span>
+
+                <div>
+
+                    <strong>
+                        Donation Reports
+                    </strong>
+
+                    <small>
+                        Review financial activity
+                    </small>
+
+                </div>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <a
+                href="404-admin.html"
+                class="stackly-youth-admin-donation-action-card"
+            >
+
+                <span>
+                    <i class="fa-solid fa-user-group"></i>
+                </span>
+
+                <div>
+
+                    <strong>
+                        Donor Directory
+                    </strong>
+
+                    <small>
+                        View and manage supporters
+                    </small>
+
+                </div>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+</div>
+
+
+    </main>
+
+
+    <!-- =========================================================
+         AOS JS
+    ========================================================== -->
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js">
+    </script>
+
+
+    <!-- =========================================================
+         ADMIN JS
+    ========================================================== -->
+
+    <script src="admin.js"></script>
+
+</body>
+
+</html>

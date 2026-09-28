@@ -1,0 +1,1503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- =========================================================
+         STACKLY YOUTH WELFARE FOUNDATION
+         ADMIN DASHBOARD
+    ========================================================== -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stackly Youth Welfare Foundation | Admin Dashboard</title>
+
+    <!-- =========================================================
+         GOOGLE FONTS
+    ========================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- =========================================================
+         FONT AWESOME
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <!-- =========================================================
+         AOS ANIMATION
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    >
+
+    <!-- =========================================================
+         ADMIN CSS
+    ========================================================== -->
+
+    <link rel="stylesheet" href="admin.css">
+
+</head>
+
+
+<body>
+
+    <!-- =========================================================
+         MOBILE OVERLAY
+    ========================================================== -->
+
+    <div
+        class="stackly-youth-admin-overlay"
+        id="stacklyYouthAdminOverlay"
+    ></div>
+
+
+    <!-- =========================================================
+         ADMIN SIDEBAR
+    ========================================================== -->
+
+    <aside
+        class="stackly-youth-admin-sidebar"
+        id="stacklyYouthAdminSidebar"
+    >
+
+        <!-- =====================================================
+             SIDEBAR HEADER
+        ====================================================== -->
+
+        <div class="stackly-youth-admin-sidebar-header">
+
+            <!-- Logo -->
+            <a
+                href="admin.html"
+                class="stackly-youth-admin-brand"
+            >
+
+                <img
+                    src="Stackly-logo-Blue.webp"
+                    alt="Stackly Youth Welfare Foundation Logo"
+                >
+
+
+            </a>
+
+
+            <!-- Mobile Close -->
+            <button
+                type="button"
+                class="stackly-youth-admin-sidebar-close"
+                id="stacklyYouthAdminSidebarClose"
+                aria-label="Close navigation"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- =====================================================
+             SIDEBAR NAVIGATION
+        ====================================================== -->
+
+        <nav class="stackly-youth-admin-navigation">
+
+            <span class="stackly-youth-admin-nav-label">
+                MAIN MENU
+            </span>
+
+
+            <!-- Dashboard -->
+            <a
+                href="admin.html"
+                class="stackly-youth-admin-nav-link"
+            >
+
+                <span class="stackly-youth-admin-nav-icon">
+                    <i class="fa-solid fa-chart-pie"></i>
+                </span>
+
+                <span class="stackly-youth-admin-nav-text">
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <!-- Volunteers -->
+            <a
+                href="admin-volunteers.html"
+                class="stackly-youth-admin-nav-link active"
+            >
+
+                <span class="stackly-youth-admin-nav-icon">
+                    <i class="fa-solid fa-users"></i>
+                </span>
+
+                <span class="stackly-youth-admin-nav-text">
+                    Volunteers
+                </span>
+
+            </a>
+
+
+            <!-- Donations -->
+            <a
+                href="admin-donations.html"
+                class="stackly-youth-admin-nav-link"
+            >
+
+                <span class="stackly-youth-admin-nav-icon">
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                </span>
+
+                <span class="stackly-youth-admin-nav-text">
+                    Donations
+                </span>
+
+            </a>
+
+
+            <!-- =================================================
+                 MANAGEMENT
+            ================================================== -->
+
+            <span class="stackly-youth-admin-nav-label">
+                MANAGEMENT
+            </span>
+
+            <!-- Events -->
+            <a
+                href="admin-events.html"
+                class="stackly-youth-admin-nav-link"
+            >
+
+                <span class="stackly-youth-admin-nav-icon">
+                    <i class="fa-solid fa-calendar-days"></i>
+                </span>
+
+                <span class="stackly-youth-admin-nav-text">
+                    Events
+                </span>
+
+            </a>
+
+
+            <!-- Reports -->
+            <a
+                href="admin-reports.html"
+                class="stackly-youth-admin-nav-link"
+            >
+
+                <span class="stackly-youth-admin-nav-icon">
+                    <i class="fa-solid fa-chart-column"></i>
+                </span>
+
+                <span class="stackly-youth-admin-nav-text">
+                    Reports
+                </span>
+
+            </a>
+
+
+            <!-- =================================================
+                 SYSTEM
+            ================================================== -->
+
+            <span class="stackly-youth-admin-nav-label">
+                SYSTEM
+            </span>
+
+
+            <!-- Messages -->
+            <a
+                href="admin-messages.html"
+                class="stackly-youth-admin-nav-link"
+            >
+
+                <span class="stackly-youth-admin-nav-icon">
+                    <i class="fa-regular fa-envelope"></i>
+                </span>
+
+                <span class="stackly-youth-admin-nav-text">
+                    Messages
+                </span>
+
+                <span class="stackly-youth-admin-nav-badge">
+                    8
+                </span>
+
+            </a>
+
+
+            <!-- Settings -->
+            <a
+                href="admin-settings.html"
+                class="stackly-youth-admin-nav-link"
+            >
+
+                <span class="stackly-youth-admin-nav-icon">
+                    <i class="fa-solid fa-gear"></i>
+                </span>
+
+                <span class="stackly-youth-admin-nav-text">
+                    Settings
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- =====================================================
+             SIDEBAR FOOTER
+        ====================================================== -->
+
+        <div class="stackly-youth-admin-sidebar-footer">
+
+            <a
+                href="index.html"
+                class="stackly-youth-admin-logout"
+            >
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>
+                    Logout
+                </span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =========================================================
+         MAIN DASHBOARD AREA
+    ========================================================== -->
+
+    <main class="stackly-youth-admin-main">
+
+
+        <!-- =====================================================
+             TOP HEADER
+        ====================================================== -->
+
+        <header class="stackly-youth-admin-topbar">
+
+
+            <!-- Mobile Hamburger -->
+            <button
+                type="button"
+                class="stackly-youth-admin-menu-toggle"
+                id="stacklyYouthAdminMenuToggle"
+                aria-label="Open navigation"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <!-- Page Heading -->
+            <div
+                class="stackly-youth-admin-page-heading"
+                data-aos="fade-down"
+            >
+
+                <span>
+                    ADMINISTRATION
+                </span>
+
+                <h1>
+                    Admin Dashboard
+                </h1>
+
+            </div>
+
+
+            <!-- =================================================
+                 TOP RIGHT
+            ================================================== -->
+
+            <div class="stackly-youth-admin-top-actions">
+
+
+                <!-- Notification -->
+                <a href="404-admin.html"><button
+                    type="button"
+                    class="stackly-youth-admin-notification"
+                    aria-label="Notifications"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span>
+                        3
+                    </span>
+
+                </button></a>
+
+
+                <!-- Admin Email -->
+                <div class="stackly-youth-admin-profile">
+
+                    <div class="stackly-youth-admin-profile-avatar">
+
+                        <i class="fa-solid fa-user-shield"></i>
+
+                    </div>
+
+                    <div class="stackly-youth-admin-profile-info">
+
+                        <strong>
+                            Admin
+                        </strong>
+
+                        <span id="stacklyYouthAdminEmail">
+                            admin@stacklyyouth.org
+                        </span>
+
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down stackly-youth-admin-profile-arrow"></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+<!-- =========================================================
+     STACKLY YOUTH WELFARE FOUNDATION
+     ADMIN VOLUNTEERS PAGE
+     VOLUNTEER MANAGEMENT CONTENT
+========================================================= -->
+
+<section class="stackly-youth-admin-volunteers-content">
+
+
+    <!-- =====================================================
+         VOLUNTEER HERO / WELCOME
+    ====================================================== -->
+
+    <section
+        class="stackly-youth-admin-volunteer-hero"
+        data-aos="fade-up"
+    >
+
+        <div class="stackly-youth-admin-volunteer-hero-content">
+
+            <span class="stackly-youth-admin-volunteer-eyebrow">
+                <i class="fa-solid fa-people-group"></i>
+                VOLUNTEER MANAGEMENT
+            </span>
+
+            <h2>
+                People Who
+                <span>Make Change Happen.</span>
+            </h2>
+
+            <p>
+                Manage volunteers, track engagement, review applications,
+                and build a stronger community of changemakers.
+            </p>
+
+            <div class="stackly-youth-admin-volunteer-hero-actions">
+
+                <a
+                    href="404-admin.html"
+                    class="stackly-youth-admin-volunteer-primary"
+                >
+                    <i class="fa-solid fa-user-plus"></i>
+                    Add Volunteer
+                </a>
+
+                <a
+                    href="404-admin.html"
+                    class="stackly-youth-admin-volunteer-secondary"
+                >
+                    <i class="fa-solid fa-file-export"></i>
+                    Export Directory
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="stackly-youth-admin-volunteer-hero-visual">
+
+            <div class="stackly-youth-admin-volunteer-visual-circle">
+
+                <i class="fa-solid fa-hands-holding-child"></i>
+
+            </div>
+
+            <div class="stackly-youth-admin-volunteer-floating-card card-one">
+
+                <strong>2,486</strong>
+                <span>Active Volunteers</span>
+
+            </div>
+
+            <div class="stackly-youth-admin-volunteer-floating-card card-two">
+
+                <i class="fa-solid fa-arrow-trend-up"></i>
+
+                <div>
+                    <strong>12.8%</strong>
+                    <span>Growth</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         VOLUNTEER STATISTICS
+    ====================================================== -->
+
+    <section class="stackly-youth-admin-volunteer-stat-grid">
+
+
+        <!-- Total Volunteers -->
+
+        <article
+            class="stackly-youth-admin-volunteer-stat-card"
+            data-aos="fade-up"
+            data-aos-delay="50"
+        >
+
+            <div class="stackly-youth-admin-volunteer-stat-icon green">
+                <i class="fa-solid fa-users"></i>
+            </div>
+
+            <div class="stackly-youth-admin-volunteer-stat-info">
+
+                <span>Total Volunteers</span>
+
+                <strong>3,842</strong>
+
+                <small>
+                    <i class="fa-solid fa-arrow-up"></i>
+                    14.6% this year
+                </small>
+
+            </div>
+
+        </article>
+
+
+        <!-- Active Volunteers -->
+
+        <article
+            class="stackly-youth-admin-volunteer-stat-card"
+            data-aos="fade-up"
+            data-aos-delay="100"
+        >
+
+            <div class="stackly-youth-admin-volunteer-stat-icon orange">
+                <i class="fa-solid fa-user-check"></i>
+            </div>
+
+            <div class="stackly-youth-admin-volunteer-stat-info">
+
+                <span>Active Volunteers</span>
+
+                <strong>2,486</strong>
+
+                <small>
+                    <i class="fa-solid fa-arrow-up"></i>
+                    12.8% this month
+                </small>
+
+            </div>
+
+        </article>
+
+
+        <!-- New Applications -->
+
+        <article
+            class="stackly-youth-admin-volunteer-stat-card"
+            data-aos="fade-up"
+            data-aos-delay="150"
+        >
+
+            <div class="stackly-youth-admin-volunteer-stat-icon blue">
+                <i class="fa-solid fa-user-clock"></i>
+            </div>
+
+            <div class="stackly-youth-admin-volunteer-stat-info">
+
+                <span>Pending Applications</span>
+
+                <strong>126</strong>
+
+                <small>
+                    <i class="fa-solid fa-clock"></i>
+                    Needs review
+                </small>
+
+            </div>
+
+        </article>
+
+
+        <!-- Volunteer Hours -->
+
+        <article
+            class="stackly-youth-admin-volunteer-stat-card"
+            data-aos="fade-up"
+            data-aos-delay="200"
+        >
+
+            <div class="stackly-youth-admin-volunteer-stat-icon purple">
+                <i class="fa-solid fa-clock"></i>
+            </div>
+
+            <div class="stackly-youth-admin-volunteer-stat-info">
+
+                <span>Volunteer Hours</span>
+
+                <strong>18.7K</strong>
+
+                <small>
+                    <i class="fa-solid fa-arrow-up"></i>
+                    9.4% this month
+                </small>
+
+            </div>
+
+        </article>
+
+    </section>
+
+ 
+    <!-- =====================================================
+         VOLUNTEER DIRECTORY + ENGAGEMENT
+    ====================================================== -->
+
+    <div class="stackly-youth-admin-volunteer-main-grid">
+
+
+        <!-- =================================================
+             VOLUNTEER DIRECTORY
+        ================================================== -->
+
+        <section
+            class="stackly-youth-admin-volunteer-panel"
+            data-aos="fade-right"
+        >
+
+            <div class="stackly-youth-admin-volunteer-panel-header">
+
+                <div>
+
+                    <span>
+                        VOLUNTEER DIRECTORY
+                    </span>
+
+                    <h3>
+                        Active Volunteers
+                    </h3>
+
+                </div>
+
+                <a href="404-admin.html">
+                    View All
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="stackly-youth-admin-volunteer-list">
+
+
+                <!-- Volunteer 01 -->
+
+                <article class="stackly-youth-admin-volunteer-person">
+
+                    <div class="stackly-youth-admin-volunteer-avatar avatar-green">
+                        PS
+                    </div>
+
+                    <div class="stackly-youth-admin-volunteer-person-info">
+
+                        <strong>
+                            Priya Sharma
+                        </strong>
+
+                        <span>
+                            Education Program
+                        </span>
+
+                    </div>
+
+                    <div class="stackly-youth-admin-volunteer-person-status active">
+                        Active
+                    </div>
+
+                    <a
+                        href="404-admin.html"
+                        class="stackly-youth-admin-volunteer-person-arrow"
+                    >
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+
+                </article>
+
+
+                <!-- Volunteer 02 -->
+
+                <article class="stackly-youth-admin-volunteer-person">
+
+                    <div class="stackly-youth-admin-volunteer-avatar avatar-orange">
+                        AK
+                    </div>
+
+                    <div class="stackly-youth-admin-volunteer-person-info">
+
+                        <strong>
+                            Arjun Kumar
+                        </strong>
+
+                        <span>
+                            Digital Skills
+                        </span>
+
+                    </div>
+
+                    <div class="stackly-youth-admin-volunteer-person-status active">
+                        Active
+                    </div>
+
+                    <a
+                        href="404-admin.html"
+                        class="stackly-youth-admin-volunteer-person-arrow"
+                    >
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+
+                </article>
+
+
+                <!-- Volunteer 03 -->
+
+                <article class="stackly-youth-admin-volunteer-person">
+
+                    <div class="stackly-youth-admin-volunteer-avatar avatar-blue">
+                        RM
+                    </div>
+
+                    <div class="stackly-youth-admin-volunteer-person-info">
+
+                        <strong>
+                            Riya Menon
+                        </strong>
+
+                        <span>
+                            Health & Wellness
+                        </span>
+
+                    </div>
+
+                    <div class="stackly-youth-admin-volunteer-person-status active">
+                        Active
+                    </div>
+
+                    <a
+                        href="404-admin.html"
+                        class="stackly-youth-admin-volunteer-person-arrow"
+                    >
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+
+                </article>
+
+
+                <!-- Volunteer 04 -->
+
+                <article class="stackly-youth-admin-volunteer-person">
+
+                    <div class="stackly-youth-admin-volunteer-avatar avatar-purple">
+                        VN
+                    </div>
+
+                    <div class="stackly-youth-admin-volunteer-person-info">
+
+                        <strong>
+                            Vikram Nair
+                        </strong>
+
+                        <span>
+                            Career Development
+                        </span>
+
+                    </div>
+
+                    <div class="stackly-youth-admin-volunteer-person-status active">
+                        Active
+                    </div>
+
+                    <a
+                        href="404-admin.html"
+                        class="stackly-youth-admin-volunteer-person-arrow"
+                    >
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+
+                </article>
+
+
+                <!-- Volunteer 05 -->
+
+                <article class="stackly-youth-admin-volunteer-person">
+
+                    <div class="stackly-youth-admin-volunteer-avatar avatar-yellow">
+                        NS
+                    </div>
+
+                    <div class="stackly-youth-admin-volunteer-person-info">
+
+                        <strong>
+                            Neha Singh
+                        </strong>
+
+                        <span>
+                            Youth Education
+                        </span>
+
+                    </div>
+
+                    <div class="stackly-youth-admin-volunteer-person-status active">
+                        Active
+                    </div>
+
+                    <a
+                        href="404-admin.html"
+                        class="stackly-youth-admin-volunteer-person-arrow"
+                    >
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             VOLUNTEER ENGAGEMENT
+        ================================================== -->
+
+        <section
+            class="stackly-youth-admin-volunteer-panel"
+            data-aos="fade-left"
+        >
+
+            <div class="stackly-youth-admin-volunteer-panel-header">
+
+                <div>
+
+                    <span>
+                        ENGAGEMENT
+                    </span>
+
+                    <h3>
+                        Volunteer Activity
+                    </h3>
+
+                </div>
+
+                <a href="404-admin.html">
+                    Details
+                </a>
+
+            </div>
+
+
+            <div class="stackly-youth-admin-volunteer-chart">
+
+                <div class="stackly-youth-admin-chart-summary">
+
+                    <strong>
+                        82%
+                    </strong>
+
+                    <span>
+                        Engagement Rate
+                    </span>
+
+                    <small>
+                        <i class="fa-solid fa-arrow-up"></i>
+                        6.8% from last month
+                    </small>
+
+                </div>
+
+
+                <div class="stackly-youth-admin-chart-bars">
+
+                    <div>
+                        <span style="height: 48%;"></span>
+                        <small>Mon</small>
+                    </div>
+
+                    <div>
+                        <span style="height: 67%;"></span>
+                        <small>Tue</small>
+                    </div>
+
+                    <div>
+                        <span style="height: 58%;"></span>
+                        <small>Wed</small>
+                    </div>
+
+                    <div>
+                        <span style="height: 82%;"></span>
+                        <small>Thu</small>
+                    </div>
+
+                    <div>
+                        <span style="height: 72%;"></span>
+                        <small>Fri</small>
+                    </div>
+
+                    <div>
+                        <span style="height: 91%;"></span>
+                        <small>Sat</small>
+                    </div>
+
+                    <div>
+                        <span style="height: 62%;"></span>
+                        <small>Sun</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="stackly-youth-admin-volunteer-engagement-footer">
+
+                <div>
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                    <span>
+                        Most active day
+                    </span>
+
+                    <strong>
+                        Saturday
+                    </strong>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-clock"></i>
+
+                    <span>
+                        Avg. weekly hours
+                    </span>
+
+                    <strong>
+                        7.4 hrs
+                    </strong>
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         PENDING APPLICATIONS
+    ====================================================== -->
+
+    <section
+        class="stackly-youth-admin-volunteer-panel"
+        data-aos="fade-up"
+    >
+
+        <div class="stackly-youth-admin-volunteer-panel-header">
+
+            <div>
+
+                <span>
+                    APPLICATIONS
+                </span>
+
+                <h3>
+                    New Volunteer Applications
+                </h3>
+
+            </div>
+
+            <a href="404-admin.html">
+                Review All
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="stackly-youth-admin-volunteer-applications">
+
+
+            <!-- Application 01 -->
+
+            <article class="stackly-youth-admin-volunteer-application">
+
+                <div class="stackly-youth-admin-volunteer-application-avatar">
+                    AP
+                </div>
+
+                <div class="stackly-youth-admin-volunteer-application-info">
+
+                    <strong>
+                        Ananya Patel
+                    </strong>
+
+                    <span>
+                        Interested in Youth Education
+                    </span>
+
+                    <small>
+                        Applied 18 minutes ago
+                    </small>
+
+                </div>
+
+                <div class="stackly-youth-admin-volunteer-application-actions">
+
+                    <a
+                        href="404-admin.html"
+                        class="approve"
+                    >
+                        <i class="fa-solid fa-check"></i>
+                        Approve
+                    </a>
+
+                    <a
+                        href="404-admin.html"
+                        class="review"
+                    >
+                        Review
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- Application 02 -->
+
+            <article class="stackly-youth-admin-volunteer-application">
+
+                <div class="stackly-youth-admin-volunteer-application-avatar">
+                    RS
+                </div>
+
+                <div class="stackly-youth-admin-volunteer-application-info">
+
+                    <strong>
+                        Rahul Shah
+                    </strong>
+
+                    <span>
+                        Interested in Digital Skills
+                    </span>
+
+                    <small>
+                        Applied 46 minutes ago
+                    </small>
+
+                </div>
+
+                <div class="stackly-youth-admin-volunteer-application-actions">
+
+                    <a
+                        href="404-admin.html"
+                        class="approve"
+                    >
+                        <i class="fa-solid fa-check"></i>
+                        Approve
+                    </a>
+
+                    <a
+                        href="404-admin.html"
+                        class="review"
+                    >
+                        Review
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- Application 03 -->
+
+            <article class="stackly-youth-admin-volunteer-application">
+
+                <div class="stackly-youth-admin-volunteer-application-avatar">
+                    SM
+                </div>
+
+                <div class="stackly-youth-admin-volunteer-application-info">
+
+                    <strong>
+                        Sneha Mathew
+                    </strong>
+
+                    <span>
+                        Interested in Health & Wellness
+                    </span>
+
+                    <small>
+                        Applied 1 hour ago
+                    </small>
+
+                </div>
+
+                <div class="stackly-youth-admin-volunteer-application-actions">
+
+                    <a
+                        href="404-admin.html"
+                        class="approve"
+                    >
+                        <i class="fa-solid fa-check"></i>
+                        Approve
+                    </a>
+
+                    <a
+                        href="404-admin.html"
+                        class="review"
+                    >
+                        Review
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PROGRAM PARTICIPATION
+    ====================================================== -->
+
+    <section
+        class="stackly-youth-admin-volunteer-panel"
+        data-aos="fade-up"
+    >
+
+        <div class="stackly-youth-admin-volunteer-panel-header">
+
+            <div>
+
+                <span>
+                    PROGRAM PARTICIPATION
+                </span>
+
+                <h3>
+                    Where Volunteers Are Making an Impact
+                </h3>
+
+            </div>
+
+            <a href="404-admin.html">
+                Manage Programs
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="stackly-youth-admin-volunteer-program-grid">
+
+
+            <!-- Education -->
+
+            <div class="stackly-youth-admin-volunteer-program-card">
+
+                <div class="stackly-youth-admin-volunteer-program-icon">
+                    <i class="fa-solid fa-book-open"></i>
+                </div>
+
+                <div>
+
+                    <strong>
+                        Youth Education
+                    </strong>
+
+                    <span>
+                        684 volunteers
+                    </span>
+
+                </div>
+
+                <div class="stackly-youth-admin-volunteer-program-progress">
+
+                    <div>
+                        <span style="width: 82%;"></span>
+                    </div>
+
+                    <strong>
+                        82%
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- Health -->
+
+            <div class="stackly-youth-admin-volunteer-program-card">
+
+                <div class="stackly-youth-admin-volunteer-program-icon">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+
+                <div>
+
+                    <strong>
+                        Health & Wellness
+                    </strong>
+
+                    <span>
+                        512 volunteers
+                    </span>
+
+                </div>
+
+                <div class="stackly-youth-admin-volunteer-program-progress">
+
+                    <div>
+                        <span style="width: 68%;"></span>
+                    </div>
+
+                    <strong>
+                        68%
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- Digital -->
+
+            <div class="stackly-youth-admin-volunteer-program-card">
+
+                <div class="stackly-youth-admin-volunteer-program-icon">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+
+                <div>
+
+                    <strong>
+                        Digital Skills
+                    </strong>
+
+                    <span>
+                        438 volunteers
+                    </span>
+
+                </div>
+
+                <div class="stackly-youth-admin-volunteer-program-progress">
+
+                    <div>
+                        <span style="width: 57%;"></span>
+                    </div>
+
+                    <strong>
+                        57%
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- Career -->
+
+            <div class="stackly-youth-admin-volunteer-program-card">
+
+                <div class="stackly-youth-admin-volunteer-program-icon">
+                    <i class="fa-solid fa-briefcase"></i>
+                </div>
+
+                <div>
+
+                    <strong>
+                        Career Development
+                    </strong>
+
+                    <span>
+                        326 volunteers
+                    </span>
+
+                </div>
+
+                <div class="stackly-youth-admin-volunteer-program-progress">
+
+                    <div>
+                        <span style="width: 46%;"></span>
+                    </div>
+
+                    <strong>
+                        46%
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         VOLUNTEER IMPACT
+    ====================================================== -->
+
+    <section
+        class="stackly-youth-admin-volunteer-impact"
+        data-aos="zoom-in"
+    >
+
+        <div class="stackly-youth-admin-volunteer-impact-icon">
+
+            <i class="fa-solid fa-hands-holding-circle"></i>
+
+        </div>
+
+        <div class="stackly-youth-admin-volunteer-impact-content">
+
+            <span>
+                VOLUNTEER IMPACT
+            </span>
+
+            <h3>
+                Every Hour Creates a Ripple of Change.
+            </h3>
+
+            <p>
+                Together, our volunteer community has contributed
+                thousands of hours toward education, wellness,
+                skills development, and opportunities for young people.
+            </p>
+
+        </div>
+
+
+        <div class="stackly-youth-admin-volunteer-impact-stat">
+
+            <strong>
+                18,742
+            </strong>
+
+            <span>
+                Hours Contributed
+            </span>
+
+        </div>
+
+
+        <a
+            href="404-admin.html"
+            class="stackly-youth-admin-volunteer-impact-button"
+        >
+            View Impact
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         QUICK ACTIONS
+    ====================================================== -->
+
+    <section
+        class="stackly-youth-admin-volunteer-quick-actions"
+        data-aos="fade-up"
+    >
+
+        <div class="stackly-youth-admin-volunteer-panel-header">
+
+            <div>
+
+                <span>
+                    MANAGEMENT
+                </span>
+
+                <h3>
+                    Volunteer Actions
+                </h3>
+
+            </div>
+
+        </div>
+
+
+        <div class="stackly-youth-admin-volunteer-action-grid">
+
+
+            <a
+                href="404-admin.html"
+                class="stackly-youth-admin-volunteer-action-card"
+            >
+
+                <span>
+                    <i class="fa-solid fa-user-plus"></i>
+                </span>
+
+                <div>
+                    <strong>
+                        Add Volunteer
+                    </strong>
+
+                    <small>
+                        Create a new volunteer profile
+                    </small>
+                </div>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <a
+                href="404-admin.html"
+                class="stackly-youth-admin-volunteer-action-card"
+            >
+
+                <span>
+                    <i class="fa-solid fa-user-clock"></i>
+                </span>
+
+                <div>
+                    <strong>
+                        Applications
+                    </strong>
+
+                    <small>
+                        Review pending applications
+                    </small>
+                </div>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <a
+                href="404-admin.html"
+                class="stackly-youth-admin-volunteer-action-card"
+            >
+
+                <span>
+                    <i class="fa-solid fa-calendar-check"></i>
+                </span>
+
+                <div>
+                    <strong>
+                        Volunteer Schedule
+                    </strong>
+
+                    <small>
+                        Manage upcoming activities
+                    </small>
+                </div>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <a
+                href="404-admin.html"
+                class="stackly-youth-admin-volunteer-action-card"
+            >
+
+                <span>
+                    <i class="fa-solid fa-chart-line"></i>
+                </span>
+
+                <div>
+                    <strong>
+                        Volunteer Reports
+                    </strong>
+
+                    <small>
+                        Review engagement analytics
+                    </small>
+                </div>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </section>
+
+</section>
+
+
+    </main>
+
+
+    <!-- =========================================================
+         AOS JS
+    ========================================================== -->
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js">
+    </script>
+
+
+    <!-- =========================================================
+         ADMIN JS
+    ========================================================== -->
+
+    <script src="admin.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- =========================================================
+         STACKLY YOUTH WELFARE FOUNDATION
+         ADMIN DASHBOARD
+    ========================================================== -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stackly Youth Welfare Foundation | Admin Dashboard</title>
+
+    <!-- =========================================================
+         GOOGLE FONTS
+    ========================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- =========================================================
+         FONT AWESOME
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <!-- =========================================================
+         AOS ANIMATION
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    >
+
+    <!-- =========================================================
+         ADMIN CSS
+    ========================================================== -->
+
+    <link rel="stylesheet" href="admin.css">
+
+</head>
+
+
+<body>
+
+    <!-- =========================================================
+         MOBILE OVERLAY
+    ========================================================== -->
+
+    <div
+        class="stackly-youth-admin-overlay"
+        id="stacklyYouthAdminOverlay"
+    ></div>
+
+
+    <!-- =========================================================
+         ADMIN SIDEBAR
+    ========================================================== -->
+
+    <aside
+        class="stackly-youth-admin-sidebar"
+        id="stacklyYouthAdminSidebar"
+    >
+
+        <!-- =====================================================
+             SIDEBAR HEADER
+        ====================================================== -->
+
+        <div class="stackly-youth-admin-sidebar-header">
+
+            <!-- Logo -->
+            <a
+                href="admin.html"
+                class="stackly-youth-admin-brand"
+            >
+
+                <img
+                    src="Stackly-logo-Blue.webp"
+                    alt="Stackly Youth Welfare Foundation Logo"
+                >
+
+
+            </a>
+
+
+            <!-- Mobile Close -->
+            <button
+                type="button"
+                class="stackly-youth-admin-sidebar-close"
+                id="stacklyYouthAdminSidebarClose"
+                aria-label="Close navigation"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- =====================================================
+             SIDEBAR NAVIGATION
+        ====================================================== -->
+
+        <nav class="stackly-youth-admin-navigation">
+
+            <span class="stackly-youth-admin-nav-label">
+                MAIN MENU
+            </span>
+
+
+            <!-- Dashboard -->
+            <a
+                href="admin.html"
+                class="stackly-youth-admin-nav-link"
+            >
+
+                <span class="stackly-youth-admin-nav-icon">
+                    <i class="fa-solid fa-chart-pie"></i>
+                </span>
+
+                <span class="stackly-youth-admin-nav-text">
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <!-- Volunteers -->
+            <a
+                href="admin-volunteers.html"
+                class="stackly-youth-admin-nav-link"
+            >
+
+                <span class="stackly-youth-admin-nav-icon">
+                    <i class="fa-solid fa-users"></i>
+                </span>
+
+                <span class="stackly-youth-admin-nav-text">
+                    Volunteers
+                </span>
+
+            </a>
+
+
+            <!-- Donations -->
+            <a
+                href="admin-donations.html"
+                class="stackly-youth-admin-nav-link"
+            >
+
+                <span class="stackly-youth-admin-nav-icon">
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                </span>
+
+                <span class="stackly-youth-admin-nav-text">
+                    Donations
+                </span>
+
+            </a>
+
+
+            <!-- =================================================
+                 MANAGEMENT
+            ================================================== -->
+
+            <span class="stackly-youth-admin-nav-label">
+                MANAGEMENT
+            </span>
+
+            <!-- Events -->
+            <a
+                href="admin-events.html"
+                class="stackly-youth-admin-nav-link active"
+            >
+
+                <span class="stackly-youth-admin-nav-icon">
+                    <i class="fa-solid fa-calendar-days"></i>
+                </span>
+
+                <span class="stackly-youth-admin-nav-text">
+                    Events
+                </span>
+
+            </a>
+
+
+            <!-- Reports -->
+            <a
+                href="admin-reports.html"
+                class="stackly-youth-admin-nav-link"
+            >
+
+                <span class="stackly-youth-admin-nav-icon">
+                    <i class="fa-solid fa-chart-column"></i>
+                </span>
+
+                <span class="stackly-youth-admin-nav-text">
+                    Reports
+                </span>
+
+            </a>
+
+
+            <!-- =================================================
+                 SYSTEM
+            ================================================== -->
+
+            <span class="stackly-youth-admin-nav-label">
+                SYSTEM
+            </span>
+
+
+            <!-- Messages -->
+            <a
+                href="admin-messages.html"
+                class="stackly-youth-admin-nav-link"
+            >
+
+                <span class="stackly-youth-admin-nav-icon">
+                    <i class="fa-regular fa-envelope"></i>
+                </span>
+
+                <span class="stackly-youth-admin-nav-text">
+                    Messages
+                </span>
+
+                <span class="stackly-youth-admin-nav-badge">
+                    8
+                </span>
+
+            </a>
+
+
+            <!-- Settings -->
+            <a
+                href="admin-settings.html"
+                class="stackly-youth-admin-nav-link"
+            >
+
+                <span class="stackly-youth-admin-nav-icon">
+                    <i class="fa-solid fa-gear"></i>
+                </span>
+
+                <span class="stackly-youth-admin-nav-text">
+                    Settings
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- =====================================================
+             SIDEBAR FOOTER
+        ====================================================== -->
+
+        <div class="stackly-youth-admin-sidebar-footer">
+
+            <a
+                href="index.html"
+                class="stackly-youth-admin-logout"
+            >
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>
+                    Logout
+                </span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =========================================================
+         MAIN DASHBOARD AREA
+    ========================================================== -->
+
+    <main class="stackly-youth-admin-main">
+
+
+        <!-- =====================================================
+             TOP HEADER
+        ====================================================== -->
+
+        <header class="stackly-youth-admin-topbar">
+
+
+            <!-- Mobile Hamburger -->
+            <button
+                type="button"
+                class="stackly-youth-admin-menu-toggle"
+                id="stacklyYouthAdminMenuToggle"
+                aria-label="Open navigation"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+
+            <!-- Page Heading -->
+            <div
+                class="stackly-youth-admin-page-heading"
+                data-aos="fade-down"
+            >
+
+                <span>
+                    ADMINISTRATION
+                </span>
+
+                <h1>
+                    Admin Dashboard
+                </h1>
+
+            </div>
+
+
+            <!-- =================================================
+                 TOP RIGHT
+            ================================================== -->
+
+            <div class="stackly-youth-admin-top-actions">
+
+
+                <!-- Notification -->
+                <a href="404-admin.html"><button
+                    type="button"
+                    class="stackly-youth-admin-notification"
+                    aria-label="Notifications"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span>
+                        3
+                    </span>
+
+                </button></a>
+
+
+                <!-- Admin Email -->
+                <div class="stackly-youth-admin-profile">
+
+                    <div class="stackly-youth-admin-profile-avatar">
+
+                        <i class="fa-solid fa-user-shield"></i>
+
+                    </div>
+
+                    <div class="stackly-youth-admin-profile-info">
+
+                        <strong>
+                            Admin
+                        </strong>
+
+                        <span id="stacklyYouthAdminEmail">
+                            admin@stacklyyouth.org
+                        </span>
+
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down stackly-youth-admin-profile-arrow"></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+<!-- =========================================================
+     STACKLY YOUTH WELFARE FOUNDATION
+     ADMIN EVENTS PAGE
+     EVENTS MANAGEMENT CONTENT
+========================================================== -->
+
+<section class="stackly-youth-admin-events-content">
+
+
+    <!-- =====================================================
+         EVENTS HERO / INTRO
+    ====================================================== -->
+
+    <section
+        class="stackly-youth-admin-events-hero"
+        data-aos="fade-up"
+    >
+
+        <!-- Decorative Elements -->
+
+        <div class="stackly-youth-admin-events-hero-glow"></div>
+
+        <div class="stackly-youth-admin-events-hero-circle"></div>
+
+
+        <div class="stackly-youth-admin-events-hero-content">
+
+            <div class="stackly-youth-admin-events-hero-copy">
+
+                <span class="stackly-youth-admin-events-eyebrow">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    COMMUNITY EVENTS
+                </span>
+
+                <h2>
+                    Create Moments That
+                    <strong>Bring Youth Together.</strong>
+                </h2>
+
+                <p>
+                    Plan, manage, and monitor community events,
+                    youth programs, workshops, and volunteering
+                    activities from one central dashboard.
+                </p>
+
+
+                <div class="stackly-youth-admin-events-hero-actions">
+
+                    <a
+                        href="404-admin.html"
+                        class="stackly-youth-admin-events-primary-btn"
+                    >
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        Create New Event
+
+                    </a>
+
+
+                    <a
+                        href="404-admin.html"
+                        class="stackly-youth-admin-events-secondary-btn"
+                    >
+
+                        <i class="fa-solid fa-calendar-days"></i>
+
+                        View Calendar
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Hero Visual -->
+
+            <div class="stackly-youth-admin-events-hero-visual">
+
+                <div class="stackly-youth-admin-events-calendar-card">
+
+                    <div class="stackly-youth-admin-events-calendar-top">
+
+                        <span>
+                            OCTOBER
+                        </span>
+
+                        <i class="fa-solid fa-calendar-days"></i>
+
+                    </div>
+
+
+                    <strong>
+                        18
+                    </strong>
+
+                    <span>
+                        Youth Leadership Summit
+                    </span>
+
+
+                    <div class="stackly-youth-admin-events-calendar-meta">
+
+                        <span>
+                            <i class="fa-regular fa-clock"></i>
+                            10:00 AM
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Chennai
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="stackly-youth-admin-events-floating-card events-float-one"
+                >
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <div>
+
+                        <strong>
+                            128
+                        </strong>
+
+                        <span>
+                            Registered
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="stackly-youth-admin-events-floating-card events-float-two"
+                >
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    <div>
+
+                        <strong>
+                            92%
+                        </strong>
+
+                        <span>
+                            Attendance
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         EVENT SUMMARY CARDS
+    ====================================================== -->
+
+    <section class="stackly-youth-admin-events-summary">
+
+
+        <!-- Total Events -->
+
+        <div
+            class="stackly-youth-admin-events-summary-card"
+            data-aos="fade-up"
+            data-aos-delay="50"
+        >
+
+            <div class="stackly-youth-admin-events-summary-icon green">
+
+                <i class="fa-solid fa-calendar-days"></i>
+
+            </div>
+
+            <div class="stackly-youth-admin-events-summary-info">
+
+                <span>
+                    Total Events
+                </span>
+
+                <strong>
+                    86
+                </strong>
+
+                <small class="positive">
+
+                    <i class="fa-solid fa-arrow-up"></i>
+
+                    12.4% this year
+
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <!-- Upcoming -->
+
+        <div
+            class="stackly-youth-admin-events-summary-card"
+            data-aos="fade-up"
+            data-aos-delay="100"
+        >
+
+            <div class="stackly-youth-admin-events-summary-icon orange">
+
+                <i class="fa-solid fa-calendar-plus"></i>
+
+            </div>
+
+            <div class="stackly-youth-admin-events-summary-info">
+
+                <span>
+                    Upcoming Events
+                </span>
+
+                <strong>
+                    14
+                </strong>
+
+                <small>
+                    Next 30 days
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <!-- Participants -->
+
+        <div
+            class="stackly-youth-admin-events-summary-card"
+            data-aos="fade-up"
+            data-aos-delay="150"
+        >
+
+            <div class="stackly-youth-admin-events-summary-icon blue">
+
+                <i class="fa-solid fa-users"></i>
+
+            </div>
+
+            <div class="stackly-youth-admin-events-summary-info">
+
+                <span>
+                    Participants
+                </span>
+
+                <strong>
+                    2,486
+                </strong>
+
+                <small class="positive">
+
+                    <i class="fa-solid fa-arrow-up"></i>
+
+                    18.6% growth
+
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <!-- Completed -->
+
+        <div
+            class="stackly-youth-admin-events-summary-card"
+            data-aos="fade-up"
+            data-aos-delay="200"
+        >
+
+            <div class="stackly-youth-admin-events-summary-icon purple">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+            </div>
+
+            <div class="stackly-youth-admin-events-summary-info">
+
+                <span>
+                    Completed
+                </span>
+
+                <strong>
+                    72
+                </strong>
+
+                <small>
+                    83.7% of total
+                </small>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         UPCOMING EVENTS SECTION
+    ====================================================== -->
+
+    <section
+        class="stackly-youth-admin-events-upcoming"
+        data-aos="fade-up"
+    >
+
+        <div class="stackly-youth-admin-events-section-header">
+
+            <div>
+
+                <span>
+                    EVENT SCHEDULE
+                </span>
+
+                <h3>
+                    Upcoming Events
+                </h3>
+
+                <p>
+                    Keep track of the next activities and
+                    community programs.
+                </p>
+
+            </div>
+
+
+            <a
+                href="404-admin.html"
+                class="stackly-youth-admin-events-view-all"
+            >
+
+                View All
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+        <div class="stackly-youth-admin-events-upcoming-grid">
+
+
+            <!-- Event 01 -->
+
+            <article
+                class="stackly-youth-admin-events-event-card"
+                data-aos="fade-up"
+                data-aos-delay="80"
+            >
+
+                <div class="stackly-youth-admin-events-event-date">
+
+                    <strong>
+                        18
+                    </strong>
+
+                    <span>
+                        OCT
+                    </span>
+
+                </div>
+
+
+                <div class="stackly-youth-admin-events-event-content">
+
+                    <span class="event-category leadership">
+                        LEADERSHIP
+                    </span>
+
+                    <h4>
+                        Youth Leadership
+                    </h4>
+
+                    <p>
+                        A youth-focused leadership program
+designed to develop confidence and
+leadership skills.
+
+                    </p>
+
+
+                    <div class="stackly-youth-admin-events-event-meta">
+
+                        <span>
+                            <i class="fa-regular fa-clock"></i>
+                            10:00 AM
+                        </span>
+
+                        <br>
+
+                        <span>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Chennai
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="404-admin.html"
+                    class="stackly-youth-admin-events-event-arrow"
+                >
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+            </article>
+
+
+
+            <!-- Event 02 -->
+
+            <article
+                class="stackly-youth-admin-events-event-card"
+                data-aos="fade-up"
+                data-aos-delay="140"
+            >
+
+                <div class="stackly-youth-admin-events-event-date">
+
+                    <strong>
+                        24
+                    </strong>
+
+                    <span>
+                        OCT
+                    </span>
+
+                </div>
+
+
+                <div class="stackly-youth-admin-events-event-content">
+
+                    <span class="event-category skills">
+                        DIGITAL SKILLS
+                    </span>
+
+                    <h4>
+                        Digital Skills Workshop
+                    </h4>
+
+                    <p>
+                        Practical digital learning sessions
+                        helping young people build future-ready
+                        technology skills.
+                    </p>
+
+
+                    <div class="stackly-youth-admin-events-event-meta">
+
+                        <span>
+                            <i class="fa-regular fa-clock"></i>
+                            02:00 PM
+                        </span>
+
+                        <br>
+
+                        <span>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Coimbatore
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="404-admin.html"
+                    class="stackly-youth-admin-events-event-arrow"
+                >
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+            </article>
+
+
+
+            <!-- Event 03 -->
+
+            <article
+                class="stackly-youth-admin-events-event-card"
+                data-aos="fade-up"
+                data-aos-delay="200"
+            >
+
+                <div class="stackly-youth-admin-events-event-date">
+
+                    <strong>
+                        02
+                    </strong>
+
+                    <span>
+                        NOV
+                    </span>
+
+                </div>
+
+
+                <div class="stackly-youth-admin-events-event-content">
+
+                    <span class="event-category wellness">
+                        WELLNESS
+                    </span>
+
+                    <h4>
+                        Youth Wellness Day
+                    </h4>
+
+                    <p>
+                        A community wellness event focused on
+                        healthy habits, awareness, and youth
+                        participation.
+                    </p>
+
+
+                    <div class="stackly-youth-admin-events-event-meta">
+
+                        <span>
+                            <i class="fa-regular fa-clock"></i>
+                            09:30 AM
+                        </span>
+                        <br>
+
+                        <span>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Madurai
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="404-admin.html"
+                    class="stackly-youth-admin-events-event-arrow"
+                >
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         EVENT PERFORMANCE + CALENDAR
+    ====================================================== -->
+
+    <section class="stackly-youth-admin-events-management-grid">
+
+
+        <!-- =================================================
+             EVENT PERFORMANCE
+        ================================================== -->
+
+        <div
+            class="stackly-youth-admin-events-panel"
+            data-aos="fade-right"
+        >
+
+            <div class="stackly-youth-admin-events-panel-header">
+
+                <div>
+
+                    <span>
+                        PARTICIPATION INSIGHTS
+                    </span>
+
+                    <h3>
+                        Event Performance
+                    </h3>
+
+                </div>
+
+                <a href="404-admin.html">
+                    Details
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="stackly-youth-admin-events-performance">
+
+
+                <!-- Participation -->
+
+                <div class="stackly-youth-admin-events-performance-item">
+
+                    <div class="performance-icon green">
+
+                        <i class="fa-solid fa-user-group"></i>
+
+                    </div>
+
+                    <div class="performance-copy">
+
+                        <div>
+
+                            <strong>
+                                2,486
+                            </strong>
+
+                            <span>
+                                Participants
+                            </span>
+
+                        </div>
+
+                        <div class="performance-progress">
+
+                            <div
+                                class="performance-progress-fill"
+                                style="width:82%;"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+                    <span class="performance-value">
+                        82%
+                    </span>
+
+                </div>
+
+
+
+                <!-- Attendance -->
+
+                <div class="stackly-youth-admin-events-performance-item">
+
+                    <div class="performance-icon orange">
+
+                        <i class="fa-solid fa-user-check"></i>
+
+                    </div>
+
+                    <div class="performance-copy">
+
+                        <div>
+
+                            <strong>
+                                92%
+                            </strong>
+
+                            <span>
+                                Attendance Rate
+                            </span>
+
+                        </div>
+
+                        <div class="performance-progress">
+
+                            <div
+                                class="performance-progress-fill"
+                                style="width:92%;"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+                    <span class="performance-value">
+                        92%
+                    </span>
+
+                </div>
+
+
+
+                <!-- Completion -->
+
+                <div class="stackly-youth-admin-events-performance-item">
+
+                    <div class="performance-icon blue">
+
+                        <i class="fa-solid fa-flag-checkered"></i>
+
+                    </div>
+
+                    <div class="performance-copy">
+
+                        <div>
+
+                            <strong>
+                                72
+                            </strong>
+
+                            <span>
+                                Completed Events
+                            </span>
+
+                        </div>
+
+                        <div class="performance-progress">
+
+                            <div
+                                class="performance-progress-fill"
+                                style="width:84%;"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+                    <span class="performance-value">
+                        84%
+                    </span>
+
+                </div>
+
+
+
+                <!-- Satisfaction -->
+
+                <div class="stackly-youth-admin-events-performance-item">
+
+                    <div class="performance-icon purple">
+
+                        <i class="fa-solid fa-star"></i>
+
+                    </div>
+
+                    <div class="performance-copy">
+
+                        <div>
+
+                            <strong>
+                                4.8/5
+                            </strong>
+
+                            <span>
+                                Participant Rating
+                            </span>
+
+                        </div>
+
+                        <div class="performance-progress">
+
+                            <div
+                                class="performance-progress-fill"
+                                style="width:96%;"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+                    <span class="performance-value">
+                        96%
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             MINI CALENDAR
+        ================================================== -->
+
+        <div
+            class="stackly-youth-admin-events-panel"
+            data-aos="fade-left"
+            data-aos-delay="120"
+        >
+
+            <div class="stackly-youth-admin-events-panel-header">
+
+                <div>
+
+                    <span>
+                        EVENT PLANNER
+                    </span>
+
+                    <h3>
+                        October 2026
+                    </h3>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="stackly-youth-admin-events-calendar-button"
+                    aria-label="Open calendar"
+                >
+
+                    <i class="fa-solid fa-calendar"></i>
+
+                </button>
+
+            </div>
+
+
+            <div class="stackly-youth-admin-events-mini-calendar">
+
+                <div class="calendar-weekdays">
+
+                    <span>MON</span>
+                    <span>TUE</span>
+                    <span>WED</span>
+                    <span>THU</span>
+                    <span>FRI</span>
+                    <span>SAT</span>
+                    <span>SUN</span>
+
+                </div>
+
+
+                <div class="calendar-days">
+
+                    <span class="muted">28</span>
+                    <span class="muted">29</span>
+                    <span class="muted">30</span>
+
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+
+                    <span>5</span>
+                    <span>6</span>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                    <span>11</span>
+
+                    <span>12</span>
+                    <span>13</span>
+                    <span>14</span>
+                    <span>15</span>
+                    <span>16</span>
+
+                    <span class="event-day">
+                        17
+                    </span>
+
+                    <span class="today">
+                        18
+                    </span>
+
+                    <span>19</span>
+                    <span>20</span>
+                    <span>21</span>
+                    <span>22</span>
+                    <span>23</span>
+
+                    <span class="event-day">
+                        24
+                    </span>
+
+                    <span>25</span>
+
+                    <span>26</span>
+                    <span>27</span>
+                    <span>28</span>
+                    <span>29</span>
+                    <span>30</span>
+                    <span>31</span>
+
+                    <span class="muted">1</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="stackly-youth-admin-events-calendar-legend">
+
+                <span>
+                    <i></i>
+                    Event
+                </span>
+
+                <span>
+                    <i></i>
+                    Today
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =====================================================
+         RECENT EVENT ACTIVITY
+    ====================================================== -->
+
+    <section
+        class="stackly-youth-admin-events-activity"
+        data-aos="fade-up"
+    >
+
+        <div class="stackly-youth-admin-events-section-header">
+
+            <div>
+
+                <span>
+                    RECENT ACTIVITY
+                </span>
+
+                <h3>
+                    Event Updates
+                </h3>
+
+            </div>
+
+            <a
+                href="404-admin.html"
+                class="stackly-youth-admin-events-view-all"
+            >
+
+                View Activity
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+        <div class="stackly-youth-admin-events-activity-list">
+
+
+            <!-- Activity 01 -->
+
+            <div class="stackly-youth-admin-events-activity-item">
+
+                <div class="activity-icon green">
+
+                    <i class="fa-solid fa-user-plus"></i>
+
+                </div>
+
+                <div class="activity-copy">
+
+                    <strong>
+                        24 new participants registered
+                    </strong>
+
+                    <span>
+                        Youth Leadership Summit
+                    </span>
+
+                </div>
+
+                <time>
+                    18 min ago
+                </time>
+
+            </div>
+
+
+            <!-- Activity 02 -->
+
+            <div class="stackly-youth-admin-events-activity-item">
+
+                <div class="activity-icon orange">
+
+                    <i class="fa-solid fa-pen"></i>
+
+                </div>
+
+                <div class="activity-copy">
+
+                    <strong>
+                        Event details were updated
+                    </strong>
+
+                    <span>
+                        Digital Skills Workshop
+                    </span>
+
+                </div>
+
+                <time>
+                    1 hour ago
+                </time>
+
+            </div>
+
+
+            <!-- Activity 03 -->
+
+            <div class="stackly-youth-admin-events-activity-item">
+
+                <div class="activity-icon blue">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                </div>
+
+                <div class="activity-copy">
+
+                    <strong>
+                        Event successfully completed
+                    </strong>
+
+                    <span>
+                        Community Learning Day
+                    </span>
+
+                </div>
+
+                <time>
+                    Yesterday
+                </time>
+
+            </div>
+
+
+            <!-- Activity 04 -->
+
+            <div class="stackly-youth-admin-events-activity-item">
+
+                <div class="activity-icon purple">
+
+                    <i class="fa-solid fa-bullhorn"></i>
+
+                </div>
+
+                <div class="activity-copy">
+
+                    <strong>
+                        Event announcement published
+                    </strong>
+
+                    <span>
+                        Youth Wellness Day
+                    </span>
+
+                </div>
+
+                <time>
+                    2 days ago
+                </time>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         EVENT MANAGEMENT ACTIONS
+    ====================================================== -->
+
+    <section
+        class="stackly-youth-admin-events-actions"
+        data-aos="fade-up"
+    >
+
+        <div class="stackly-youth-admin-events-actions-copy">
+
+            <span>
+                EVENT MANAGEMENT
+            </span>
+
+            <h3>
+                Ready to plan the next
+                community experience?
+            </h3>
+
+            <p>
+                Create new events, coordinate volunteers,
+                manage registrations, and keep every
+                program organized.
+            </p>
+
+        </div>
+
+
+        <div class="stackly-youth-admin-events-actions-grid">
+
+
+            <a
+                href="404-admin.html"
+                class="stackly-youth-admin-events-action-card"
+            >
+
+                <i class="fa-solid fa-calendar-plus"></i>
+
+                <strong>
+                    Create Event
+                </strong>
+
+                <span>
+                    Schedule a new activity
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <a
+                href="404-admin.html"
+                class="stackly-youth-admin-events-action-card"
+            >
+
+                <i class="fa-solid fa-users"></i>
+
+                <strong>
+                    Manage Participants
+                </strong>
+
+                <span>
+                    Review event registrations
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <a
+                href="404-admin.html"
+                class="stackly-youth-admin-events-action-card"
+            >
+
+                <i class="fa-solid fa-file-export"></i>
+
+                <strong>
+                    Event Reports
+                </strong>
+
+                <span>
+                    Review event performance
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+</section>
+
+
+    </main>
+
+
+    <!-- =========================================================
+         AOS JS
+    ========================================================== -->
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js">
+    </script>
+
+
+    <!-- =========================================================
+         ADMIN JS
+    ========================================================== -->
+
+    <script src="admin.js"></script>
+
+</body>
+
+</html>

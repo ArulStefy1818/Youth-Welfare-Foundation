@@ -1,0 +1,994 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#126b45">
+    <title>Stackly Youth | Client Dashboard</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="client.css">
+
+</head>
+
+<body>
+
+    <!-- ==============================
+         SIDEBAR
+    ============================== -->
+
+    <aside class="stackly-youth-client-sidebar" id="stacklyYouthClientSidebar">
+
+        <div class="stackly-youth-client-brand">
+            <a href="client.html" aria-label="Stackly Youth Foundation Home">
+                <img src="Stackly-logo-Blue.webp"
+                     alt="Stackly Youth Foundation Logo">
+                 
+            </a>
+
+            <button class="stackly-youth-client-menu-close"
+                    id="stacklyYouthClientMenuClose"
+                    aria-label="Close navigation menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <p class="stackly-youth-client-sidebar-label">Main Menu</p>
+
+        <nav class="stackly-youth-client-nav"
+             aria-label="Client dashboard navigation">
+
+            <a href="client.html"  aria-current="page">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="client-programs.html">
+                <i class="fa-solid fa-hands-holding-child"></i>
+                <span>Our Programs</span>
+            </a>
+
+            <a href="client-donations.html" class="active">
+                <i class="fa-solid fa-heart"></i>
+                <span>My Donations</span>
+            </a>
+
+            <a href="client-impact.html">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Impact Reports</span>
+            </a>
+
+            <a href="client-events.html">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>Events</span>
+            </a>
+
+            <a href="client-messages.html">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Messages</span>
+            </a>
+
+        </nav>
+
+        <p class="stackly-youth-client-sidebar-label">Account</p>
+
+        <nav class="stackly-youth-client-nav"
+             aria-label="Account navigation">
+
+            <a href="client-profile.html">
+                <i class="fa-solid fa-user"></i>
+                <span>My Profile</span>
+            </a>
+
+            
+
+        </nav>
+
+        <div class="stackly-youth-client-sidebar-bottom">
+            <a href="index.html" id="stacklyYouthClientLogout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Logout</span>
+            </a>
+        </div>
+
+    </aside>
+
+    <!-- Mobile overlay -->
+    <div class="stackly-youth-client-overlay"
+         id="stacklyYouthClientOverlay"></div>
+
+
+    <!-- ==============================
+         MAIN
+    ============================== -->
+
+    <main class="stackly-youth-client-main">
+
+        <!-- Topbar -->
+        <header class="stackly-youth-client-topbar">
+
+            <div class="stackly-youth-client-topbar-left">
+
+                <button class="stackly-youth-client-menu-toggle"
+                        id="stacklyYouthClientMenuToggle"
+                        aria-label="Open navigation menu"
+                        aria-controls="stacklyYouthClientSidebar"
+                        aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <h2 class="stackly-youth-client-page-title">
+                    Client Dashboard
+                </h2>
+
+            </div>
+
+            <div class="stackly-youth-client-topbar-right">
+
+                <a href="404-client.html">
+                    <button class="stackly-youth-client-notification"
+                            type="button"
+                            aria-label="Notifications">
+                        <i class="fa-regular fa-bell"></i>
+                    </button>
+                </a>
+
+                <div class="stackly-youth-client-user">
+
+                    <div class="stackly-youth-client-avatar"
+                         id="stacklyYouthClientAvatar">
+                        U
+                    </div>
+
+                    <div class="stackly-youth-client-user-info">
+                        <strong id="stacklyYouthClientUserName">
+                            User
+                        </strong>
+
+                        <span id="stacklyYouthClientUserEmail">
+                            client@stacklyyouth.org
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- =========================================================
+     STACKLY YOUTH WELFARE FOUNDATION
+     CLIENT DASHBOARD — MY DONATIONS PAGE
+========================================================= -->
+
+<div class="stackly-youth-client-donations-page">
+
+    <!-- =====================================================
+         DECORATIVE BACKGROUND
+    ====================================================== -->
+
+    <div class="stackly-youth-client-donations-glow
+                stackly-youth-client-donations-glow-one"></div>
+
+    <div class="stackly-youth-client-donations-glow
+                stackly-youth-client-donations-glow-two"></div>
+
+
+    <!-- =====================================================
+         DONATION HERO
+    ====================================================== -->
+
+    <section class="stackly-youth-client-donations-hero">
+
+        <div class="stackly-youth-client-donations-hero-content"
+             data-aos="fade-right">
+
+            <span class="stackly-youth-client-donations-eyebrow">
+                <i class="fa-solid fa-heart-circle-check"></i>
+                My Giving Journey
+            </span>
+
+            <h1>
+                Every Contribution
+                <span>Makes an Impact.</span>
+            </h1>
+
+            <p>
+                Your generosity helps create opportunities, support essential
+                programs, and bring meaningful change to children and young
+                people in communities that need it most.
+            </p>
+
+            <div class="stackly-youth-client-donations-hero-actions">
+
+                <a href="404-client.html"
+                   class="stackly-youth-client-donations-primary-btn">
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+                    Make a Donation
+                </a>
+
+                <a href="404-client.html"
+                   class="stackly-youth-client-donations-secondary-btn">
+                    View My Impact
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Hero Visual -->
+
+        <div class="stackly-youth-client-donations-hero-visual"
+             data-aos="fade-left">
+
+            <div class="stackly-youth-client-donations-hero-image-wrap">
+
+                <img src="donations-client.webp"
+                     alt="Supporting youth through donations"
+                     class="stackly-youth-client-donations-hero-image">
+
+                <div class="stackly-youth-client-donations-hero-badge">
+
+                    <div class="stackly-youth-client-donations-hero-badge-icon">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <div>
+                        <strong>Thank You</strong>
+                        <span>For making a difference</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         DONATION SUMMARY
+    ====================================================== -->
+
+    <section class="stackly-youth-client-donations-summary">
+
+        <div class="stackly-youth-client-donations-summary-heading"
+             data-aos="fade-up">
+
+            <span>YOUR CONTRIBUTIONS</span>
+
+            <h2>
+                Giving at a Glance
+            </h2>
+
+            <p>
+                A simple overview of your support and contribution history.
+            </p>
+
+        </div>
+
+
+        <div class="stackly-youth-client-donations-summary-grid">
+
+            <!-- Card 1 -->
+
+            <article class="stackly-youth-client-donation-stat"
+                     data-aos="fade-up"
+                     data-aos-delay="100">
+
+                <div class="stackly-youth-client-donation-stat-icon">
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                </div>
+
+                <div class="stackly-youth-client-donation-stat-content">
+
+                    <span>Total Donated</span>
+
+                    <strong>
+                        ₹24,500
+                    </strong>
+
+                    <small>
+                        Across all contributions
+                    </small>
+
+                </div>
+
+            </article>
+
+
+            <!-- Card 2 -->
+
+            <article class="stackly-youth-client-donation-stat"
+                     data-aos="fade-up"
+                     data-aos-delay="180">
+
+                <div class="stackly-youth-client-donation-stat-icon orange">
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+                </div>
+
+                <div class="stackly-youth-client-donation-stat-content">
+
+                    <span>Programs Supported</span>
+
+                    <strong>
+                        05
+                    </strong>
+
+                    <small>
+                        Youth-focused initiatives
+                    </small>
+
+                </div>
+
+            </article>
+
+
+            <!-- Card 3 -->
+
+            <article class="stackly-youth-client-donation-stat"
+                     data-aos="fade-up"
+                     data-aos-delay="260">
+
+                <div class="stackly-youth-client-donation-stat-icon">
+                    <i class="fa-solid fa-calendar-check"></i>
+                </div>
+
+                <div class="stackly-youth-client-donation-stat-content">
+
+                    <span>Donations Made</span>
+
+                    <strong>
+                        12
+                    </strong>
+
+                    <small>
+                        Since joining us
+                    </small>
+
+                </div>
+
+            </article>
+
+
+            <!-- Card 4 -->
+
+            <article class="stackly-youth-client-donation-stat"
+                     data-aos="fade-up"
+                     data-aos-delay="340">
+
+                <div class="stackly-youth-client-donation-stat-icon orange">
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                </div>
+
+                <div class="stackly-youth-client-donation-stat-content">
+
+                    <span>Recurring Support</span>
+
+                    <strong>
+                        Active
+                    </strong>
+
+                    <small>
+                        Monthly contribution
+                    </small>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CURRENT DONATION
+    ====================================================== -->
+
+    <section class="stackly-youth-client-donations-current">
+
+        <div class="stackly-youth-client-donations-current-header"
+             data-aos="fade-up">
+
+            <div>
+
+                <span class="stackly-youth-client-donations-section-label">
+                    CURRENT SUPPORT
+                </span>
+
+                <h2>
+                    Your Ongoing Contribution
+                </h2>
+
+            </div>
+
+            <a href="404-client.html"
+               class="stackly-youth-client-donations-manage-link">
+                Manage Donation
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+        </div>
+
+
+        <div class="stackly-youth-client-donations-current-card"
+             data-aos="zoom-in">
+
+            <div class="stackly-youth-client-donations-current-left">
+
+                <div class="stackly-youth-client-donations-current-icon">
+                    <i class="fa-solid fa-seedling"></i>
+                </div>
+
+                <div>
+
+                    <span>Monthly Giving</span>
+
+                    <h3>
+                        Youth Education & Development
+                    </h3>
+
+                    <p>
+                        Supporting learning resources, mentorship,
+                        educational activities, and growth opportunities.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="stackly-youth-client-donations-current-amount">
+
+                <span>Monthly Contribution</span>
+
+                <strong>
+                    ₹2,000
+                </strong>
+
+                <small>
+                    Next contribution: 15 Oct 2026
+                </small>
+
+            </div>
+
+
+            <div class="stackly-youth-client-donations-current-status">
+
+                <span class="stackly-youth-client-donation-active">
+                    <i class="fa-solid fa-circle"></i>
+                    Active
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         DONATION ALLOCATION
+    ====================================================== -->
+
+    <section class="stackly-youth-client-donations-allocation">
+
+        <div class="stackly-youth-client-donations-allocation-intro"
+             data-aos="fade-right">
+
+            <span class="stackly-youth-client-donations-section-label">
+                WHERE YOUR SUPPORT GOES
+            </span>
+
+            <h2>
+                Your Giving Supports
+                <span>Meaningful Programs.</span>
+            </h2>
+
+            <p>
+                Contributions help strengthen programs designed to support
+                education, wellbeing, skills, and opportunities for young people.
+            </p>
+
+            <a href="404-client.html"
+               class="stackly-youth-client-donations-outline-btn">
+                Explore Programs
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="stackly-youth-client-donations-allocation-list"
+             data-aos="fade-left">
+
+            <!-- Allocation 1 -->
+
+            <div class="stackly-youth-client-donation-allocation-item">
+
+                <div class="stackly-youth-client-donation-allocation-icon">
+                    <i class="fa-solid fa-book-open"></i>
+                </div>
+
+                <div class="stackly-youth-client-donation-allocation-info">
+
+                    <div class="stackly-youth-client-donation-allocation-top">
+
+                        <strong>
+                            Education
+                        </strong>
+
+                        <span>
+                            40%
+                        </span>
+
+                    </div>
+
+                    <div class="stackly-youth-client-donation-allocation-bar">
+                        <span style="width:40%;"></span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Allocation 2 -->
+
+            <div class="stackly-youth-client-donation-allocation-item">
+
+                <div class="stackly-youth-client-donation-allocation-icon orange">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+
+                <div class="stackly-youth-client-donation-allocation-info">
+
+                    <div class="stackly-youth-client-donation-allocation-top">
+
+                        <strong>
+                            Health & Wellness
+                        </strong>
+
+                        <span>
+                            25%
+                        </span>
+
+                    </div>
+
+                    <div class="stackly-youth-client-donation-allocation-bar">
+                        <span style="width:25%;"></span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Allocation 3 -->
+
+            <div class="stackly-youth-client-donation-allocation-item">
+
+                <div class="stackly-youth-client-donation-allocation-icon">
+                    <i class="fa-solid fa-lightbulb"></i>
+                </div>
+
+                <div class="stackly-youth-client-donation-allocation-info">
+
+                    <div class="stackly-youth-client-donation-allocation-top">
+
+                        <strong>
+                            Skills Development
+                        </strong>
+
+                        <span>
+                            20%
+                        </span>
+
+                    </div>
+
+                    <div class="stackly-youth-client-donation-allocation-bar">
+                        <span style="width:20%;"></span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Allocation 4 -->
+
+            <div class="stackly-youth-client-donation-allocation-item">
+
+                <div class="stackly-youth-client-donation-allocation-icon orange">
+                    <i class="fa-solid fa-people-group"></i>
+                </div>
+
+                <div class="stackly-youth-client-donation-allocation-info">
+
+                    <div class="stackly-youth-client-donation-allocation-top">
+
+                        <strong>
+                            Community Support
+                        </strong>
+
+                        <span>
+                            15%
+                        </span>
+
+                    </div>
+
+                    <div class="stackly-youth-client-donation-allocation-bar">
+                        <span style="width:15%;"></span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         DONATION HISTORY
+    ====================================================== -->
+
+    <section class="stackly-youth-client-donations-history">
+
+        <div class="stackly-youth-client-donations-history-header"
+             data-aos="fade-up">
+
+            <div>
+
+                <span class="stackly-youth-client-donations-section-label">
+                    CONTRIBUTION HISTORY
+                </span>
+
+                <h2>
+                    Recent Donations
+                </h2>
+
+            </div>
+
+            <a href="404-client.html"
+               class="stackly-youth-client-donations-view-all">
+                View All
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="stackly-youth-client-donations-history-table"
+             data-aos="fade-up">
+
+            <div class="stackly-youth-client-donation-row
+                        stackly-youth-client-donation-row-heading">
+
+                <span>Date</span>
+                <span>Program</span>
+                <span>Amount</span>
+                <span>Status</span>
+                <span>Receipt</span>
+
+            </div>
+
+
+            <div class="stackly-youth-client-donation-row">
+
+                <div class="stackly-youth-client-donation-date">
+                    <strong>15 Sep</strong>
+                    <span>2026</span>
+                </div>
+
+                <div class="stackly-youth-client-donation-program">
+                    <div class="stackly-youth-client-donation-small-icon">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+
+                    <div>
+                        <strong>Education Support</strong>
+                        <span>Learning Program</span>
+                    </div>
+                </div>
+
+                <strong class="stackly-youth-client-donation-amount">
+                    ₹2,000
+                </strong>
+
+                <span class="stackly-youth-client-donation-status">
+                    Successful
+                </span>
+
+                <a href="404-client.html"
+                   class="stackly-youth-client-donation-receipt">
+                    <i class="fa-solid fa-receipt"></i>
+                    Receipt
+                </a>
+
+            </div>
+
+
+            <div class="stackly-youth-client-donation-row">
+
+                <div class="stackly-youth-client-donation-date">
+                    <strong>15 Aug</strong>
+                    <span>2026</span>
+                </div>
+
+                <div class="stackly-youth-client-donation-program">
+                    <div class="stackly-youth-client-donation-small-icon orange">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+
+                    <div>
+                        <strong>Health & Wellness</strong>
+                        <span>Wellbeing Program</span>
+                    </div>
+                </div>
+
+                <strong class="stackly-youth-client-donation-amount">
+                    ₹2,000
+                </strong>
+
+                <span class="stackly-youth-client-donation-status">
+                    Successful
+                </span>
+
+                <a href="404-client.html"
+                   class="stackly-youth-client-donation-receipt">
+                    <i class="fa-solid fa-receipt"></i>
+                    Receipt
+                </a>
+
+            </div>
+
+
+            <div class="stackly-youth-client-donation-row">
+
+                <div class="stackly-youth-client-donation-date">
+                    <strong>15 Jul</strong>
+                    <span>2026</span>
+                </div>
+
+                <div class="stackly-youth-client-donation-program">
+                    <div class="stackly-youth-client-donation-small-icon">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+
+                    <div>
+                        <strong>Skills Development</strong>
+                        <span>Youth Skills Program</span>
+                    </div>
+                </div>
+
+                <strong class="stackly-youth-client-donation-amount">
+                    ₹2,000
+                </strong>
+
+                <span class="stackly-youth-client-donation-status">
+                    Successful
+                </span>
+
+                <a href="404-client.html"
+                   class="stackly-youth-client-donation-receipt">
+                    <i class="fa-solid fa-receipt"></i>
+                    Receipt
+                </a>
+
+            </div>
+
+
+            <div class="stackly-youth-client-donation-row">
+
+                <div class="stackly-youth-client-donation-date">
+                    <strong>15 Jun</strong>
+                    <span>2026</span>
+                </div>
+
+                <div class="stackly-youth-client-donation-program">
+                    <div class="stackly-youth-client-donation-small-icon orange">
+                        <i class="fa-solid fa-people-group"></i>
+                    </div>
+
+                    <div>
+                        <strong>Community Support</strong>
+                        <span>Community Program</span>
+                    </div>
+                </div>
+
+                <strong class="stackly-youth-client-donation-amount">
+                    ₹2,000
+                </strong>
+
+                <span class="stackly-youth-client-donation-status">
+                    Successful
+                </span>
+
+                <a href="404-client.html"
+                   class="stackly-youth-client-donation-receipt">
+                    <i class="fa-solid fa-receipt"></i>
+                    Receipt
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         DONOR IMPACT
+    ====================================================== -->
+
+    <section class="stackly-youth-client-donations-impact">
+
+        <div class="stackly-youth-client-donations-impact-image"
+             data-aos="fade-right">
+
+            <img src="donation-impact.webp"
+                 alt="Youth receiving support through community programs">
+
+            <div class="stackly-youth-client-donations-impact-image-card">
+
+                <i class="fa-solid fa-hands-holding-heart"></i>
+
+                <div>
+                    <strong>Real Support</strong>
+                    <span>Real opportunities</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="stackly-youth-client-donations-impact-content"
+             data-aos="fade-left">
+
+            <span class="stackly-youth-client-donations-section-label">
+                YOUR IMPACT
+            </span>
+
+            <h2>
+                Your Giving Helps
+                <span>Lives Progress.</span>
+            </h2>
+
+            <p>
+                Every contribution becomes part of a larger effort to create
+                access to education, wellbeing resources, skills, mentorship,
+                and positive opportunities for young people.
+            </p>
+
+
+            <div class="stackly-youth-client-donations-impact-points">
+
+                <div>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Learning opportunities for young people</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Health and wellbeing awareness</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Skills and career development support</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Community-focused youth initiatives</span>
+                </div>
+
+            </div>
+
+
+            <a href="404-client.html"
+               class="stackly-youth-client-donations-impact-btn">
+                Explore Impact Reports
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         DONATION CTA
+    ====================================================== -->
+
+    <section class="stackly-youth-client-donations-cta"
+             data-aos="zoom-in">
+
+        <div class="stackly-youth-client-donations-cta-decoration
+                    stackly-youth-client-donations-cta-circle-one"></div>
+
+        <div class="stackly-youth-client-donations-cta-decoration
+                    stackly-youth-client-donations-cta-circle-two"></div>
+
+
+        <div class="stackly-youth-client-donations-cta-content">
+
+            <span>
+                <i class="fa-solid fa-heart"></i>
+                KEEP THE IMPACT GROWING
+            </span>
+
+            <h2>
+                Continue Supporting
+                <br>
+                A Brighter Future.
+            </h2>
+
+            <p>
+                Your continued generosity can help more young people access
+                opportunities, resources, and support.
+            </p>
+
+            <div class="stackly-youth-client-donations-cta-actions">
+
+                <a href="404-client.html"
+                   class="stackly-youth-client-donations-cta-primary">
+                    Donate Again
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a href="404-client.html"
+                   class="stackly-youth-client-donations-cta-secondary">
+                    View Upcoming Events
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         DONATION FOOT NOTE
+    ====================================================== -->
+
+    <div class="stackly-youth-client-donations-note"
+         data-aos="fade-up">
+
+        <i class="fa-solid fa-shield-heart"></i>
+
+        <p>
+            Every contribution is recorded securely and contributes toward
+            creating meaningful opportunities for children and young people.
+        </p>
+
+    </div>
+
+</div>
+
+</main>
+
+
+    <!-- ==============================
+         JAVASCRIPT
+    ============================== -->
+    <script src="client.js"></script>
+</body>
+</html>

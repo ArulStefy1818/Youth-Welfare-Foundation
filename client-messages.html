@@ -1,0 +1,1397 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#126b45">
+    <title>Stackly Youth | Client Dashboard</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="client.css">
+
+</head>
+
+<body>
+
+    <!-- ==============================
+         SIDEBAR
+    ============================== -->
+
+    <aside class="stackly-youth-client-sidebar" id="stacklyYouthClientSidebar">
+
+        <div class="stackly-youth-client-brand">
+            <a href="client.html" aria-label="Stackly Youth Foundation Home">
+                <img src="Stackly-logo-Blue.webp"
+                     alt="Stackly Youth Foundation Logo">
+                 
+            </a>
+
+            <button class="stackly-youth-client-menu-close"
+                    id="stacklyYouthClientMenuClose"
+                    aria-label="Close navigation menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <p class="stackly-youth-client-sidebar-label">Main Menu</p>
+
+        <nav class="stackly-youth-client-nav"
+             aria-label="Client dashboard navigation">
+
+            <a href="client.html"  aria-current="page">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="client-programs.html">
+                <i class="fa-solid fa-hands-holding-child"></i>
+                <span>Our Programs</span>
+            </a>
+
+            <a href="client-donations.html">
+                <i class="fa-solid fa-heart"></i>
+                <span>My Donations</span>
+            </a>
+
+            <a href="client-impact.html">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Impact Reports</span>
+            </a>
+
+            <a href="client-events.html">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>Events</span>
+            </a>
+
+            <a href="client-messages.html" class="active">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Messages</span>
+            </a>
+
+        </nav>
+
+        <p class="stackly-youth-client-sidebar-label">Account</p>
+
+        <nav class="stackly-youth-client-nav"
+             aria-label="Account navigation">
+
+            <a href="client-profile.html">
+                <i class="fa-solid fa-user"></i>
+                <span>My Profile</span>
+            </a>
+
+            
+
+        </nav>
+
+        <div class="stackly-youth-client-sidebar-bottom">
+            <a href="index.html" id="stacklyYouthClientLogout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Logout</span>
+            </a>
+        </div>
+
+    </aside>
+
+    <!-- Mobile overlay -->
+    <div class="stackly-youth-client-overlay"
+         id="stacklyYouthClientOverlay"></div>
+
+
+    <!-- ==============================
+         MAIN
+    ============================== -->
+
+    <main class="stackly-youth-client-main">
+
+        <!-- Topbar -->
+        <header class="stackly-youth-client-topbar">
+
+            <div class="stackly-youth-client-topbar-left">
+
+                <button class="stackly-youth-client-menu-toggle"
+                        id="stacklyYouthClientMenuToggle"
+                        aria-label="Open navigation menu"
+                        aria-controls="stacklyYouthClientSidebar"
+                        aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <h2 class="stackly-youth-client-page-title">
+                    Client Dashboard
+                </h2>
+
+            </div>
+
+            <div class="stackly-youth-client-topbar-right">
+
+                <a href="404-client.html">
+                    <button class="stackly-youth-client-notification"
+                            type="button"
+                            aria-label="Notifications">
+                        <i class="fa-regular fa-bell"></i>
+                    </button>
+                </a>
+
+                <div class="stackly-youth-client-user">
+
+                    <div class="stackly-youth-client-avatar"
+                         id="stacklyYouthClientAvatar">
+                        U
+                    </div>
+
+                    <div class="stackly-youth-client-user-info">
+                        <strong id="stacklyYouthClientUserName">
+                            User
+                        </strong>
+
+                        <span id="stacklyYouthClientUserEmail">
+                            client@stacklyyouth.org
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- =========================================================
+     STACKLY YOUTH WELFARE FOUNDATION
+     CLIENT DASHBOARD — MESSAGES PAGE
+========================================================= -->
+
+<div class="stackly-youth-client-messages-page">
+
+
+    <!-- =====================================================
+         DECORATIVE BACKGROUND
+    ====================================================== -->
+
+    <div class="stackly-youth-client-messages-glow
+                stackly-youth-client-messages-glow-one"></div>
+
+    <div class="stackly-youth-client-messages-glow
+                stackly-youth-client-messages-glow-two"></div>
+
+
+    <!-- =====================================================
+         MESSAGES HERO
+    ====================================================== -->
+
+    <section class="stackly-youth-client-messages-hero">
+
+        <div class="stackly-youth-client-messages-hero-content"
+             data-aos="fade-right">
+
+            <span class="stackly-youth-client-messages-eyebrow">
+                <i class="fa-solid fa-comments"></i>
+                Stay Connected
+            </span>
+
+            <h1>
+                Your Conversations,
+                <span>All in One Place.</span>
+            </h1>
+
+            <p>
+                Keep track of important updates, program announcements,
+                event reminders, support conversations, and messages from
+                the Stackly Youth Foundation team.
+            </p>
+
+            <div class="stackly-youth-client-messages-hero-actions">
+
+                <a href="404-client.html"
+                   class="stackly-youth-client-messages-primary-btn">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    New Message
+                </a>
+
+                <a href="404-client.html"
+                   class="stackly-youth-client-messages-secondary-btn">
+                    View Inbox
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Hero Visual -->
+
+        <div class="stackly-youth-client-messages-hero-visual"
+             data-aos="fade-left">
+
+            <div class="stackly-youth-client-messages-hero-panel">
+
+                <div class="stackly-youth-client-messages-hero-panel-top">
+
+                    <span>
+                        <i class="fa-solid fa-inbox"></i>
+                        Inbox
+                    </span>
+
+                    <small>
+                        03 New
+                    </small>
+
+                </div>
+
+
+                <div class="stackly-youth-client-messages-preview">
+
+                    <div class="stackly-youth-client-messages-preview-avatar">
+                        S
+                    </div>
+
+                    <div class="stackly-youth-client-messages-preview-content">
+
+                        <strong>
+                            Stackly Youth Foundation
+                        </strong>
+
+                        <span>
+                            Your upcoming event reminder is ready.
+                        </span>
+
+                        <small>
+                            8 min ago
+                        </small>
+
+                    </div>
+
+                    <i class="fa-solid fa-circle preview-dot"></i>
+
+                </div>
+
+
+                <div class="stackly-youth-client-messages-preview">
+
+                    <div class="stackly-youth-client-messages-preview-avatar orange">
+                        P
+                    </div>
+
+                    <div class="stackly-youth-client-messages-preview-content">
+
+                        <strong>
+                            Program Team
+                        </strong>
+
+                        <span>
+                            Your program participation has been updated.
+                        </span>
+
+                        <small>
+                            42 min ago
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-youth-client-messages-preview">
+
+                    <div class="stackly-youth-client-messages-preview-avatar">
+                        C
+                    </div>
+
+                    <div class="stackly-youth-client-messages-preview-content">
+
+                        <strong>
+                            Community Team
+                        </strong>
+
+                        <span>
+                            New community activities are now available.
+                        </span>
+
+                        <small>
+                            Yesterday
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="stackly-youth-client-messages-floating-badge">
+
+                <i class="fa-solid fa-bell"></i>
+
+                <div>
+                    <strong>03</strong>
+                    <span>Unread messages</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         MESSAGE STATS
+    ====================================================== -->
+
+    <section class="stackly-youth-client-messages-stats">
+
+        <div class="stackly-youth-client-messages-stats-grid">
+
+
+            <!-- Stat 1 -->
+
+            <article class="stackly-youth-client-message-stat"
+                     data-aos="fade-up">
+
+                <div class="stackly-youth-client-message-stat-icon">
+
+                    <i class="fa-solid fa-envelope-open-text"></i>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        24
+                    </strong>
+
+                    <span>
+                        Total Messages
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- Stat 2 -->
+
+            <article class="stackly-youth-client-message-stat"
+                     data-aos="fade-up"
+                     data-aos-delay="100">
+
+                <div class="stackly-youth-client-message-stat-icon orange">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        03
+                    </strong>
+
+                    <span>
+                        Unread Messages
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- Stat 3 -->
+
+            <article class="stackly-youth-client-message-stat"
+                     data-aos="fade-up"
+                     data-aos-delay="180">
+
+                <div class="stackly-youth-client-message-stat-icon">
+
+                    <i class="fa-solid fa-headset"></i>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        02
+                    </strong>
+
+                    <span>
+                        Support Threads
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- Stat 4 -->
+
+            <article class="stackly-youth-client-message-stat"
+                     data-aos="fade-up"
+                     data-aos-delay="260">
+
+                <div class="stackly-youth-client-message-stat-icon orange">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                </div>
+
+                <div>
+
+                    <strong>
+                        12m
+                    </strong>
+
+                    <span>
+                        Avg. Response
+                    </span>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         MESSAGE TOOLBAR
+    ====================================================== -->
+
+    <section class="stackly-youth-client-messages-toolbar"
+             id="recent-messages">
+
+        <div class="stackly-youth-client-messages-toolbar-heading"
+             data-aos="fade-up">
+
+            <span>
+                YOUR INBOX
+            </span>
+
+            <h2>
+                Recent Messages
+            </h2>
+
+            <p>
+                Review recent conversations and important communication
+                from the foundation.
+            </p>
+
+        </div>
+
+
+        <div class="stackly-youth-client-messages-toolbar-actions"
+             data-aos="fade-up">
+
+            <button type="button"
+                    class="stackly-youth-client-message-filter active">
+                <i class="fa-solid fa-inbox"></i>
+                All
+            </button>
+
+            <button type="button"
+                    class="stackly-youth-client-message-filter">
+                <i class="fa-solid fa-envelope"></i>
+                Unread
+            </button>
+
+            <button type="button"
+                    class="stackly-youth-client-message-filter">
+                <i class="fa-solid fa-star"></i>
+                Important
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         MAIN MESSAGE AREA
+    ====================================================== -->
+
+    <section class="stackly-youth-client-messages-inbox">
+
+        <div class="stackly-youth-client-messages-list"
+             data-aos="fade-right">
+
+
+            <!-- Message 1 -->
+
+            <article class="stackly-youth-client-message-card unread">
+
+                <div class="stackly-youth-client-message-avatar">
+
+                    <span>
+                        S
+                    </span>
+
+                    <i class="fa-solid fa-circle"></i>
+
+                </div>
+
+
+                <div class="stackly-youth-client-message-content">
+
+                    <div class="stackly-youth-client-message-top">
+
+                        <div>
+
+                            <strong>
+                                Stackly Youth Foundation
+                            </strong>
+
+                            <span>
+                                Foundation Team
+                            </span>
+
+                        </div>
+
+                        <time>
+                            Today, 10:42 AM
+                        </time>
+
+                    </div>
+
+                    <h3>
+                        Upcoming Event Reminder
+                    </h3>
+
+                    <p>
+                        This is a reminder that the Youth Leadership Growth
+                        Summit is scheduled for 18 October 2026.
+                    </p>
+
+                    <div class="stackly-youth-client-message-tags">
+
+                        <span class="green">
+                            Event
+                        </span>
+
+                        <span>
+                            Important
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <a href="404-client.html"
+                   class="stackly-youth-client-message-open">
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+            </article>
+
+
+            <!-- Message 2 -->
+
+            <article class="stackly-youth-client-message-card unread">
+
+                <div class="stackly-youth-client-message-avatar orange">
+
+                    <span>
+                        P
+                    </span>
+
+                    <i class="fa-solid fa-circle"></i>
+
+                </div>
+
+
+                <div class="stackly-youth-client-message-content">
+
+                    <div class="stackly-youth-client-message-top">
+
+                        <div>
+
+                            <strong>
+                                Program Team
+                            </strong>
+
+                            <span>
+                                Youth Development
+                            </span>
+
+                        </div>
+
+                        <time>
+                            Today, 9:18 AM
+                        </time>
+
+                    </div>
+
+                    <h3>
+                        Program Participation Updated
+                    </h3>
+
+                    <p>
+                        Your participation details have been updated for
+                        the Youth Skills and Career Development program.
+                    </p>
+
+                    <div class="stackly-youth-client-message-tags">
+
+                        <span class="orange">
+                            Program
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <a href="404-client.html"
+                   class="stackly-youth-client-message-open">
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+            </article>
+
+
+            <!-- Message 3 -->
+
+            <article class="stackly-youth-client-message-card unread">
+
+                <div class="stackly-youth-client-message-avatar">
+
+                    <span>
+                        C
+                    </span>
+
+                    <i class="fa-solid fa-circle"></i>
+
+                </div>
+
+
+                <div class="stackly-youth-client-message-content">
+
+                    <div class="stackly-youth-client-message-top">
+
+                        <div>
+
+                            <strong>
+                                Community Team
+                            </strong>
+
+                            <span>
+                                Community Programs
+                            </span>
+
+                        </div>
+
+                        <time>
+                            Yesterday
+                        </time>
+
+                    </div>
+
+                    <h3>
+                        New Community Activities Available
+                    </h3>
+
+                    <p>
+                        Explore newly added community activities and
+                        opportunities available this month.
+                    </p>
+
+                    <div class="stackly-youth-client-message-tags">
+
+                        <span class="green">
+                            Community
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <a href="404-client.html"
+                   class="stackly-youth-client-message-open">
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+            </article>
+
+
+            <!-- Message 4 -->
+
+            <article class="stackly-youth-client-message-card">
+
+                <div class="stackly-youth-client-message-avatar purple">
+
+                    <span>
+                        D
+                    </span>
+
+                </div>
+
+
+                <div class="stackly-youth-client-message-content">
+
+                    <div class="stackly-youth-client-message-top">
+
+                        <div>
+
+                            <strong>
+                                Donations Team
+                            </strong>
+
+                            <span>
+                                Support Services
+                            </span>
+
+                        </div>
+
+                        <time>
+                            22 Sep 2026
+                        </time>
+
+                    </div>
+
+                    <h3>
+                        Contribution Receipt Available
+                    </h3>
+
+                    <p>
+                        Your latest contribution record has been updated.
+                        You can review the available receipt from your account.
+                    </p>
+
+                    <div class="stackly-youth-client-message-tags">
+
+                        <span>
+                            Donation
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <a href="404-client.html"
+                   class="stackly-youth-client-message-open">
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+            </article>
+
+
+            <!-- Message 5 -->
+
+            <article class="stackly-youth-client-message-card">
+
+                <div class="stackly-youth-client-message-avatar orange">
+
+                    <span>
+                        H
+                    </span>
+
+                </div>
+
+
+                <div class="stackly-youth-client-message-content">
+
+                    <div class="stackly-youth-client-message-top">
+
+                        <div>
+
+                            <strong>
+                                Health Program Team
+                            </strong>
+
+                            <span>
+                                Wellness Initiative
+                            </span>
+
+                        </div>
+
+                        <time>
+                            18 Sep 2026
+                        </time>
+
+                    </div>
+
+                    <h3>
+                        Wellness Workshop Update
+                    </h3>
+
+                    <p>
+                        New details have been shared for the upcoming
+                        youth health and wellness workshop.
+                    </p>
+
+                    <div class="stackly-youth-client-message-tags">
+
+                        <span class="orange">
+                            Wellness
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <a href="404-client.html"
+                   class="stackly-youth-client-message-open">
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+            </article>
+
+        </div>
+
+
+        <!-- =================================================
+             MESSAGE SIDEBAR
+        ================================================== -->
+
+        <aside class="stackly-youth-client-messages-side"
+               data-aos="fade-left">
+
+
+            <!-- Quick Compose -->
+
+            <div class="stackly-youth-client-message-compose-card">
+
+                <div class="stackly-youth-client-message-compose-icon">
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                </div>
+
+                <h3>
+                    Need to Reach Us?
+                </h3>
+
+                <p>
+                    Send a message to the foundation team regarding
+                    programs, events, donations, or your account.
+                </p>
+
+                <a href="404-client.html"
+                   class="stackly-youth-client-message-compose-btn">
+
+                    Contact Team
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+            <!-- Message Categories -->
+
+            <div class="stackly-youth-client-message-category-card">
+
+                <div class="stackly-youth-client-message-category-head">
+
+                    <h3>
+                        Message Categories
+                    </h3>
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                </div>
+
+
+                <a href="404-client.html">
+
+                    <span>
+                        <i class="fa-solid fa-bullhorn"></i>
+                        Announcements
+                    </span>
+
+                    <strong>
+                        04
+                    </strong>
+
+                </a>
+
+
+                <a href="404-client.html">
+
+                    <span>
+                        <i class="fa-solid fa-calendar-check"></i>
+                        Events
+                    </span>
+
+                    <strong>
+                        05
+                    </strong>
+
+                </a>
+
+
+                <a href="404-client.html">
+
+                    <span>
+                        <i class="fa-solid fa-hands-holding-child"></i>
+                        Programs
+                    </span>
+
+                    <strong>
+                        07
+                    </strong>
+
+                </a>
+
+
+                <a href="404-client.html">
+
+                    <span>
+                        <i class="fa-solid fa-heart"></i>
+                        Donations
+                    </span>
+
+                    <strong>
+                        03
+                    </strong>
+
+                </a>
+
+            </div>
+
+
+            <!-- Support Status -->
+
+            <div class="stackly-youth-client-message-status-card">
+
+                <div class="stackly-youth-client-message-status-icon">
+
+                    <i class="fa-solid fa-headset"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Support Status
+                    </span>
+
+                    <strong>
+                        Team Available
+                    </strong>
+
+                    <small>
+                        Usually replies within the same day.
+                    </small>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+    </section>
+
+
+    <!-- =====================================================
+         IMPORTANT ANNOUNCEMENT
+    ====================================================== -->
+
+    <section class="stackly-youth-client-messages-announcement"
+             data-aos="fade-up">
+
+        <div class="stackly-youth-client-messages-announcement-icon">
+
+            <i class="fa-solid fa-bullhorn"></i>
+
+        </div>
+
+
+        <div class="stackly-youth-client-messages-announcement-content">
+
+            <span>
+                IMPORTANT ANNOUNCEMENT
+            </span>
+
+            <h2>
+                New Youth Development Activities Are Opening Soon.
+            </h2>
+
+            <p>
+                Keep an eye on your inbox for new programs, workshops,
+                volunteer opportunities, and community activities.
+            </p>
+
+        </div>
+
+
+        <a href="404-client.html"
+           class="stackly-youth-client-messages-announcement-btn">
+
+            Learn More
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+    </section>
+
+
+    <!-- =====================================================
+         RECENT CONVERSATIONS
+    ====================================================== -->
+
+    <section class="stackly-youth-client-messages-conversations">
+
+        <div class="stackly-youth-client-messages-section-head"
+             data-aos="fade-up">
+
+            <div>
+
+                <span>
+                    CONVERSATION ACTIVITY
+                </span>
+
+                <h2>
+                    Recent Conversations
+                </h2>
+
+            </div>
+
+            <a href="404-client.html"
+               class="stackly-youth-client-messages-view-link">
+
+                View All
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+        <div class="stackly-youth-client-message-conversation-grid">
+
+
+            <!-- Conversation 1 -->
+
+            <article class="stackly-youth-client-message-conversation"
+                     data-aos="fade-up">
+
+                <div class="stackly-youth-client-message-conversation-top">
+
+                    <div class="stackly-youth-client-message-conversation-avatar">
+
+                        <i class="fa-solid fa-calendar-days"></i>
+
+                    </div>
+
+                    <span>
+                        Event Support
+                    </span>
+
+                </div>
+
+                <h3>
+                    Leadership Summit Registration
+                </h3>
+
+                <p>
+                    4 messages exchanged
+                </p>
+
+                <a href="404-client.html">
+                    Open Conversation
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+            <!-- Conversation 2 -->
+
+            <article class="stackly-youth-client-message-conversation orange"
+                     data-aos="fade-up"
+                     data-aos-delay="120">
+
+                <div class="stackly-youth-client-message-conversation-top">
+
+                    <div class="stackly-youth-client-message-conversation-avatar">
+
+                        <i class="fa-solid fa-hands-holding-child"></i>
+
+                    </div>
+
+                    <span>
+                        Program Support
+                    </span>
+
+                </div>
+
+                <h3>
+                    Skills Development Program
+                </h3>
+
+                <p>
+                    6 messages exchanged
+                </p>
+
+                <a href="404-client.html">
+                    Open Conversation
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+
+            <!-- Conversation 3 -->
+
+            <article class="stackly-youth-client-message-conversation"
+                     data-aos="fade-up"
+                     data-aos-delay="240">
+
+                <div class="stackly-youth-client-message-conversation-top">
+
+                    <div class="stackly-youth-client-message-conversation-avatar">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+                    <span>
+                        Account Support
+                    </span>
+
+                </div>
+
+                <h3>
+                    Profile Information <br>
+                    Update
+                </h3>
+
+                <p>
+                    3 messages exchanged
+                </p>
+
+                <a href="404-client.html">
+                    Open Conversation
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         MESSAGE GUIDELINES
+    ====================================================== -->
+
+    <section class="stackly-youth-client-messages-guidelines">
+
+        <div class="stackly-youth-client-messages-guidelines-content"
+             data-aos="fade-right">
+
+            <span>
+                COMMUNICATION CENTER
+            </span>
+
+            <h2>
+                Need Help With
+                <span>Something Specific?</span>
+            </h2>
+
+            <p>
+                Choose the right communication channel to get help with
+                programs, events, donations, account details, or general
+                questions.
+            </p>
+
+        </div>
+
+
+        <div class="stackly-youth-client-messages-guideline-grid"
+             data-aos="fade-left">
+
+
+            <a href="404-client.html"
+               class="stackly-youth-client-message-guideline">
+
+                <i class="fa-solid fa-hands-holding-child"></i>
+
+                <div>
+                    <strong>
+                        Programs
+                    </strong>
+
+                    <span>
+                        Ask about active programs
+                    </span>
+                </div>
+
+                <i class="fa-solid fa-arrow-right arrow"></i>
+
+            </a>
+
+
+            <a href="404-client.html"
+               class="stackly-youth-client-message-guideline orange">
+
+                <i class="fa-solid fa-calendar-days"></i>
+
+                <div>
+                    <strong>
+                        Events
+                    </strong>
+
+                    <span>
+                        Questions about activities
+                    </span>
+                </div>
+
+                <i class="fa-solid fa-arrow-right arrow"></i>
+
+            </a>
+
+
+            <a href="404-client.html"
+               class="stackly-youth-client-message-guideline">
+
+                <i class="fa-solid fa-heart"></i>
+
+                <div>
+                    <strong>
+                        Donations
+                    </strong>
+
+                    <span>
+                        Contribution assistance
+                    </span>
+                </div>
+
+                <i class="fa-solid fa-arrow-right arrow"></i>
+
+            </a>
+
+
+            <a href="404-client.html"
+               class="stackly-youth-client-message-guideline orange">
+
+                <i class="fa-solid fa-user"></i>
+
+                <div>
+                    <strong>
+                        Account
+                    </strong>
+
+                    <span>
+                        Profile and account help
+                    </span>
+                </div>
+
+                <i class="fa-solid fa-arrow-right arrow"></i>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         MESSAGES CTA
+    ====================================================== -->
+
+    <section class="stackly-youth-client-messages-cta"
+             data-aos="zoom-in">
+
+        <div class="stackly-youth-client-messages-cta-circle
+                    stackly-youth-client-messages-cta-circle-one"></div>
+
+        <div class="stackly-youth-client-messages-cta-circle
+                    stackly-youth-client-messages-cta-circle-two"></div>
+
+
+        <div class="stackly-youth-client-messages-cta-content">
+
+            <span>
+                <i class="fa-solid fa-comments"></i>
+                WE'RE HERE TO HELP
+            </span>
+
+            <h2>
+                Have a Question?
+                <br>
+                Start a Conversation.
+            </h2>
+
+            <p>
+                Our team is here to help you stay informed, connected,
+                and engaged with the foundation's work.
+            </p>
+
+            <div class="stackly-youth-client-messages-cta-actions">
+
+                <a href="404-client.html"
+                   class="stackly-youth-client-messages-cta-primary">
+
+                    Send a Message
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                </a>
+
+                <a href="404-client.html"
+                   class="stackly-youth-client-messages-cta-secondary">
+
+                    Explore Events
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         MESSAGE NOTE
+    ====================================================== -->
+
+    <div class="stackly-youth-client-messages-note"
+         data-aos="fade-up">
+
+        <i class="fa-solid fa-shield-heart"></i>
+
+        <p>
+            Your conversations and account communication are handled
+            through your secure client dashboard.
+        </p>
+
+    </div>
+
+</div>
+
+</main>
+
+
+    <!-- ==============================
+         JAVASCRIPT
+    ============================== -->
+    <script src="client.js"></script>
+</body>
+</html>
