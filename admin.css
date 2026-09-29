@@ -562,6 +562,10 @@ img {
 /* =========================================================
    SIDEBAR FOOTER LINKS
 ========================================================= */
+/* ============================================================
+   ADMIN BACK SITE + LOGOUT
+   RED COLOR / HOVER EFFECT
+============================================================ */
 
 .stackly-youth-admin-back-site,
 .stackly-youth-admin-logout {
@@ -580,38 +584,61 @@ img {
 
     border-radius: 12px;
 
-    color:
-        rgba(255, 255, 255, 0.55);
+    color: #ff3b3b;
 
     font-size: 14px;
 
     font-weight: 600;
 
     transition:
-        var(--stackly-youth-admin-transition);
+        color 0.3s ease,
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
+
+
+/* ============================================================
+   BACK TO SITE HOVER
+============================================================ */
 
 .stackly-youth-admin-back-site:hover {
 
     color: #ffffff;
 
     background:
-        rgba(120, 169, 47, 0.12);
+        rgba(255, 59, 59, 0.15);
 
     transform:
         translateX(4px);
+
+    box-shadow:
+        0 6px 18px rgba(255, 59, 59, 0.12);
 }
+
+
+/* ============================================================
+   LOGOUT HOVER
+============================================================ */
 
 .stackly-youth-admin-logout:hover {
 
     color: #ffffff;
 
     background:
-        rgba(255, 148, 24, 0.13);
+        rgba(255, 59, 59, 0.18);
 
     transform:
         translateX(4px);
+
+    box-shadow:
+        0 6px 18px rgba(255, 59, 59, 0.15);
 }
+
+
+/* ============================================================
+   LOGOUT SPACING
+============================================================ */
 
 .stackly-youth-admin-logout {
 
@@ -3333,8 +3360,8 @@ img {
 
 
     .stackly-youth-admin-brand img {
-        width: 62px;
-        height: 62px;
+        width: 110px;
+        height: 110px;
     }
 
 

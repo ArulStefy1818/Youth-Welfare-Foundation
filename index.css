@@ -1188,6 +1188,44 @@ video {
     background: rgba(16, 21, 16, 0.2);
 }
 
+/* =========================================================
+   SIMPLE HOVER EFFECT
+========================================================= */
+
+.stackly-youth-impact-item {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.stackly-youth-impact-item:hover {
+    transform: translateY(-5px);
+}
+
+.stackly-youth-impact-item strong {
+    transition: color 0.3s ease;
+}
+
+.stackly-youth-impact-item:hover strong {
+    color: var(--stackly-youth-green);
+}
+
+.stackly-youth-impact-item span {
+    transition: color 0.3s ease;
+}
+
+.stackly-youth-impact-item:hover span {
+    color: var(--stackly-youth-black);
+}
+
+.stackly-youth-impact-divider {
+    transition: background 0.3s ease;
+}
+
+.stackly-youth-impact-row:hover
+.stackly-youth-impact-divider {
+    background: var(--stackly-youth-green);
+}
+
 
 /* ============================================================
    HERO SIDE CARD
@@ -1562,65 +1600,359 @@ video {
     transform: translateX(5px);
 }
 
-
 /* ============================================================
-   LARGE LAPTOP
+   STACKLY YOUTH — COMPLETE MOBILE RESPONSIVE
+   HERO + MISSION CARD + HAMBURGER MENU
 ============================================================ */
 
-@media (max-width: 1250px) {
-
-    .stackly-youth-header-inner {
-        width: min(100% - 45px, 1200px);
-    }
-
-    .stackly-youth-container {
-        width: min(100% - 60px, 1180px);
-    }
-
-    .stackly-youth-desktop-nav {
-        gap: 22px;
-    }
-
-    .stackly-youth-nav-link {
-        font-size: 13px;
-    }
-
-    .stackly-youth-header-actions {
-        gap: 14px;
-    }
-
-    .stackly-youth-language span {
-        display: none;
-    }
-
-    .stackly-youth-hero-content {
-        width: 62%;
-    }
-
-    .stackly-youth-hero-card {
-        width: 310px;
-    }
-
-    .stackly-youth-hero-title {
-        font-size: clamp(52px, 6.5vw, 78px);
-    }
-}
-
 
 /* ============================================================
-   TABLET
+   TABLET / MOBILE — 1050px
 ============================================================ */
 
 @media (max-width: 1050px) {
 
+    /* --------------------------------------------------------
+       DESKTOP NAVIGATION
+    -------------------------------------------------------- */
+
     .stackly-youth-desktop-nav,
     .stackly-youth-header-actions {
-        display: none;
+        display: none !important;
     }
 
     .stackly-youth-menu-toggle {
-        display: flex;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 48px;
+        height: 48px;
+        padding: 0;
+        margin-left: auto;
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+        z-index: 10020;
     }
+
+    .stackly-youth-menu-toggle i,
+    .stackly-youth-menu-toggle svg {
+        pointer-events: none;
+    }
+
+
+    /* --------------------------------------------------------
+       HEADER
+    -------------------------------------------------------- */
+
+    .stackly-youth-header {
+        position: fixed !important;
+
+        top: 0;
+        left: 0;
+
+        width: 100%;
+
+        z-index: 10000;
+    }
+
+    .stackly-youth-header-inner {
+        position: relative;
+
+        z-index: 10001;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+    }
+
+
+    /* ========================================================
+       MOBILE OVERLAY
+    ======================================================== */
+
+    .stackly-youth-mobile-overlay {
+        position: fixed !important;
+
+        inset: 0;
+
+        width: 100vw;
+
+        height: 100vh;
+
+        height: 100dvh;
+
+        background: rgba(16, 21, 16, 0.55);
+
+        backdrop-filter: blur(5px);
+
+        -webkit-backdrop-filter: blur(5px);
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        pointer-events: none;
+
+        z-index: 10005;
+
+        transition:
+            opacity 0.35s ease,
+            visibility 0.35s ease;
+    }
+
+    .stackly-youth-mobile-overlay.active,
+    .stackly-youth-mobile-overlay.open {
+        opacity: 1;
+
+        visibility: visible;
+
+        pointer-events: auto;
+    }
+
+
+    /* ========================================================
+       MOBILE MENU
+    ======================================================== */
+
+    .stackly-youth-mobile-menu {
+        position: fixed !important;
+
+        top: 0;
+
+        right: 0;
+
+        width: min(390px, 88vw);
+
+        height: 100vh;
+
+        height: 100dvh;
+
+        max-height: none;
+
+        padding: 28px;
+
+        box-sizing: border-box;
+
+        background: #ffffff;
+
+        box-shadow:
+            -20px 0 60px rgba(16, 21, 16, 0.18);
+
+        overflow-y: auto;
+
+        overflow-x: hidden;
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        pointer-events: none;
+
+        transform: translate3d(105%, 0, 0);
+
+        z-index: 10010;
+
+        transition:
+            transform 0.4s cubic-bezier(.22,.61,.36,1),
+            opacity 0.3s ease,
+            visibility 0.3s ease;
+    }
+
+    /* OPEN STATES */
+
+    .stackly-youth-mobile-menu.active,
+    .stackly-youth-mobile-menu.open,
+    body.mobile-menu-open .stackly-youth-mobile-menu {
+        opacity: 1;
+
+        visibility: visible;
+
+        pointer-events: auto;
+
+        transform: translate3d(0, 0, 0);
+    }
+
+
+    /* ========================================================
+       MOBILE CLOSE BUTTON
+    ======================================================== */
+
+    .stackly-youth-menu-close,
+    .stackly-youth-mobile-close {
+        position: absolute !important;
+
+        top: 18px;
+
+        right: 18px;
+
+        display: flex !important;
+
+        align-items: center;
+
+        justify-content: center;
+
+        width: 44px;
+
+        height: 44px;
+
+        padding: 0;
+
+        border: 0;
+
+        border-radius: 50%;
+
+        background: #f3f7ed;
+
+        color: #101510;
+
+        font-size: 18px;
+
+        cursor: pointer;
+
+        z-index: 10020;
+
+        transition:
+            background 0.3s ease,
+            color 0.3s ease,
+            transform 0.3s ease;
+    }
+
+    .stackly-youth-menu-close:hover,
+    .stackly-youth-mobile-close:hover {
+        background: #ff9418;
+
+        color: #ffffff;
+
+        transform: rotate(90deg);
+    }
+
+
+    /* ========================================================
+       MOBILE LINKS
+    ======================================================== */
+
+    .stackly-youth-mobile-nav {
+        display: flex;
+
+        flex-direction: column;
+
+        width: 100%;
+
+        margin-top: 65px;
+    }
+
+    .stackly-youth-mobile-link {
+        position: relative;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        width: 100%;
+
+        min-height: 62px;
+
+        padding: 0 4px;
+
+        border-bottom: 1px solid rgba(16, 21, 16, 0.10);
+
+        color: #101510;
+
+        font-size: 19px;
+
+        font-weight: 700;
+
+        text-decoration: none;
+
+        transition:
+            color 0.3s ease,
+            padding-left 0.3s ease;
+    }
+
+    .stackly-youth-mobile-link:hover {
+        color: #78a92f;
+
+        padding-left: 8px;
+    }
+
+    .stackly-youth-mobile-link i {
+        color: #78a92f;
+
+        font-size: 13px;
+
+        transition: transform 0.3s ease;
+    }
+
+    .stackly-youth-mobile-link:hover i {
+        transform: translateX(5px);
+    }
+
+
+    /* ========================================================
+       MOBILE MENU DONATE
+    ======================================================== */
+
+    .stackly-youth-mobile-donate,
+    .stackly-youth-mobile-menu .stackly-youth-primary-btn {
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        width: 100%;
+
+        min-height: 56px;
+
+        margin-top: 28px;
+
+        border-radius: 12px;
+
+        background: #78a92f;
+
+        color: #ffffff;
+
+        text-decoration: none;
+
+        font-size: 13px;
+
+        font-weight: 800;
+
+        transition:
+            background 0.3s ease,
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+    }
+
+    .stackly-youth-mobile-donate:hover,
+    .stackly-youth-mobile-menu .stackly-youth-primary-btn:hover {
+        background: #507b1e;
+
+        transform: translateY(-2px);
+
+        box-shadow:
+            0 12px 25px rgba(80, 123, 30, 0.20);
+    }
+
+
+    /* ========================================================
+       BODY WHEN MENU OPEN
+    ======================================================== */
+
+    body.mobile-menu-open {
+        overflow: hidden !important;
+    }
+
+
+    /* ========================================================
+       HERO TABLET
+    ======================================================== */
 
     .stackly-youth-hero {
         height: auto;
@@ -1660,80 +1992,252 @@ video {
                 rgba(244, 249, 237, 0.75)
             );
     }
-
-    .stackly-youth-intro-grid {
-        grid-template-columns: 110px 1fr;
-    }
-
-    .stackly-youth-intro-text {
-        grid-column: 2;
-    }
 }
 
 
 /* ============================================================
-   MOBILE LARGE
+   MOBILE LARGE — 760px
 ============================================================ */
 
 @media (max-width: 760px) {
 
+    /* ========================================================
+       HEADER
+    ======================================================== */
+
     .stackly-youth-header {
         height: 70px;
+
+        z-index: 10000;
     }
 
     .stackly-youth-header-inner {
         width: calc(100% - 32px);
+
+        min-height: 70px;
+
+        z-index: 10001;
     }
-
-
-    /* Logo */
 
     .stackly-youth-brand {
         width: 120px;
+
         height: 70px;
+
+        flex-shrink: 0;
     }
 
     .stackly-youth-logo-wrap {
         width: 120px;
+
         height: 70px;
     }
 
     .stackly-youth-logo {
         width: 116px;
+
         height: 66px;
+
+        object-fit: contain;
     }
 
+
+    /* ========================================================
+       HAMBURGER
+    ======================================================== */
+
+    .stackly-youth-menu-toggle {
+        display: flex !important;
+
+        width: 46px;
+
+        height: 46px;
+
+        flex-shrink: 0;
+
+        border-radius: 10px;
+
+        background: rgba(120, 169, 47, 0.10);
+
+        color: #101510;
+
+        z-index: 10020;
+    }
+
+    .stackly-youth-menu-toggle:hover {
+        background: #78a92f;
+
+        color: #ffffff;
+    }
+
+
+    /* ========================================================
+       CONTAINER
+    ======================================================== */
 
     .stackly-youth-container {
         width: calc(100% - 36px);
+
+        max-width: none;
     }
 
 
-    /* Hero */
+    /* ========================================================
+       HERO
+    ======================================================== */
 
     .stackly-youth-hero {
-        min-height: 850px;
-    }
-
-    .stackly-youth-hero .stackly-youth-container {
-        padding-top: 125px;
-
-        padding-bottom: 135px;
+        position: relative;
 
         display: block;
-    }
 
-    .stackly-youth-hero-content {
         width: 100%;
 
-        padding: 40px 0 0;
+        height: auto !important;
+
+        min-height: 1180px !important;
+
+        max-height: none !important;
+
+        margin: 0;
+
+        padding: 0;
+
+        overflow: hidden !important;
+
+        isolation: isolate;
     }
 
 
-    /* Hero tag */
+    /* ========================================================
+       VIDEO
+    ======================================================== */
+
+    .stackly-youth-video-layer {
+        position: absolute !important;
+
+        inset: 0;
+
+        width: 100%;
+
+        height: 100%;
+
+        z-index: -3;
+
+        pointer-events: none;
+    }
+
+    .stackly-youth-video-layer video {
+        width: 100%;
+
+        height: 100%;
+
+        object-fit: cover;
+
+        object-position: center;
+    }
+
+
+    /* ========================================================
+       OVERLAY
+    ======================================================== */
+
+    .stackly-youth-video-overlay {
+        position: absolute !important;
+
+        inset: 0;
+
+        width: 100%;
+
+        height: 100%;
+
+        z-index: -2;
+
+        pointer-events: none;
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(244, 249, 237, 0.97) 0%,
+                rgba(244, 249, 237, 0.94) 38%,
+                rgba(244, 249, 237, 0.91) 70%,
+                rgba(244, 249, 237, 0.98) 100%
+            );
+    }
+
+
+    /* ========================================================
+       HERO CONTAINER
+    ======================================================== */
+
+    .stackly-youth-hero .stackly-youth-container {
+        position: relative;
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        align-items: stretch !important;
+
+        justify-content: flex-start !important;
+
+        width: calc(100% - 36px);
+
+        height: auto !important;
+
+        min-height: 1180px !important;
+
+        max-height: none !important;
+
+        padding-top: 125px;
+
+        padding-bottom: 150px;
+
+        box-sizing: border-box;
+
+        z-index: 10;
+    }
+
+
+    /* ========================================================
+       HERO CONTENT
+    ======================================================== */
+
+    .stackly-youth-hero-content {
+        position: relative;
+
+        display: block;
+
+        width: 100% !important;
+
+        max-width: 100%;
+
+        height: auto !important;
+
+        margin: 0;
+
+        padding: 40px 0 0;
+
+        box-sizing: border-box;
+
+        order: 1;
+
+        z-index: 20;
+    }
+
+
+    /* ========================================================
+       HERO TAG
+    ======================================================== */
 
     .stackly-youth-hero-tag {
+        display: inline-flex;
+
+        align-items: center;
+
         font-size: 12px;
+
+        line-height: 1.4;
 
         letter-spacing: 1.7px;
 
@@ -1741,32 +2245,68 @@ video {
     }
 
 
-    /* Hero title */
+    /* ========================================================
+       HERO TITLE
+    ======================================================== */
 
     .stackly-youth-hero-title {
+        display: block;
+
+        width: 100%;
+
+        max-width: 100%;
+
+        margin: 0;
+
         font-size: clamp(46px, 12vw, 66px);
+
+        line-height: 0.98;
 
         letter-spacing: -3px;
 
-        line-height: 0.98;
+        overflow-wrap: normal;
     }
 
 
-    /* Description */
+    /* ========================================================
+       DESCRIPTION
+    ======================================================== */
 
     .stackly-youth-hero-description {
+        display: block;
+
+        width: 100%;
+
+        max-width: 520px;
+
+        margin-top: 20px;
+
         font-size: 16px;
 
         line-height: 1.75;
-
-        max-width: 520px;
     }
 
 
-    /* Buttons */
+    /* ========================================================
+       BUTTONS
+    ======================================================== */
 
     .stackly-youth-hero-actions {
+        position: relative;
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        align-items: center;
+
+        gap: 12px;
+
+        width: 100%;
+
         margin-top: 32px;
+
+        z-index: 20;
     }
 
     .stackly-youth-primary-btn,
@@ -1777,21 +2317,170 @@ video {
     }
 
 
-    /* Hide card */
+    /* ========================================================
+       MISSION CARD
+    ======================================================== */
 
     .stackly-youth-hero-card {
-        display: none;
+        position: relative !important;
+
+        display: block !important;
+
+        flex: 0 0 auto !important;
+
+        order: 2;
+
+        width: 100% !important;
+
+        max-width: 430px;
+
+        height: auto !important;
+
+        min-height: 0 !important;
+
+        max-height: none !important;
+
+        margin: 48px auto 0 !important;
+
+        padding: 30px 26px !important;
+
+        box-sizing: border-box;
+
+        top: auto !important;
+
+        right: auto !important;
+
+        bottom: auto !important;
+
+        left: auto !important;
+
+        transform: none !important;
+
+        opacity: 1 !important;
+
+        visibility: visible !important;
+
+        z-index: 100 !important;
+
+        border-radius: 22px;
+
+        background: rgba(255, 255, 255, 0.99);
+
+        border: 1px solid rgba(16, 21, 16, 0.10);
+
+        box-shadow:
+            0 25px 65px rgba(18, 31, 18, 0.20);
+
+        overflow: visible !important;
+    }
+
+    .stackly-youth-card-icon {
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        width: 54px;
+
+        height: 54px;
+
+        margin-bottom: 20px;
+
+        border-radius: 50%;
+
+        font-size: 19px;
+    }
+
+    .stackly-youth-card-label {
+        display: block;
+
+        width: 100%;
+
+        font-size: 10px;
+
+        line-height: 1.4;
+
+        letter-spacing: 1.8px;
+    }
+
+    .stackly-youth-hero-card h2 {
+        display: block;
+
+        width: 100%;
+
+        margin: 13px 0 0;
+
+        font-size: 28px;
+
+        line-height: 1.18;
+
+        letter-spacing: -0.7px;
+    }
+
+    .stackly-youth-hero-card p {
+        display: block;
+
+        width: 100%;
+
+        margin: 16px 0 0;
+
+        font-size: 14px;
+
+        line-height: 1.72;
+    }
+
+    .stackly-youth-card-link {
+        display: flex !important;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        width: 100%;
+
+        margin-top: 24px;
+
+        padding-top: 18px;
+
+        box-sizing: border-box;
+
+        font-size: 11px;
     }
 
 
-    /* Impact */
+    /* ========================================================
+       IMPACT
+    ======================================================== */
 
     .stackly-youth-impact-row {
-        margin-top: 43px;
+        position: relative;
 
-        gap: 17px;
+        display: flex !important;
+
+        flex: 0 0 auto;
+
+        order: 3;
+
+        width: 100%;
+
+        height: auto;
+
+        min-height: 0;
+
+        margin-top: 45px;
+
+        padding: 0;
 
         flex-wrap: wrap;
+
+        align-items: flex-start;
+
+        gap: 18px;
+
+        box-sizing: border-box;
+
+        z-index: 40;
     }
 
     .stackly-youth-impact-divider {
@@ -1807,18 +2496,25 @@ video {
     }
 
 
-    /* Controls */
+    /* ========================================================
+       CONTROLS
+    ======================================================== */
 
     .stackly-youth-slider-controls {
+        position: absolute;
+
         left: 18px;
 
         right: auto;
 
         bottom: 25px;
+
+        z-index: 200;
     }
 
     .stackly-youth-slider-btn {
         width: 44px;
+
         height: 44px;
     }
 
@@ -1827,24 +2523,16 @@ video {
     }
 
 
-    /* Scroll */
-
-    .stackly-youth-scroll-indicator {
-        display: none;
-    }
-
-
-    /* Progress */
-
-    .stackly-youth-progress {
-        bottom: 0;
-    }
-
-
-    /* Intro */
+    /* ========================================================
+       INTRO
+    ======================================================== */
 
     .stackly-youth-intro-section {
-        padding: 85px 0;
+        position: relative;
+
+        z-index: 5;
+
+        padding: 90px 0;
     }
 
     .stackly-youth-intro-grid {
@@ -1871,12 +2559,14 @@ video {
 
     .stackly-youth-intro-text p {
         font-size: 16px;
+
+        line-height: 1.7;
     }
 }
 
 
 /* ============================================================
-   MOBILE SMALL
+   SMALL MOBILE — 480px
 ============================================================ */
 
 @media (max-width: 480px) {
@@ -1885,61 +2575,266 @@ video {
         height: 66px;
     }
 
+    .stackly-youth-header-inner {
+        width: calc(100% - 28px);
 
-    /* Logo */
+        min-height: 66px;
+    }
+
+
+    /* ========================================================
+       LOGO
+    ======================================================== */
 
     .stackly-youth-brand {
         width: 105px;
+
         height: 66px;
     }
 
     .stackly-youth-logo-wrap {
         width: 105px;
+
         height: 66px;
     }
 
     .stackly-youth-logo {
         width: 101px;
+
         height: 62px;
     }
 
 
-    /* Hero */
+    /* ========================================================
+       HAMBURGER
+    ======================================================== */
+
+    .stackly-youth-menu-toggle {
+        width: 44px;
+
+        height: 44px;
+    }
+
+
+    /* ========================================================
+       MOBILE MENU
+    ======================================================== */
+
+    .stackly-youth-mobile-menu {
+        width: 92vw;
+
+        max-width: 390px;
+
+        padding: 24px;
+    }
+
+    .stackly-youth-mobile-link {
+        min-height: 65px;
+
+        font-size: 20px;
+    }
+
+
+    /* ========================================================
+       HERO
+    ======================================================== */
 
     .stackly-youth-hero {
-        min-height: 820px;
+        height: auto !important;
+
+        min-height: 1220px !important;
+
+        max-height: none !important;
+
+        overflow: hidden !important;
+    }
+
+    .stackly-youth-hero .stackly-youth-container {
+        width: calc(100% - 28px);
+
+        min-height: 1220px !important;
+
+        height: auto !important;
+
+        padding-top: 108px;
+
+        padding-bottom: 145px;
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        align-items: stretch !important;
+
+        justify-content: flex-start !important;
+    }
+
+
+    /* ========================================================
+       CONTENT
+    ======================================================== */
+
+    .stackly-youth-hero-content {
+        width: 100% !important;
+
+        padding-top: 30px;
+
+        order: 1;
+    }
+
+    .stackly-youth-hero-tag {
+        font-size: 11px;
+
+        letter-spacing: 1.5px;
+
+        margin-bottom: 19px;
     }
 
     .stackly-youth-hero-title {
         font-size: 43px;
+
+        line-height: 1;
 
         letter-spacing: -2px;
     }
 
     .stackly-youth-hero-description {
         font-size: 15px;
+
+        line-height: 1.7;
+
+        margin-top: 18px;
     }
 
 
-    /* Buttons */
+    /* ========================================================
+       BUTTONS
+    ======================================================== */
 
     .stackly-youth-hero-actions {
         flex-direction: column;
 
         align-items: stretch;
+
+        width: 100%;
+
+        gap: 11px;
+
+        margin-top: 28px;
     }
 
     .stackly-youth-primary-btn,
     .stackly-youth-secondary-btn {
         width: 100%;
 
+        min-height: 56px;
+
         justify-content: center;
     }
 
 
-    /* Impact */
+    /* ========================================================
+       MISSION CARD
+    ======================================================== */
+
+    .stackly-youth-hero-card {
+        position: relative !important;
+
+        display: block !important;
+
+        order: 2;
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        height: auto !important;
+
+        min-height: 0 !important;
+
+        margin: 38px auto 0 !important;
+
+        padding: 26px 21px !important;
+
+        box-sizing: border-box;
+
+        top: auto !important;
+
+        right: auto !important;
+
+        bottom: auto !important;
+
+        left: auto !important;
+
+        transform: none !important;
+
+        opacity: 1 !important;
+
+        visibility: visible !important;
+
+        z-index: 100 !important;
+
+        border-radius: 19px;
+
+        background: rgba(255, 255, 255, 0.99);
+
+        overflow: visible !important;
+    }
+
+    .stackly-youth-card-icon {
+        width: 49px;
+
+        height: 49px;
+
+        margin-bottom: 18px;
+
+        font-size: 18px;
+    }
+
+    .stackly-youth-card-label {
+        font-size: 9px;
+
+        letter-spacing: 1.6px;
+    }
+
+    .stackly-youth-hero-card h2 {
+        font-size: 25px;
+
+        line-height: 1.2;
+
+        letter-spacing: -0.5px;
+
+        margin-top: 12px;
+    }
+
+    .stackly-youth-hero-card p {
+        font-size: 14px;
+
+        line-height: 1.68;
+
+        margin-top: 14px;
+    }
+
+    .stackly-youth-card-link {
+        margin-top: 21px;
+
+        padding-top: 16px;
+
+        font-size: 10px;
+    }
+
+
+    /* ========================================================
+       IMPACT
+    ======================================================== */
 
     .stackly-youth-impact-row {
+        order: 3;
+
+        width: 100%;
+
+        margin-top: 38px;
+
         gap: 15px;
     }
 
@@ -1955,62 +2850,216 @@ video {
         font-size: 20px;
     }
 
+    .stackly-youth-impact-item span {
+        font-size: 9px;
+    }
 
-    /* Intro */
+
+    /* ========================================================
+       SLIDER
+    ======================================================== */
+
+    .stackly-youth-slider-controls {
+        left: 14px;
+
+        bottom: 17px;
+    }
+
+    .stackly-youth-slider-btn {
+        width: 40px;
+
+        height: 40px;
+    }
+
+
+    /* ========================================================
+       INTRO
+    ======================================================== */
+
+    .stackly-youth-intro-section {
+        padding: 75px 0;
+    }
 
     .stackly-youth-intro-title h2 {
         font-size: 36px;
+
+        line-height: 1.08;
     }
 
     .stackly-youth-intro-text p {
         font-size: 15px;
-    }
 
-
-    /* Mobile menu */
-
-    .stackly-youth-mobile-menu {
-        width: 92vw;
-
-        padding: 24px;
-    }
-
-    .stackly-youth-mobile-link {
-        min-height: 65px;
-
-        font-size: 20px;
+        line-height: 1.7;
     }
 }
 
 
 /* ============================================================
-   VERY SMALL MOBILE
+   VERY SMALL MOBILE — 360px
 ============================================================ */
 
 @media (max-width: 360px) {
 
+    .stackly-youth-header {
+        height: 62px;
+    }
+
+    .stackly-youth-header-inner {
+        width: calc(100% - 20px);
+
+        min-height: 62px;
+    }
+
+
+    /* Logo */
+
     .stackly-youth-brand {
         width: 92px;
+
+        height: 62px;
     }
 
     .stackly-youth-logo-wrap {
         width: 92px;
+
+        height: 62px;
     }
 
     .stackly-youth-logo {
         width: 89px;
+
+        height: 58px;
+    }
+
+
+    /* Hamburger */
+
+    .stackly-youth-menu-toggle {
+        width: 42px;
+
+        height: 42px;
+    }
+
+
+    /* Menu */
+
+    .stackly-youth-mobile-menu {
+        width: 94vw;
+
+        padding: 22px;
+    }
+
+    .stackly-youth-mobile-link {
+        min-height: 60px;
+
+        font-size: 18px;
+    }
+
+
+    /* Hero */
+
+    .stackly-youth-hero {
+        min-height: 1250px !important;
+
+        height: auto !important;
+
+        max-height: none !important;
+    }
+
+    .stackly-youth-hero .stackly-youth-container {
+        width: calc(100% - 24px);
+
+        min-height: 1250px !important;
+
+        height: auto !important;
+
+        padding-top: 100px;
+
+        padding-bottom: 145px;
+    }
+
+    .stackly-youth-hero-content {
+        padding-top: 25px;
     }
 
     .stackly-youth-hero-title {
         font-size: 39px;
+
+        letter-spacing: -1.8px;
+
+        line-height: 1;
     }
 
     .stackly-youth-hero-description {
         font-size: 14px;
+
+        line-height: 1.65;
+    }
+
+
+    /* Mission card */
+
+    .stackly-youth-hero-card {
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        margin-top: 32px !important;
+
+        padding: 23px 18px !important;
+
+        border-radius: 17px;
+    }
+
+    .stackly-youth-card-icon {
+        width: 45px;
+
+        height: 45px;
+
+        font-size: 17px;
+
+        margin-bottom: 17px;
+    }
+
+    .stackly-youth-hero-card h2 {
+        font-size: 23px;
+
+        line-height: 1.2;
+    }
+
+    .stackly-youth-hero-card p {
+        font-size: 13px;
+
+        line-height: 1.65;
+    }
+
+    .stackly-youth-card-link {
+        margin-top: 19px;
+
+        padding-top: 15px;
+
+        font-size: 10px;
+    }
+
+
+    /* Impact */
+
+    .stackly-youth-impact-row {
+        margin-top: 32px;
+
+        gap: 12px;
+    }
+
+    .stackly-youth-impact-item {
+        width: calc(50% - 6px);
     }
 
     .stackly-youth-impact-item strong {
         font-size: 18px;
+    }
+
+    .stackly-youth-impact-item span {
+        font-size: 8px;
     }
 }
 
@@ -2036,6 +3085,37 @@ video {
     }
 }
 
+/* =========================================================
+   STACKLY YOUTH MOBILE BRAND LOGO
+   BIGGER MOBILE VIEW
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .stackly-youth-mobile-brand {
+        width: 150px !important;
+        height: 90px !important;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        overflow: visible !important;
+        flex-shrink: 0;
+    }
+
+    .stackly-youth-mobile-brand img {
+        display: block;
+
+        width: 145px !important;
+        height: 85px !important;
+
+        max-width: none !important;
+        max-height: none !important;
+
+        object-fit: contain !important;
+    }
+}
 /* =========================================================
    STACKLY DONOR MARQUEE SECTION
    LARGE / PREMIUM VERSION
@@ -5358,6 +6438,7 @@ video {
     }
 }
  
+
 
 /* ============================================================
    STACKLY YOUTH WELFARE

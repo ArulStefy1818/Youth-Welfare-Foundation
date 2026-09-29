@@ -2823,10 +2823,10 @@ select.stackly-youth-input-error {
     .stackly-youth-auth-logo {
 
         width:
-            54px;
+            100px;
 
         height:
-            54px;
+            100px;
 
         border-radius:
             15px;
@@ -2837,10 +2837,10 @@ select.stackly-youth-input-error {
     .stackly-youth-auth-logo img {
 
         width:
-            44px;
+            90px;
 
         height:
-            44px;
+            90px;
 
     }
 
@@ -2851,7 +2851,7 @@ select.stackly-youth-input-error {
             10px 14px;
 
         font-size:
-            12px;
+            16px;
 
     }
 
@@ -2859,7 +2859,7 @@ select.stackly-youth-input-error {
     .stackly-youth-auth-home i {
 
         font-size:
-            11px;
+            14px;
 
     }
 

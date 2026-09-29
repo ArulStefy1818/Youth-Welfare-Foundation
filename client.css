@@ -589,6 +589,11 @@ img {
    SIDEBAR BOTTOM
 ========================================================= */
 
+/* =========================================================
+   STACKLY YOUTH CLIENT — SIDEBAR BOTTOM
+   RED COLOR + RED HOVER EFFECT
+========================================================= */
+
 .stackly-youth-client-sidebar-bottom {
 
     margin-top: auto;
@@ -600,12 +605,16 @@ img {
         1px solid rgba(255, 255, 255, 0.07);
 }
 
+
+/* ---------------------------------------------------------
+   BOTTOM LINKS
+--------------------------------------------------------- */
+
 .stackly-youth-client-sidebar-bottom a {
 
     min-height: 50px;
 
     display: flex;
-
     align-items: center;
 
     gap: 13px;
@@ -616,15 +625,23 @@ img {
     border-radius: 13px;
 
     color:
-        rgba(255, 255, 255, 0.57);
+        #ff3b3b;
 
     font-size: 15px;
 
     font-weight: 600;
 
     transition:
-        var(--stackly-youth-client-transition);
+        color 0.3s ease,
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
+
+
+/* ---------------------------------------------------------
+   RED HOVER EFFECT
+--------------------------------------------------------- */
 
 .stackly-youth-client-sidebar-bottom a:hover {
 
@@ -632,11 +649,19 @@ img {
         #ffffff;
 
     background:
-        rgba(255, 148, 24, 0.13);
+        rgba(255, 59, 59, 0.16);
 
     transform:
         translateX(5px);
+
+    box-shadow:
+        0 7px 20px rgba(255, 59, 59, 0.12);
 }
+
+
+/* ---------------------------------------------------------
+   ICON
+--------------------------------------------------------- */
 
 .stackly-youth-client-sidebar-bottom a i {
 
@@ -644,19 +669,27 @@ img {
 
     text-align: center;
 
+    color:
+        #ff3b3b;
+
     transition:
+        color 0.3s ease,
         transform 0.3s ease;
 }
+
+
+/* ---------------------------------------------------------
+   ICON HOVER
+--------------------------------------------------------- */
 
 .stackly-youth-client-sidebar-bottom a:hover i {
 
     color:
-        var(--stackly-youth-client-orange);
+        #ffffff;
 
     transform:
         translateX(3px);
 }
-
 
 /* =========================================================
    MAIN
@@ -2305,30 +2338,42 @@ img {
        SIDEBAR BRAND
     ----------------------------------------------------- */
 
-    .stackly-youth-client-brand {
-        min-height: 86px;
+    /* -----------------------------------------------------
+   CLIENT BRAND LOGO — TABLET / MOBILE
+----------------------------------------------------- */
 
-        padding: 12px 16px;
-    }
+.stackly-youth-client-brand {
+    min-height: 110px !important;
+    padding: 10px 16px !important;
 
-    .stackly-youth-client-brand > a {
-        min-width: 0;
+    display: flex;
+    align-items: center;
+}
 
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-    }
+.stackly-youth-client-brand > a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 
-    .stackly-youth-client-brand img {
-        width: 68px;
-        height: 68px;
+    min-width: 0;
+}
 
-        max-width: 68px;
+.stackly-youth-client-brand img {
+    display: block;
 
-        padding: 3px;
+    width: 110px !important;
+    height: 110px !important;
 
-        object-fit: contain;
-    }
+    min-width: 110px !important;
+    min-height: 110px !important;
+
+    max-width: none !important;
+    max-height: none !important;
+
+    padding: 3px;
+
+    object-fit: contain !important;
+}
 
 
     /* -----------------------------------------------------
@@ -3798,7 +3843,46 @@ img {
     }
 }
 
+/* =========================================================
+   STACKLY YOUTH CLIENT — BARAN IMAGE
+   EXTRA LARGE MOBILE FIX
+========================================================= */
 
+@media (max-width: 768px) {
+
+    .stackly-youth-client-barnd {
+        width: 150px !important;
+        min-width: 150px !important;
+        max-width: 150px !important;
+
+        height: auto !important;
+        min-height: 150px !important;
+
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+
+        overflow: visible !important;
+        flex-shrink: 0 !important;
+    }
+
+    .stackly-youth-client-barnd img {
+        display: block !important;
+
+        width: 150px !important;
+        height: 150px !important;
+
+        min-width: 150px !important;
+        min-height: 150px !important;
+
+        max-width: none !important;
+        max-height: none !important;
+
+        object-fit: contain !important;
+
+        flex: 0 0 150px !important;
+    }
+}
 /* =========================================================
    SIDEBAR BODY LOCK
 ========================================================= */
