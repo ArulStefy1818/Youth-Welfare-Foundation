@@ -836,7 +836,6 @@ video {
         linear-gradient(
             90deg,
             rgba(244, 249, 237, 0.98) 0%,
-            rgba(244, 249, 237, 0.93) 36%,
             rgba(244, 249, 237, 0.48) 58%,
             rgba(10, 20, 12, 0.15) 100%
         );
@@ -1010,7 +1009,7 @@ video {
 
     margin-top: 30px;
 
-    color: #4f5a51;
+    color: #000;
 
     font-size: 18px;
 
@@ -1171,7 +1170,7 @@ video {
 .stackly-youth-impact-item span {
     font-size: 11px;
 
-    color: #697269;
+    color: #000;
 
     text-transform: uppercase;
 
@@ -3116,6 +3115,96 @@ video {
         object-fit: contain !important;
     }
 }
+
+
+/* =========================================================
+   STACKLY YOUTH — MOBILE HERO VIDEO FIX
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .stackly-youth-hero {
+        position: relative !important;
+        isolation: isolate;
+        overflow: hidden !important;
+        background: #f4f9ed;
+    }
+
+    /* Video layer */
+    .stackly-youth-hero .stackly-youth-video-layer {
+        position: absolute !important;
+        inset: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        z-index: 0 !important;
+        display: block !important;
+        overflow: hidden;
+        pointer-events: none;
+    }
+
+    .stackly-youth-video-layer video {
+        position: absolute;
+        inset: 0;
+        display: block;
+        width: 100% !important;
+        height: 100% !important;
+        max-width: none;
+        object-fit: cover !important;
+        object-position: center center;
+    }
+
+    /* Lighter overlay lets the video show through */
+    .stackly-youth-hero .stackly-youth-video-overlay {
+        position: absolute !important;
+        inset: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        z-index: 1 !important;
+        display: block !important;
+        pointer-events: none;
+
+       background: linear-gradient(
+    180deg,
+    rgba(244, 249, 237, 0.50) 0%,
+    rgba(244, 249, 237, 0.40) 45%,
+    rgba(244, 249, 237, 0.50) 75%,
+    rgba(244, 249, 237, 0.65) 100%
+) !important;
+    }
+
+    /* Keep text and cards above the video */
+    .stackly-youth-hero .stackly-youth-container {
+        position: relative !important;
+        z-index: 2 !important;
+    }
+
+    .stackly-youth-hero-content,
+    .stackly-youth-hero-card,
+    .stackly-youth-impact-row {
+        position: relative;
+        z-index: 3;
+    }
+
+    .stackly-youth-slider-controls {
+        z-index: 5 !important;
+    }
+}
+
+/* Small mobile video framing */
+@media (max-width: 480px) {
+    .stackly-youth-video-layer video {
+        object-position: center center;
+    }
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+    .stackly-youth-video-layer video {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
 /* =========================================================
    STACKLY DONOR MARQUEE SECTION
    LARGE / PREMIUM VERSION
